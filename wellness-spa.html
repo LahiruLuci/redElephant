@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
+    <meta name="author" content="Ansonika">
+    <title>Red Elephant Travels | Wellness & Spa </title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- COMMON CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link href="layerslider/css/layerslider.css" rel="stylesheet">
+
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --primary: #e63946;
+            --primary-dark: #c1121f;
+            --dark: #121212;
+            --light: #ffffff;
+            --red-accent: #E31C25;
+            --soft-gray: #F9F9F9;
+            --text-gray: #666666;
+            --glass: rgba(255, 255, 255, 0.85);
+            --ocean-blue: #54a5d5;
+            --deep-blue: #3892c6;
+            --light-gray: #D3D3D3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--soft-gray);
+            color: var(--dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Global Elements --- */
+        section {
+            padding: 100px 10%;
+            position: relative;
+        }
+
+        .spa-and-wellness-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            border-left: 3px solid var(--primary);
+            background: var(--light);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .spa-and-wellness-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.4s;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .spa-and-wellness-btn-main {
+            background: var(--primary);
+            color: var(--light);
+            box-shadow: 0 10px 20px rgba(227, 28, 37, 0.2);
+        }
+
+        .spa-and-wellness-btn-main:hover {
+            transform: translateY(-5px);
+            background: var(--primary-dark);
+            box-shadow: 0 15px 30px rgba(227, 28, 37, 0.4);
+        }
+
+        /* --- 1. Hero Section (Matched to image_39aa67.png) --- */
+        .spa-and-wellness-hero {
+            height: 80vh;
+            background: linear-gradient(to right, rgba(234, 248, 248, 0.9) 30%, rgba(234, 248, 248, 0.1)),
+                url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .spa-and-wellness-hero-content {
+            max-width: 650px;
+            margin-top: 100px;
+        }
+
+        .spa-and-wellness-hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+
+        .spa-and-wellness-hero-content h1 i {
+            font-weight: 400;
+            font-style: italic;
+            color: var(--text-gray);
+        }
+
+        .spa-and-wellness-hero-content span {
+            color: var(--primary);
+        }
+
+        .spa-and-wellness-hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+
+        /* --- 2. Philosophy --- */
+        .spa-and-wellness-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            background: var(--light);
+        }
+
+        .spa-and-wellness-intro-img img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 40px 40px 0px var(--ocean-blue);
+        }
+
+        .spa-and-wellness-intro-text h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        /* --- 3. Wellness Experiences (Matched to image_38c642.png) --- */
+        .spa-and-wellness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .spa-and-wellness-exp-card {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            height: 500px;
+            transition: 0.5s;
+        }
+
+        .spa-and-wellness-exp-card:hover {
+            transform: scale(1.02);
+        }
+
+        .spa-and-wellness-exp-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .spa-and-wellness-exp-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            background: linear-gradient(transparent, rgba(18, 18, 18, 0.9));
+            z-index: 2;
+            color: var(--light);
+        }
+
+        .spa-and-wellness-exp-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
+
+        /* --- 4. Signature Treatments --- */
+        .spa-and-wellness-treatments {
+            background: var(--dark);
+            color: var(--light);
+            margin-top: 100px;
+        }
+
+        .spa-and-wellness-t-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s;
+        }
+
+        .spa-and-wellness-t-row:hover {
+            color: var(--ocean-blue);
+            padding-left: 20px;
+        }
+
+        .spa-and-wellness-t-meta {
+            text-align: right;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* --- 6. Destinations --- */
+        .spa-and-wellness-dest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .spa-and-wellness-dest-item {
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            text-align: center;
+        }
+
+        .spa-and-wellness-dest-item img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            transition: 0.5s;
+        }
+
+        .spa-and-wellness-dest-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.5);
+        }
+
+        .spa-and-wellness-dest-item h3 {
+            z-index: 2;
+            font-size: 2rem;
+        }
+
+        /* --- 8. Transparency (Included/Not) --- */
+        .spa-and-wellness-transparency {
+            background: var(--light);
+            display: flex;
+            gap: 40px;
+        }
+
+        .spa-and-wellness-box {
+            flex: 1;
+            padding: 50px;
+            border-radius: 30px;
+        }
+
+        .spa-and-wellness-box.inc {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .spa-and-wellness-box.not {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+
+        .spa-and-wellness-box ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .spa-and-wellness-box li {
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .spa-and-wellness-box i {
+            margin-right: 15px;
+        }
+
+        /* --- 12. Final CTA --- */
+        .spa-and-wellness-final-cta {
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            color: var(--light);
+            padding: 150px 10%;
+        }
+
+        .spa-and-wellness-glass-box {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            padding: 80px;
+            border-radius: 40px;
+            color: var(--dark);
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 992px) {
+
+            .spa-and-wellness-intro,
+            .spa-and-wellness-transparency {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+
+            .spa-and-wellness-hero {
+                text-align: center;
+                justify-content: center;
+                height: 90vh;
+                /* background: linear-gradient(rgba(234, 248, 248, 0.8), rgba(234, 248, 248, 0.8)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=2000'); */
+            }
+
+            .spa-page-intro-text {
+                margin-top: 20px;
+            }
+
+            .col-md-6 {
+                padding-top: 20px;
+            }
+
+            .playfair {
+                font-size: 2rem !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <!-- Header================================================== -->
+    <header>
+        <div id="top_line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
+                </div><!-- End row -->
+            </div><!-- End container-->
+        </div><!-- End top line-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                        <h1><a href="index.html" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+                    </div>
+                </div>
+                <nav class="col-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
+                            mobile</span></a>
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <img src="img/logo-red-elephant.png" width="160" height="34" alt="Red Elephant sri lanka">
+                        </div>
+                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="index.html" class="show-submenu">Home</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="about.html" class="show-submenu">About Us</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Tours <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="#">By Theme</a></li>
+                                    <li><a href="#">By Length</a></li>
+                                    <li class="third-level">
+
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Destinations <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
+                                        <ul>
+                                            <li><a href="anuradhapura.html">Anuradhapura</a></li>
+                                            <li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
+                                            <li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+                                            <li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+                                            <li><a href="kandy-sri-lanka.html">Kandy </a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="hill-country.html">Hill Country</a>
+
+                                        <ul>
+                                            <li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+                                            <li><a href="ella-sri-lanka.html">Ella</a></li>
+                                            <li><a href="hatton-sri-lanka.html">Haton</a></li>
+                                            <li><a href="badulla-sri-lanka.html">Badulla</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
+
+
+                                        <ul>
+                                            <li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+                                            <li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+                                            <li><a href="ahungalla-beach.html">Ahungalla</a></li>
+                                            <li><a href="bentota-beach.html">Bentota</a></li>
+                                            <li><a href="galle-sri-lanka.html">Galle</a></li>
+                                            <li><a href="negombo-sri-lanka.html">Negambo</a></li>
+                                            <li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+                                            <li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+                                            <li><a href="koggala-sri-lanka.html">Koggala</a></li>
+                                            <li><a href="pasikuda-beach.html">Pasikuda</a></li>
+                                            <li><a href="unawatuna-beach.html">Unawatuna</a></li>
+                                            <li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+                                            <li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+                                            <li><a href="weligama-beach.html">Weligama</a></li>
+                                            <li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+                                        </ul>
+
+
+
+
+                                    </li>
+                                    <li class="third-level"><a href="wild-life.html">Wildlife</a>
+
+                                        <ul>
+                                            <li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+                                            <li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+                                            <li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+                                            <li><a href="bundala-national-park.html">Bundala National Park</a></li>
+                                            <li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a>
+                                            </li>
+                                            <li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National
+                                                    Park</a></li>
+                                            <li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a>
+                                            </li>
+                                            <li><a href="habarana-sri-lanka.html">Habarana</a></li>
+                                            <li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National
+                                                    Park</a></li>
+                                            <li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+                                            <li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+                                            <li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
+                                        <ul>
+                                            <li><a href="#">Galle Fort</a></li>
+                                            <li><a href="#">Anuradhapura</a></li>
+                                            <li><a href="#">Jaffna</a></li>
+                                            <li><a href="#">Dambulla</a></li>
+                                            <li><a href="#">Polonnaruwa</a></li>
+                                            <li><a href="#">Kandy</a></li>
+                                            <li><a href="#">Sigiriya</a></li>
+                                            <li><a href="#">Colombo</a></li>
+                                            <li><a href="#">Chilaw</a></li>
+                                            <li><a href="#">Sinharaja</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+                                    <li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
+
+                                        <ul>
+                                            <li><a href="#">Colombo Seaport</a></li>
+                                            <li><a href="#">Hambantota Seaport</a></li>
+                                            <li><a href="#">B. Airport</a></li>
+                                            <li><a href="#">R. Airport</a></li>
+                                            <li><a href="#">M.R Airport</a></li>
+                                            <li><a href="#">Aaffna Airport</a></li>
+                                            <li><a href="#">Batticaloa Airport</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="submenu">
+                                <a href="wellness-spa.html" class="show-submenu">Wellness <i
+                                        class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="weddings-events.html" class="show-submenu">Weddings & Events <i
+                                        class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="contact-us.html" class="show-submenu">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End main-menu -->
+                </nav>
+            </div>
+        </div><!-- container -->
+    </header><!-- End Header -->
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="spa-and-wellness-hero">
+            <div class="spa-and-wellness-hero-content reveal active">
+                <span class="spa-and-wellness-tag">Rejuvenate & Restore</span>
+                <h1>The Path to <i>Inner Harmony</i></h1>
+                <p>Experience the confluence of ancient Ayurvedic wisdom and the rhythmic serenity of the Indian Ocean.
+                    Our tailored retreats are designed to heal the modern soul.</p>
+                <div class="spa-and-wellness-cta-btns">
+                    <a href="#booking" class="spa-and-wellness-btn spa-and-wellness-btn-main">Begin Your Journey <i
+                            class="fas fa-arrow-right" style="margin-left:10px"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <div class="container margin_80" style="margin-top: 100px; margin-bottom: 100px;">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="spa-page-intro-img">
+                        <img src="img/spa-and-wellness/wellness.webp" alt="Sri Lanka Wellness"
+                            class="img-fluid rounded-img">
+                        <div class="spa-page-experience-badge">
+                            <span>15+</span> Years of Healing
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="spa-page-intro-text">
+                        <span class="spa-page-subtitle">Welcome to serenity</span>
+                        <h2>More Than Just a Spa, It's a <span>Lifestyle</span></h2>
+                        <p>Immerse yourself in the ancient wisdom of Ayurveda and modern wellness practices. Sri Lanka
+                            offers a unique blend of holistic treatments that not only relax the body but also
+                            rejuvenate the spirit.</p>
+                        <ul class="spa-page-feature-list">
+                            <li><i class="icon-ok"></i> Authentic Ayurveda Treatments</li>
+                            <li><i class="icon-ok"></i> Personalized Yoga Sessions</li>
+                            <li><i class="icon-ok"></i> Luxury Spa Resorts in Nature</li>
+                            <li><i class="icon-ok"></i> Mindfulness & Meditation Retreats</li>
+                        </ul>
+                        <a href="contact-us.html" class="btn_1 medium mt-4">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="bg_gray">
+            <div class="container margin_80" id="spa-services">
+                <div class="smain_title">
+                    <h2>Our <span>Wellness</span> Experiences</h2>
+                    <p>Curated packages designed to restore balance and harmony.</p>
+                </div>
+
+                <div class="row">
+                    <!-- Service 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="spa-page-service-card">
+                            <div class="spa-page-img-wrapper">
+                                <img src="img/spa-and-wellness/Ayurveda-Healing-Wellness.webp" alt="Ayurveda Healing">
+                            </div>
+                            <div class="spa-page-card-content">
+                                <h3>Ayurveda Healing</h3>
+                                <p>Ancient herbal therapies and oil treatments tailored to your body type (Dosha) for
+                                    deep detoxification.</p>
+                                <a href="#" class="read-more-link">Learn More <i class="icon-right-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="spa-page-service-card">
+                            <div class="spa-page-img-wrapper">
+                                <img src="img/spa-and-wellness/Luxury-Couple-Spa-Experiences.webp" alt="Couple Spa">
+                            </div>
+                            <div class="spa-page-card-content">
+                                <h3>Luxury Couple Spa</h3>
+                                <p>Romantic and relaxing treatments for couples, featuring aromatic baths and
+                                    synchronized massages.</p>
+                                <a href="#" class="read-more-link">Learn More <i class="icon-right-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="spa-page-service-card">
+                            <div class="spa-page-img-wrapper">
+                                <img src="img/spa-and-wellness/Yoga.webp" alt="Yoga & Meditation">
+                            </div>
+                            <div class="spa-page-card-content">
+                                <h3>Yoga & Meditation</h3>
+                                <p>Guided sessions in breathtaking locations, from beachfront pavilions to misty
+                                    mountain tops.</p>
+                                <a href="#" class="read-more-link">Learn More <i class="icon-right-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parallax / Video Section -->
+        <!-- <section class="spa-page-parallax">
+            <div class="spa-page-parallax-overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2>Embrace The Calm</h2>
+                        <p>Let the sounds of nature and the touch of expert therapists transport you to a state of
+                            bliss.</p>
+                        <a href="contact-us.html" class="spa-page-btn-outline">Book a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="spa-and-wellness-treatments reveal">
+            <span class="spa-and-wellness-tag">Bespoke Rituals</span>
+            <h2 style="font-size: 2.5rem; margin-bottom: 40px; color: #fff;">Clinical Treatments</h2>
+            <div class="spa-and-wellness-t-row">
+                <div>
+                    <h4 style="color: #fff;">Shirodhara Oil Flow</h4>
+                    <p>Targeted third-eye therapy for insomnia.</p>
+                </div>
+                <div class="spa-and-wellness-t-meta"><span>60 MINS</span><br><strong>BEST FOR SLEEP</strong></div>
+            </div>
+            <div class="spa-and-wellness-t-row">
+                <div>
+                    <h4 style="color: #fff;">Abhyanga Sync Massage</h4>
+                    <p>Four-hand lymphatic drainage for total detox.</p>
+                </div>
+                <div class="spa-and-wellness-t-meta"><span>90 MINS</span><br><strong>BEST FOR DETOX</strong></div>
+            </div>
+            <div class="spa-and-wellness-t-row">
+                <div>
+                    <h4 style="color: #fff;">Sound Healing Journey</h4>
+                    <p>Vibrational frequency therapy for mental clarity.</p>
+                </div>
+                <div class="spa-and-wellness-t-meta"><span>45 MINS</span><br><strong>BEST FOR ANXIETY</strong></div>
+            </div>
+        </section>
+
+        <!-- Testimonials (Simplified for this page) -->
+        <!-- <div class="container margin_80">
+            <div class="main_title">
+                <h2>Guest <span>Stories</span></h2>
+                <p>What our guests say about their wellness journey.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="spa-page-testimonial">
+                        <blockquote>
+                            "The Ayurveda treatment at the resort was life-changing. I felt lighter and more energetic
+                            after just 3 days."
+                        </blockquote>
+                        <div class="author">
+                            <img src="img/avatar1.jpg" alt="" class="rounded-circle"
+                                style="width: 50px; height: 50px; background: #ddd;">
+                            <span>Sarah M., UK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="spa-page-testimonial">
+                        <blockquote>
+                            "Highly improved my flexibility and peace of mind with the yoga retreat in Ella. The view
+                            was breathtaking."
+                        </blockquote>
+                        <div class="author">
+                            <img src="img/avatar2.jpg" alt="" class="rounded-circle"
+                                style="width: 50px; height: 50px; background: #ddd;">
+                            <span>John D., Australia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <section class="spa-and-wellness-transparency reveal">
+            <div class="spa-and-wellness-box inc">
+                <h3><i class="fas fa-check-circle" style="color:#22c55e"></i> Included in Packages</h3>
+                <ul>
+                    <li> Personalized Dosha Consultation</li>
+                    <li> All Ayurvedic Treatments & Oils</li>
+                    <li> Organic Sattvic Full-Board Meals</li>
+                    <li> Daily Yoga & Meditation</li>
+                </ul>
+            </div>
+            <div class="spa-and-wellness-box not">
+                <h3><i class="fas fa-times-circle" style="color:#ef4444"></i> Not Included</h3>
+                <ul>
+                    <li> International Airfare</li>
+                    <li> Personal Laundry & Gratuities</li>
+                    <li> Alcoholic Beverages</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="spa-and-wellness-final-cta" id="booking">
+            <div class="spa-and-wellness-glass-box reveal">
+                <h2 class="playfair" style="font-size: 3.5rem; margin-bottom: 20px;">Begin Your Wellness Journey Today
+                </h2>
+                <p style="margin-bottom: 40px; font-size: 1.1rem; color: var(--text-gray);">Trust Red Elephant Wellness
+                    to curate your professional path to rejuvenation.</p>
+                <a href="#" class="spa-and-wellness-btn spa-and-wellness-btn-main">Book Your Experience Now</a>
+                <div style="margin-top:20px;">
+                    <a href="#" style="color:var(--deep-blue); font-weight:700; text-decoration:none;">TALK TO A
+                        WELLNESS EXPERT →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="revealed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Need help?</h3>
+                    <a href="tel://004542344599" id="phone">+94 77 315 71 71</a>
+                    <a href="mailto:help@citytours.com" id="email_footer">info@redelephanttravel.com</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Distination</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Discover</h3>
+                    <ul>
+                        <li><a href="#">Cultural Trangle</a></li>
+                        <li><a href="#">Hill Country</a></li>
+                        <li><a href="#">Sun and Sand</a></li>
+                        <li><a href="#">Wild Life</a></li>
+                        <li><a href="#">Heritage</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h3>Address</h3>
+                    <ul>
+                        <li><a href="#">50/5 Rajamahavihara Road,</a></li>
+                        <li><a href="#">Mirihana</a></li>
+                        <li><a href="#">Kotte.</a></li>
+                    </ul>
+                </div>
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="social_footer">
+                        <ul>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-google"></i></a></li>
+                            <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                            <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                        </ul>
+                        <p>© RedElephant 2024 by GAMBA</p>
+                    </div>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+    </footer>
+
+    <!-- Common scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+
+    <!-- Specific scripts -->
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="layerslider/js/greensock.js"></script>
+    <script src="layerslider/js/layerslider.transitions.js"></script>
+    <script src="layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Red Elephant Travels - Destination Weddings and Private Events in Sri Lanka.">
+    <meta name="author" content="Red Elephant Travels">
+    <title>Red Elephant Travels | Weddings & Private Events </title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- COMMON CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link href="layerslider/css/layerslider.css" rel="stylesheet">
+
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --event-gold: #54a5d5;
+            --event-dark: #1a1a1a;
+            --event-light: #ffffff;
+            --event-bg: #f9f9f9;
+            --event-primary: #e63946;
+        }
+
+        /* --- Global Overrides for this page --- */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--event-bg);
+            color: var(--event-dark);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .event-page-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .event-page-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Hero Section --- */
+        .event-page-hero {
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--event-light);
+        }
+
+        .event-page-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519225468359-4058d927cbd4?q=80&w=2072&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: zoomEffect 20s infinite alternate;
+        }
+
+        @keyframes zoomEffect {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .event-page-hero-content h1 {
+            font-size: clamp(3rem, 5vw, 6rem);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .event-page-hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .event-page-btn {
+            background-color: var(--event-gold);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            border: 2px solid var(--event-gold);
+        }
+
+        .event-page-btn:hover {
+            background-color: transparent;
+            color: var(--event-gold);
+        }
+
+        /* --- Intro Section --- */
+        .event-page-section {
+            padding: 100px 10%;
+        }
+
+        .event-page-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .event-page-intro-text span {
+            color: var(--event-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .event-page-intro-text h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .event-page-intro-img {
+            position: relative;
+        }
+
+        .event-page-intro-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-page-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .event-page-badge strong {
+            display: block;
+            font-size: 2rem;
+            color: var(--event-gold);
+            line-height: 1;
+        }
+
+        /* --- Services --- */
+        .event-page-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .event-page-service-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .event-page-service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            border-color: var(--event-gold);
+        }
+
+        .event-page-service-icon {
+            font-size: 3rem;
+            color: var(--event-gold);
+            margin-bottom: 20px;
+        }
+
+        /* --- Parallax Section --- */
+        .event-page-parallax {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=2070&auto=format&fit=crop');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            padding: 120px 10%;
+            text-align: center;
+            color: white;
+        }
+
+        /* --- Venues Section --- */
+        .event-page-venue-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .event-page-venue-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .event-page-venue-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .event-page-venue-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            color: white;
+        }
+
+        /* --- Contact Form Section --- */
+        .event-page-contact-wrapper {
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .event-page-contact-info {
+            flex: 1;
+            padding: 60px;
+            background: var(--event-dark);
+            color: white;
+            min-width: 300px;
+        }
+
+        .event-page-contact-form {
+            flex: 1.5;
+            padding: 20px;
+            min-width: 300px;
+        }
+
+        .event-page-contact-info h3 {
+            color: var(--event-gold);
+            margin-bottom: 30px;
+        }
+
+        .event-page-form-group {
+            margin-bottom: 20px;
+        }
+
+        .event-page-form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fcfcfc;
+        }
+
+        .event-btn-submit {
+            background: var(--event-primary);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .event-btn-submit:hover {
+            background: var(--event-gold);
+        }
+
+        @media (max-width: 991px) {
+            .event-page-intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-page-hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <!-- Header================================================== -->
+    <header>
+        <div id="top_line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
+                </div><!-- End row -->
+            </div><!-- End container-->
+        </div><!-- End top line-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                        <h1><a href="index.html" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+                    </div>
+                </div>
+                <nav class="col-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
+                            mobile</span></a>
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <img src="img/logo-red-elephant.png" width="160" height="34" alt="Red Elephant sri lanka">
+                        </div>
+                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="index.html" class="show-submenu">Home</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="about.html" class="show-submenu">About Us</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Tours <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="#">By Theme</a></li>
+                                    <li><a href="#">By Length</a></li>
+                                    <li class="third-level">
+
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Destinations <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
+                                        <ul>
+                                            <li><a href="anuradhapura.html">Anuradhapura</a></li>
+                                            <li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
+                                            <li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+                                            <li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+                                            <li><a href="kandy-sri-lanka.html">Kandy </a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="hill-country.html">Hill Country</a>
+
+                                        <ul>
+                                            <li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+                                            <li><a href="ella-sri-lanka.html">Ella</a></li>
+                                            <li><a href="hatton-sri-lanka.html">Haton</a></li>
+                                            <li><a href="badulla-sri-lanka.html">Badulla</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
+
+
+                                        <ul>
+                                            <li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+                                            <li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+                                            <li><a href="ahungalla-beach.html">Ahungalla</a></li>
+                                            <li><a href="bentota-beach.html">Bentota</a></li>
+                                            <li><a href="galle-sri-lanka.html">Galle</a></li>
+                                            <li><a href="negombo-sri-lanka.html">Negambo</a></li>
+                                            <li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+                                            <li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+                                            <li><a href="koggala-sri-lanka.html">Koggala</a></li>
+                                            <li><a href="pasikuda-beach.html">Pasikuda</a></li>
+                                            <li><a href="unawatuna-beach.html">Unawatuna</a></li>
+                                            <li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+                                            <li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+                                            <li><a href="weligama-beach.html">Weligama</a></li>
+                                            <li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+                                        </ul>
+
+
+
+
+                                    </li>
+                                    <li class="third-level"><a href="wild-life.html">Wildlife</a>
+
+                                        <ul>
+                                            <li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+                                            <li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+                                            <li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+                                            <li><a href="bundala-national-park.html">Bundala National Park</a></li>
+                                            <li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a>
+                                            </li>
+                                            <li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National
+                                                    Park</a></li>
+                                            <li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a>
+                                            </li>
+                                            <li><a href="habarana-sri-lanka.html">Habarana</a></li>
+                                            <li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National
+                                                    Park</a></li>
+                                            <li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+                                            <li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+                                            <li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
+                                        <ul>
+                                            <li><a href="#">Galle Fort</a></li>
+                                            <li><a href="#">Anuradhapura</a></li>
+                                            <li><a href="#">Jaffna</a></li>
+                                            <li><a href="#">Dambulla</a></li>
+                                            <li><a href="#">Polonnaruwa</a></li>
+                                            <li><a href="#">Kandy</a></li>
+                                            <li><a href="#">Sigiriya</a></li>
+                                            <li><a href="#">Colombo</a></li>
+                                            <li><a href="#">Chilaw</a></li>
+                                            <li><a href="#">Sinharaja</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+                                    <li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
+
+                                        <ul>
+                                            <li><a href="#">Colombo Seaport</a></li>
+                                            <li><a href="#">Hambantota Seaport</a></li>
+                                            <li><a href="#">B. Airport</a></li>
+                                            <li><a href="#">R. Airport</a></li>
+                                            <li><a href="#">M.R Airport</a></li>
+                                            <li><a href="#">Aaffna Airport</a></li>
+                                            <li><a href="#">Batticaloa Airport</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li class="submenu">
+                                <a href="wellness-spa.html" class="show-submenu">Wellness <i
+                                        class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="weddings-events.html" class="show-submenu">Weddings & Events <i
+                                        class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="contact-us.html" class="show-submenu">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End main-menu -->
+                </nav>
+            </div>
+        </div><!-- container -->
+    </header><!-- End Header -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="event-page-hero">
+            <div class="event-page-hero-bg"></div>
+            <div class="event-page-hero-content event-page-reveal">
+                <h1>Celebrate Love <br> & Life Details</h1>
+                <p>Destination Weddings • Private Parties • Corporate Events <br> Crafted with Elegance in Sri Lanka</p>
+                <a href="#plan-event" class="event-page-btn">Start Planning</a>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="event-page-section">
+            <div class="container">
+                <div class="event-page-intro-grid">
+                    <div class="event-page-intro-text event-page-reveal">
+                        <span>UNFORGETTABLE MOMENTS</span>
+                        <h2>We Create Events That<br>Tell Your Story</h2>
+                        <p>From the golden beaches of the south to the misty hills of tea country, Sri Lanka offers the
+                            most breathtaking backdrops for your special moments. Whether it's an intimate beach vow
+                            renewal, a grand destination wedding, or an exclusive private celebration, Red Elephant
+                            Travels handles every detail.</p>
+                        <p>Our dedicated team of planners ensures seamless execution, combining Sri Lankan hospitality
+                            with world-class event management.</p>
+                    </div>
+                    <div class="event-page-intro-img event-page-reveal">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop"
+                            alt="Wedding Couple">
+                        <div class="event-page-badge">
+                            <strong>100+</strong>
+                            Successful Events
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-page-services-grid">
+                    <div class="event-page-service-card event-page-reveal">
+                        <i class="icon_set_1_icon-24 event-page-service-icon"></i>
+                        <h3>Destination Weddings</h3>
+                        <p>Romantic beachside ceremonies or grand hotel ballrooms. We curate your dream wedding from
+                            start to finish.</p>
+                    </div>
+                    <div class="event-page-service-card event-page-reveal">
+                        <i class="icon_set_1_icon-29 event-page-service-icon"></i>
+                        <h3>Private Parties</h3>
+                        <p>Birthdays, anniversaries, or family reunions. Celebrate in privacy at luxury villas or
+                            exclusive resorts.</p>
+                    </div>
+                    <div class="event-page-service-card event-page-reveal">
+                        <i class="icon_set_1_icon-14 event-page-service-icon"></i>
+                        <h3>Corporate Events</h3>
+                        <p>Incentive trips, team building, and executive retreats. Blend business with the beauty of the
+                            island.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Stats/Quote -->
+        <section class="event-page-parallax">
+            <div class="container event-page-reveal">
+                <i class="icon_quote_alt" style="font-size: 50px; color: var(--event-gold);"></i>
+                <h2 style="font-size: 3rem; margin: 30px 0;">"The most beautiful day of our lives."</h2>
+                <p style="font-size: 1.2rem;">- Sarah & James, Wedding at Bentota, 2024</p>
+            </div>
+        </section>
+
+        <!-- Venues Gallery -->
+        <section class="event-page-section" style="background: #fff;">
+            <div class="container">
+                <div class="main_title">
+                    <h2>Stunning <span>Venues</span></h2>
+                    <p>Choose your perfect backdrop from our hand-picked locations.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="event-page-venue-card event-page-reveal">
+                            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2088&auto=format&fit=crop"
+                                alt="Beach Venue">
+                            <div class="event-page-venue-overlay">
+                                <h3>Golden Beaches</h3>
+                                <p>Bentota, Mirissa, Tangalle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="event-page-venue-card event-page-reveal">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
+                                alt="Hill Country Venue">
+                            <div class="event-page-venue-overlay">
+                                <h3>Misty Hills</h3>
+                                <p>Nuwara Eliya, Ella, Kandy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="event-page-venue-card event-page-reveal">
+                            <img src="https://images.unsplash.com/photo-1590059590636-6e14704b2b63?q=80&w=1955&auto=format&fit=crop"
+                                alt="Heritage Venue">
+                            <div class="event-page-venue-overlay">
+                                <h3>Colonial Heritage</h3>
+                                <p>Galle Fort, Colombo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Your Event Form -->
+        <section class="event-page-section" id="plan-event">
+            <div class="container">
+                <div class="event-page-contact-wrapper event-page-reveal">
+                    <div class="event-page-contact-info">
+                        <h3>Start Planning Your Dream Event</h3>
+                        <p>Fill out the form and our event specialists will get in touch with you within 24 hours to
+                            discuss your vision.</p>
+
+                        <div style="margin-top: 40px;">
+                            <div style="margin-bottom: 20px;">
+                                <i class="icon_phone" style="color: var(--event-gold); margin-right: 10px;"></i>
+                                <span style="font-size: 1.1rem;">+94 77 315 71 71</span>
+                            </div>
+                            <div>
+                                <i class="icon_mail" style="color: var(--event-gold); margin-right: 10px;"></i>
+                                <span style="font-size: 1.1rem;">info@redelephanttravel.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-page-contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="event-page-form-group">
+                                        <label>Your Name</label>
+                                        <input type="text" class="event-page-form-control" placeholder="Full Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="event-page-form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" class="event-page-form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="event-page-form-group">
+                                        <label>Event Type</label>
+                                        <select class="event-page-form-control">
+                                            <option>Wedding</option>
+                                            <option>Private Party</option>
+                                            <option>Corporate Event</option>
+                                            <option>Vow Renewal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="event-page-form-group">
+                                        <label>Estimated Guests</label>
+                                        <input type="number" class="event-page-form-control"
+                                            placeholder="Number of guests">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="event-page-form-group">
+                                <label>Tell us about your event</label>
+                                <textarea class="event-page-form-control" rows="4"
+                                    placeholder="Date, preferences, or any specific requirements..."></textarea>
+                            </div>
+
+                            <button type="submit" class="event-btn-submit">Request Consultation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="revealed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Need help?</h3>
+                    <a href="tel://004542344599" id="phone">+94 77 315 71 71</a>
+                    <a href="mailto:help@citytours.com" id="email_footer">info@redelephanttravel.com</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Distination</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Discover</h3>
+                    <ul>
+                        <li><a href="#">Cultural Trangle</a></li>
+                        <li><a href="#">Hill Country</a></li>
+                        <li><a href="#">Sun and Sand</a></li>
+                        <li><a href="#">Wild Life</a></li>
+                        <li><a href="#">Heritage</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h3>Address</h3>
+                    <ul>
+                        <li><a href="#">50/5 Rajamahavihara Road,</a></li>
+                        <li><a href="#">Mirihana</a></li>
+                        <li><a href="#">Kotte.</a></li>
+                    </ul>
+                </div>
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="social_footer">
+                        <ul>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-google"></i></a></li>
+                            <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                            <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                        </ul>
+                        <p>© RedElephant 2024 by GAMBA</p>
+                    </div>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+    </footer>
+
+    <!-- Common scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Scroll Reveal Animation
+            const revealElements = document.querySelectorAll('.event-page-reveal');
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

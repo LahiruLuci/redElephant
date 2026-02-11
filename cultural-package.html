@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
+    <meta name="author" content="Ansonika">
+    <title>Red Elephant Travels | Sri Lanka </title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- COMMON CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link href="layerslider/css/layerslider.css" rel="stylesheet">
+
+    <style>
+        /* Styling for the overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            display: none;
+            /* Hide the overlay by default */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styling for the popup */
+        .popup {
+            background-color: black;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            /* Shadow effect */
+            position: relative;
+        }
+
+        /* Close button styling */
+        .close-btn {
+            position: absolute;
+            top: -5px;
+            right: -30px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Styling for the play icon */
+        .icon-play {
+            width: 48px;
+            /* Adjust the width as needed */
+            height: 48px;
+            /* Adjust the height as needed */
+            cursor: pointer;
+            animation: pulse 1s infinite alternate;
+            /* Add animation */
+        }
+
+        /* Animation for the icon */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        .text-content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .text-content-modern {
+            position: relative;
+        }
+
+        .heading-container {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #e63946, #E31C25);
+            border-radius: 2px;
+            margin-bottom: 16px;
+            animation: expandLine 0.8s ease-out;
+        }
+
+        @keyframes expandLine {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+
+            to {
+                width: 60px;
+                opacity: 1;
+            }
+        }
+
+        .text-content-modern h2 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            color: #1a1a2e;
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666666;
+            margin: 0 0 32px 0;
+            font-weight: 400;
+        }
+
+        .highlight-box {
+            position: relative;
+            background: linear-gradient(135deg, rgba(227, 28, 37, 0.03) 0%, rgba(230, 57, 70, 0.05) 100%);
+            border-left: 4px solid #e63946;
+            padding: 28px 28px 28px 70px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(230, 57, 70, 0.12);
+            border-left-width: 5px;
+        }
+
+        .icon-wrapper {
+            position: absolute;
+            left: 24px;
+            top: 28px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #e63946, #E31C25);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+        }
+
+        .highlight-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #1a1a2e;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .text-content-wrapper {
+                padding: 40px 16px;
+            }
+
+            .highlight-box {
+                padding: 24px 20px 24px 60px;
+            }
+
+            .icon-wrapper {
+                left: 16px;
+                top: 24px;
+                width: 28px;
+                height: 28px;
+            }
+
+            .icon-wrapper svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .intro-text {
+                font-size: 16px;
+            }
+
+            .highlight-text {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .highlight-box {
+                padding: 20px 16px;
+                padding-top: 56px;
+            }
+
+            .icon-wrapper {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="beach-honeymoon-package-page">
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <!-- Header================================================== -->
+    <header>
+        <div id="top_line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
+                </div><!-- End row -->
+            </div><!-- End container-->
+        </div><!-- End top line-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                        <h1><a href="#" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+                    </div>
+                </div>
+                <nav class="col-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
+                            mobile</span></a>
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <img src="img/logo-red-elephant.png" width="160" height="34" alt="Red Elephant sri lanka">
+                        </div>
+                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="index.html" class="show-submenu">Home</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="about.html" class="show-submenu">About Us</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Tours <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="#">By Theme</a></li>
+                                    <li><a href="#">By Length</a></li>
+                                    <li class="third-level">
+
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <!-- <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Hotels <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="#">By City</a></li>
+                                    <li><a href="#">By Type</a></li>
+                                    <li><a href="#">By Chain</a></li>
+                                </ul>
+                            </li> -->
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Destinations <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
+                                        <ul>
+                                            <li><a href="anuradhapura.html">Anuradhapura</a></li>
+                                            <li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
+                                            <li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+                                            <li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+                                            <li><a href="kandy-sri-lanka.html">Kandy </a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="hill-country.html">Hill Country</a>
+
+                                        <ul>
+                                            <li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+                                            <li><a href="ella-sri-lanka.html">Ella</a></li>
+                                            <li><a href="hatton-sri-lanka.html">Haton</a></li>
+                                            <li><a href="badulla-sri-lanka.html">Badulla</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
+
+
+                                        <ul>
+                                            <li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+                                            <li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+                                            <li><a href="ahungalla-beach.html">Ahungalla</a></li>
+                                            <li><a href="bentota-beach.html">Bentota</a></li>
+                                            <li><a href="galle-sri-lanka.html">Galle</a></li>
+                                            <li><a href="negombo-sri-lanka.html">Negambo</a></li>
+                                            <li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+                                            <li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+                                            <li><a href="koggala-sri-lanka.html">Koggala</a></li>
+                                            <li><a href="pasikuda-beach.html">Pasikuda</a></li>
+                                            <li><a href="unawatuna-beach.html">Unawatuna</a></li>
+                                            <li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+                                            <li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+                                            <li><a href="weligama-beach.html">Weligama</a></li>
+                                            <li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+                                        </ul>
+
+
+
+
+                                    </li>
+                                    <li class="third-level"><a href="wild-life.html">Wildlife</a>
+
+                                        <ul>
+                                            <li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+                                            <li><a href="udawalawe-national-park.html">Udawalawe Natinal Park</a></li>
+                                            <li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+                                            <li><a href="bundala-national-park.html">Bundala National Park</a></li>
+                                            <li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a>
+                                            </li>
+                                            <li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National
+                                                    Park</a></li>
+                                            <li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a>
+                                            </li>
+                                            <li><a href="habarana-sri-lanka.html">Habarana</a></li>
+                                            <li><a href="wilpattu-national-park-sri-lanka.html">Wilpththu</a></li>
+                                            <li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+                                            <li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+                                            <li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
+                                        <ul>
+                                            <li><a href="#">Galle Fort</a></li>
+                                            <li><a href="#">Anuradhapura</a></li>
+                                            <li><a href="#">Jaffna</a></li>
+                                            <li><a href="#">Dambulla</a></li>
+                                            <li><a href="#">Polonnaruwa</a></li>
+                                            <li><a href="#">Kandy</a></li>
+                                            <li><a href="#">Sigiriya</a></li>
+                                            <li><a href="#">Colombo</a></li>
+                                            <li><a href="#">Chilaw</a></li>
+                                            <li><a href="#">Sinharaja</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+                                    <li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
+
+                                        <ul>
+                                            <li><a href="#">Colombo Seaport</a></li>
+                                            <li><a href="#">Hambantota Seaport</a></li>
+                                            <li><a href="#">B. Airport</a></li>
+                                            <li><a href="#">R. Airport</a></li>
+                                            <li><a href="#">M.R Airport</a></li>
+                                            <li><a href="#">Aaffna Airport</a></li>
+                                            <li><a href="#">Batticaloa Airport</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="#" class="show-submenu">Wellness <i class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="#" class="show-submenu">Weddings & Events <i
+                                        class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="contact-us.html" class="show-submenu">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End main-menu -->
+                </nav>
+            </div>
+        </div><!-- container -->
+    </header><!-- End Header -->
+
+
+    <main>
+        <section class="hero beach-honeymoon-package"
+            style="background-image: url('./img/culture-package/culture-hero.webp');" id="home">
+            <div class="hero-overlay beach-honeymoon-package"></div>
+            <div class="hero-content beach-honeymoon-package">
+                <h1>Sri Lanka Cultural Heritage Journey</h1>
+                <p>Discover Sri Lanka’s rich history, ancient kingdoms, sacred temples, and vibrant traditions through
+                    an unforgettable cultural journey across the island.</p>
+
+            </div>
+        </section>
+
+        <section>
+            <section class="section-wrapper">
+                <div class="modern-container">
+
+                    <div class="header-column">
+                        <span class="tag">Culture • Heritage Escape</span>
+                        <p class="sub-title">Cultural Tours Across Sri Lanka</p>
+                        <h1 class="main-title">Ancient<br>Sri Lanka</h1>
+
+                        <div class="days-indicator">
+                            <div class="red-dot"></div>
+                            <span>8 NIGHTS / 9 DAYS</span>
+                        </div>
+                    </div>
+
+                    <div class="content-column">
+                        <p class="greeting-text">Ayubowan & Welcome to Paradise!</p>
+                        <p class="description-text">
+                            Step into the heart of Sri Lanka’s ancient civilization with our immersive cultural heritage
+                            tour. Explore
+                            sacred temples, royal cities, UNESCO World Heritage Sites, and timeless traditions that tell
+                            the story of
+                            the island’s rich past.
+                            <br><br>
+                            From the majestic ruins of Anuradhapura and Polonnaruwa to the sacred Temple of the Tooth in
+                            Kandy and the
+                            colonial charm of Galle Fort, this journey is perfect for travelers seeking history,
+                            culture, spirituality,
+                            and authentic local experiences.
+                        </p>
+
+                        <a href="#" class="inquire-btn" id="inquireBtn">
+                            <span>INQUIRE NOW</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                style="position: relative; z-index: 2;">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+        <div class="section-header">
+            <h2>Discover the Cultural Heart of Sri Lanka</h2>
+            <p>Embark on a thoughtfully crafted cultural tour across Sri Lanka that takes you through ancient cities,
+                sacred temples, UNESCO World Heritage Sites, and timeless traditions. This itinerary is designed for
+                travelers
+                who seek history, spirituality, and authentic local experiences, offering a deep connection to Sri
+                Lanka’s rich
+                heritage, architecture, and centuries-old customs.</p>
+
+        </div>
+        <section class="itinerary-wrapper">
+
+            <div class="itinerary-header" onclick="toggleMainTimeline()">
+                <div class="header-left">
+                    <span class="badge">9 Days Journey</span>
+                    <h2>Classic Cultural Route of Sri Lanka</h2>
+                </div>
+                <div class="header-right">
+                    <span id="toggle-text">View Full Route</span>
+                    <div class="arrow-icon">▼</div>
+                </div>
+            </div>
+            <div class="timeline-collapsible" id="timelineCollapsible">
+                <div class="timeline-container">
+                    <div class="road"></div>
+                    <div class="marker start-sign">START</div>
+                    <div class="marker finish-sign">FINISH</div>
+
+                    <div class="car" id="car">
+                        <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20,35 Q50,5 80,35 L85,165 Q50,195 15,165 Z" fill="#450a0a" />
+                            <path d="M22,40 Q50,12 78,40 L82,160 Q50,185 18,160 Z" fill="#dc2626" />
+                            <path d="M30,55 Q50,45 70,55 L68,85 Q50,75 32,85 Z" fill="#1e293b" />
+                            <path d="M35,130 Q50,125 65,130 L63,145 Q50,140 37,145 Z" fill="#1e293b" opacity="0.7" />
+                            <rect x="47" y="15" width="6" height="170" fill="white" opacity="0.2" />
+                            <path d="M25,35 Q30,30 35,35" fill="none" stroke="#fef08a" stroke-width="3" />
+                            <path d="M65,35 Q70,30 75,35" fill="none" stroke="#fef08a" stroke-width="3" />
+                        </svg>
+                    </div>
+
+                    <div class="timeline-item open">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 1</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/negembo-beach.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">COASTAL POINT / AREA 01</span>
+                                <h2>Negombo Beach</h2>
+                                <p class="description">Arrive in Sri Lanka and begin your honeymoon journey along the
+                                    golden
+                                    shores
+                                    of Negombo, a charming coastal town just minutes from the international airport.
+                                    Unwind
+                                    after
+                                    your flight with ocean views, gentle sea breezes, and a relaxed beachside
+                                    atmosphere.
+                                </p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Sunset Beach Walk, Dutch Canal</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Romantic beach dinner, visit to a traditional fishing village</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 2</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/Kalpitiya.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">COASTAL POINT / AREA 02</span>
+                                <h2>Anuradhapura</h2>
+                                <p class="description">Anuradhapura is one of the most significant ancient capitals of
+                                    Sri Lanka, renowned for its
+                                    well-preserved ruins and deep cultural heritage. As a UNESCO World Heritage Site,
+                                    the city is sacred to Buddhists
+                                    around the world and is home to ancient stupas, monasteries, and the revered Sri
+                                    Maha Bodhi tree. Anuradhapura
+                                    also holds importance in Hindu traditions and ancient legends, reflecting Sri
+                                    Lanka’s rich and diverse
+                                    historical past.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Sri Maha Bodhi, Ruwanwelisaya, Jetavanaramaya, Ancient Monasteries</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Cultural sightseeing, temple visits, heritage walks, ancient city exploration
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 3</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/kandy.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">CULTURAL POINT / AREA 03</span>
+                                <h2>Dambulla</h2>
+                                <p class="description">Dambulla is home to the largest and best-preserved cave temple
+                                    complex in Sri Lanka and is
+                                    recognized as a UNESCO World Heritage Site. This sacred site consists of over 80
+                                    documented caves, with five
+                                    main caves adorned with ancient Buddhist murals and statues. The complex features a
+                                    remarkable collection of
+                                    153 Buddha statues along with statues of Sri Lankan kings and deities, reflecting
+                                    centuries of religious,
+                                    artistic, and cultural heritage.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Dambulla Cave Temple, Golden Temple, Ancient Buddhist Murals</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Cave temple exploration, cultural sightseeing, heritage photography,
+                                            spiritual experiences</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 4</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/galle-fort.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">CULTURAL POINT / AREA 04</span>
+                                <h2>Polonnaruwa</h2>
+                                <p class="description">Polonnaruwa served as the second ancient capital of Sri Lanka
+                                    after the decline of
+                                    Anuradhapura and represents the golden age of Sinhalese Buddhist civilization. This
+                                    UNESCO World Heritage Site
+                                    is renowned for its well-preserved ruins, royal palaces, sacred temples, and
+                                    impressive stone sculptures.
+                                    The advanced irrigation systems and vast reservoirs built during the reign of King
+                                    Parakramabahu the Great
+                                    highlight the architectural brilliance and agricultural prosperity of this historic
+                                    city.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Polonnaruwa Ancient City, Gal Vihara, Royal Palace, Parakrama Samudra</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Ancient city exploration, heritage cycling tours, temple visits, cultural
+                                            photography</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 5</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/Bentota-Beach.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">CULTURAL POINT / AREA 05</span>
+                                <h2>Kandy</h2>
+                                <p class="description">Nestled amidst the central hills, Kandy is the last royal capital
+                                    of ancient Sri Lanka and
+                                    remains one of the country’s most important cultural and religious cities.
+                                    Recognized as a UNESCO World
+                                    Heritage Site, Kandy is home to sacred temples, royal heritage, and traditional
+                                    arts. Surrounded by misty
+                                    mountains, lush greenery, and a scenic lake, the city offers a unique blend of
+                                    history, spirituality, and
+                                    natural beauty that continues to captivate visitors.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Temple of the Sacred Tooth Relic, Kandy Lake, Royal Palace, International
+                                            Buddhist Museum</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Cultural temple visits, traditional Kandyan dance performances, heritage
+                                            sightseeing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 6</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/colombo.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">CITY POINT / AREA 06</span>
+                                <h2>Hatton</h2>
+                                <p class="description">Hatton is located in Sri Lanka’s central highlands and is best
+                                    known for its scenic tea
+                                    plantations and colonial-era heritage. This region plays a vital role in Sri Lanka’s
+                                    tea industry and offers
+                                    visitors insight into traditional tea cultivation, estate life, and hill-country
+                                    culture. Surrounded by misty
+                                    mountains and lush greenery, Hatton also serves as a gateway to sacred pilgrimage
+                                    routes and historic estates.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Tea Plantations, Tea Factories, Adam’s Peak Access Route, Hill Country
+                                            Estates</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Tea estate tours, cultural village experiences, scenic walks, heritage
+                                            sightseeing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 7</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/airport.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">CITY POINT / AREA 07</span>
+                                <h2>Yala</h2>
+                                <p class="description">Yala is not only renowned for its rich wildlife but also holds
+                                    deep historical and cultural
+                                    significance within Sri Lanka’s ancient civilization. The region is home to several
+                                    ancient Buddhist temples,
+                                    monastic ruins, and archaeological sites that reflect early settlement patterns and
+                                    religious practices.
+                                    Cultural exploration around Yala offers insight into ancient kingdoms, traditional
+                                    beliefs, and the harmony
+                                    between nature and heritage preserved over centuries.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Sithulpawwa Ancient Temple, Magul Maha Viharaya, Yala Archaeological Sites
+                                        </p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Ancient temple visits, cultural heritage exploration, historical site tours,
+                                            nature-based heritage walks</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 8</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/airport.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">CITY POINT / AREA 08</span>
+                                <h2>Galle</h2>
+                                <p class="description">Galle is a historic coastal city renowned for its rich colonial
+                                    heritage and well-preserved
+                                    architecture. The city is home to the iconic Galle Fort, a UNESCO World Heritage
+                                    Site built by the Portuguese
+                                    and later fortified by the Dutch. Walking through its cobblestone streets reveals
+                                    ancient churches, museums,
+                                    colonial-era buildings, and traditional local life, offering visitors a deep
+                                    cultural and historical
+                                    experience shaped by centuries of maritime trade and foreign influence.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Galle Fort (UNESCO World Heritage Site), Dutch Reformed Church, Galle
+                                            Lighthouse, Maritime Museum</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Heritage walking tours, colonial architecture exploration, cultural
+                                            sightseeing, local crafts shopping</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Final Point</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/beach-honeymoon-tour/airport.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">FINAL POINT</span>
+                                <h2>Galle → Airport</h2>
+                                <p class="description">Enjoy a relaxed morning before your transfer to the airport,
+                                    taking with you unforgettable
+                                    memories of Sri Lanka’s ancient heritage, sacred temples, rich traditions, and
+                                    timeless cultural experiences.</p>
+
+                                <!-- <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Temple of the Sacred Tooth Relic</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Best Buy</h3>
+                                        <p>Cultural dance performance, visit to Pinnawala Elephant Orphanage</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="map-section">
+            <div class="trip-map-section">
+                <div class="map-content">
+                    <div class="text-content-wrapper">
+                        <div class="text-content-modern">
+                            <div class="heading-container">
+                                <div class="accent-line"></div>
+                                <h2>Discover Your Western Coast Honeymoon Route</h2>
+                            </div>
+
+                            <p class="intro-text">
+                                Carefully designed for couples, this Western Coast route blends golden beaches, cultural
+                                landmarks, and scenic coastal drives—creating the perfect start to your honeymoon in Sri
+                                Lanka.
+                            </p>
+
+                            <div class="highlight-box">
+                                <!-- <div class="icon-wrapper">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                    </svg>
+                                </div> -->
+                                <p class="highlight-text">
+                                    Tap a destination on the map to uncover romantic experiences, hidden gems, and
+                                    hand-picked
+                                    honeymoon resorts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-wrapper">
+                        <img src="./img/slmap.png" alt="Sri Lanka Relief Map" class="map-image">
+
+                        <svg class="map-svg-overlay" viewBox="0 0 100 134" xmlns="http://www.w3.org/2000/svg">
+                            <polygon class="route-line"
+                                points="21,91 20,88 38,55 48,73 58,63 45,82 43,92 76,113 30,127 21,91" />
+
+                            <g class="location-marker" data-location="anuradhapura">
+                                <circle class="location-dot" cx="38" cy="55" r="1.3" />
+                                <text class="location-label" x="40" y="56">Anuradhapura</text>
+                            </g>
+
+                            <g class="location-marker" data-location="negombo">
+                                <circle class="location-dot" cx="20" cy="88" r="1.3" />
+                                <text class="location-label" x="23" y="88">Negombo</text>
+                            </g>
+
+                            <g class="location-marker city" data-location="airport">
+                                <circle class="location-dot" cx="21" cy="91" r="1.3" />
+                                <text class="location-label" x="24" y="92">Airport</text>
+                            </g>
+
+                            <g class="location-marker city" data-location="kandy">
+                                <circle class="location-dot" cx="45" cy="82" r="1.3" />
+                                <text class="location-label" x="47" y="83">Kandy</text>
+                            </g>
+
+                            <g class="location-marker" data-location="polonnaruwa">
+                                <circle class="location-dot" cx="58" cy="63" r="1.3" />
+                                <text class="location-label" x="60" y="64">Polonnaruwa</text>
+                            </g>
+
+                            <g class="location-marker" data-location="galle">
+                                <circle class="location-dot" cx="30" cy="127" r="1.3" />
+                                <text class="location-label" x="34" y="126">Galle</text>
+                            </g>
+
+                            <g class="location-marker city" data-location="dambulla">
+                                <circle class="location-dot" cx="48" cy="73" r="1.3" />
+                                <text class="location-label" x="51" y="74">Dambulla</text>
+                            </g>
+                            <g class="location-marker city" data-location="yala">
+                                <circle class="location-dot" cx="76" cy="113" r="1.3" />
+                                <text class="location-label" x="77" y="114">Yala</text>
+                            </g>
+                            <g class="location-marker city" data-location="hatton">
+                                <circle class="location-dot" cx="43" cy="92" r="1.3" />
+                                <text class="location-label" x="45" y="93">Hatton</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modern-overlay" id="popupOverlay">
+                <div class="capsule-window">
+                    <button class="close-circle" id="popupClose">✕</button>
+                    <div class="capsule-header" id="popupHeader">
+                        <img id="popupImg" src="" alt="" class="capsule-img">
+                    </div>
+                    <div class="capsule-body">
+                        <span class="category-tag" id="popupTag">Destination</span>
+                        <h2 class="capsule-title" id="popupName">Destination</h2>
+                        <p class="capsule-desc" id="popupDesc"></p>
+
+                        <button class="capsule-btn" id="popupLink">View destination</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="tour-gallery-section">
+            <div class="tour-gallery-container">
+
+                <!-- Section Header -->
+                <div class="tour-gallery-section-header">
+                    <h2>Cultural Highlights & Heritage Experiences</h2>
+                    <p>A glimpse into Sri Lanka’s history, traditions, and timeless cultural landmarks.</p>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="tour-gallery-gallery-grid">
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/thumbs/culture/Ancient-Kingdoms-Ruins.webp" alt="Beach Honeymoon Sri Lanka">
+                        <div class="tour-gallery-overlay">Ancient Kingdoms & Ruins</div>
+                    </div>
+
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/thumbs/culture/Sacred-Temples-Shrines.webp" alt="Luxury Honeymoon Resort">
+                        <div class="tour-gallery-overlay">Sacred Temples & Shrines</div>
+                    </div>
+
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/thumbs/culture/UNESCO-Heritage-Sites.webp" alt="Sunset Sri Lanka Beach">
+                        <div class="tour-gallery-overlay">UNESCO Heritage Sites</div>
+                    </div>
+
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/thumbs/culture/Authentic-Local-Traditions.webp"
+                            alt="Couple Experiences Sri Lanka">
+                        <div class="tour-gallery-overlay">Authentic Local Traditions</div>
+                    </div>
+                </div>
+
+                <!-- Inclusions / Exclusions -->
+                <div class="tour-gallery-tour-details">
+
+                    <div class="tour-gallery-details-box included">
+                        <h3>What’s Included</h3>
+                        <ul>
+                            <li>Hand-picked Heritage & Boutique Hotels</li>
+                            <li>Private A/C Luxury Vehicle</li>
+                            <li>Daily Breakfast at Hotels</li>
+                            <li>Service of an English-Speaking Chauffeur Guide</li>
+                            <li>Airport Pickup & Drop-off</li>
+                            <li>All Government Taxes</li>
+                        </ul>
+                    </div>
+
+                    <div class="tour-gallery-details-box excluded">
+                        <h3>What’s Not Included</h3>
+                        <ul>
+                            <li>International Airfare & Visa Fees (ETA)</li>
+                            <li>Entrance Fees to Heritage Sites</li>
+                            <li>Video/Camera Permits at Sites</li>
+                            <li>Lunch, Dinner & Beverages</li>
+                            <li>Tips & Gratuities</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- QandA Section -->
+        <!-- <div class="decoration decoration-1"></div>
+        <div class="decoration decoration-2"></div> -->
+
+        <section class="faq-section">
+            <div class="faq-header">
+                <div class="faq-badge">FAQ</div>
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <p class="faq-subtitle">
+                    Everything you need to know about your beachside honeymoon experience
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the dress code for visiting temples?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Modesty is key. Both men and women must cover their shoulders and knees. Hats and shoes must
+                            be removed before entering temple grounds. We recommend wearing white or light-colored
+                            clothing.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How much walking is involved in this tour?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            There is a moderate amount of walking, especially at Polonnaruwa and Anuradhapura. Climbing
+                            Sigiriya Rock requires physical effort (approx. 1,200 steps), but the view is worth it!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are entrance fees included in the package?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Standard packages exclude entrance fees to allow flexibility, but we can easily include them
+                            in your final quote upon request.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I customize the itinerary?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! Whether you want to add a wildlife safari, spend more time in Kandy, or relax on
+                            the beach, we can tailor the tour to your preferences.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is this a private tour?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, all our cultural tours are 100% private. You will have your own private vehicle and
+                            chauffeur guide for the entire duration of the trip.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End main -->
+
+    <footer class="revealed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Need help?</h3>
+                    <a href="tel://004542344599" id="phone">+94 77 315 71 71</a>
+                    <a href="mailto:help@citytours.com" id="email_footer">info@redelephanttravel.com</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Distination</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Discover</h3>
+                    <ul>
+                        <li><a href="#">Cultural Trangle</a></li>
+                        <li><a href="#">Hill Country</a></li>
+                        <li><a href="#">Sun and Sand</a></li>
+                        <li><a href="#">Wild Life</a></li>
+                        <li><a href="#">Heritage</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h3>Address</h3>
+                    <ul>
+                        <li><a href="#">50/5 Rajamahavihara Road,</a></li>
+                        <li><a href="#">Mirihana</a></li>
+                        <li><a href="#">Kotte.</a></li>
+                    </ul>
+                </div>
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="social_footer">
+                        <ul>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-google"></i></a></li>
+                            <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                            <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                        </ul>
+                        <p>© RedElephant 2024 by GAMBA</p>
+                    </div>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+    </footer>
+
+
+
+    <!-- Common scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+
+    <!-- Specific scripts -->
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="layerslider/js/greensock.js"></script>
+    <script src="layerslider/js/layerslider.transitions.js"></script>
+    <script src="layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            'use strict';
+            $('#layerslider').layerSlider({
+                autoStart: true,
+                responsive: true,
+                responsiveUnder: 1280,
+                layersContainer: 1170,
+                skinsPath: 'layerslider/skins/'
+            });
+        });
+        document.getElementById('inquireBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log("Inquiry request sent.");
+        });
+
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.main-title, .description-text');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                if (position < window.innerHeight - 100) {
+                    el.style.opacity = "1";
+                    el.style.transform = "translateY(0)";
+                }
+            });
+        });
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            const question = item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+
+                faqItems.forEach(i => {
+                    i.classList.remove("active");
+                });
+
+                if (!isActive) {
+                    item.classList.add("active");
+                }
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script>
+        const destinations = {
+            negombo: {
+                name: 'Negombo',
+                type: 'Cultural Coastal Welcome',
+                img: 'img/negembo-destination/Negombo_Lagoon_natural_harbour.webp',
+                isBeach: false,
+                description: 'A lively coastal town near the airport where local markets, lagoon life, and colonial-era influences offer a gentle cultural start to your Sri Lanka journey.',
+                url: './negombo-sri-lanka.html'
+            },
+
+            anuradhapura: {
+                name: 'Anuradhapura',
+                type: 'Sacred Ancient Capital',
+                img: "img/anuradhapura/anuradhapura-top-banner-1.webp",
+                isBeach: false,
+                description: 'One of Sri Lanka’s great ancient capitals, renowned for sacred Buddhist sites, towering stupas, ancient reservoirs, and centuries of rich heritage and pilgrimage traditions.',
+                url: './anuradhapura.html'
+            },
+
+            dambulla: {
+                name: 'Dambulla',
+                type: 'Cave Temple Heritage',
+                img: "img/dambulla/dambulla-sri-lanka-top-banner.webp",
+                isBeach: false,
+                description: 'Home to the famous Golden Cave Temple complex, featuring remarkable Buddha statues and centuries-old murals—an iconic cultural highlight in Sri Lanka’s Cultural Triangle.',
+                url: './dambulla-sri-lanka.html'
+            },
+
+            polonnaruwa: {
+                name: 'Polonnaruwa',
+                type: 'Royal City of Ruins',
+                img: "img/pollonnaruwa/gal-viharaya-polonnaruwa-gallery-7.webp",
+                isBeach: false,
+                description: 'A beautifully preserved medieval capital with ancient palaces, stone temples, and impressive carvings—ideal for exploring Sri Lanka’s royal history and archaeological wonders.',
+                url: './polonnaruwa.html'
+            },
+
+            kandy: {
+                name: 'Kandy',
+                type: 'Hill Capital & Sacred Temple',
+                img: "img/kandy/kandy-gallery-1.webp",
+                isBeach: false,
+                description: 'A scenic hill city and cultural heart of Sri Lanka, home to the Temple of the Sacred Tooth Relic, traditional arts, and a peaceful lakeside atmosphere.',
+                url: './kandy-sri-lanka.html'
+            },
+
+            hatton: {
+                name: 'Hatton',
+                type: 'Tea Country & Heritage Trails',
+                img: "img/hatton/hatton-1.webp",
+                isBeach: false,
+                description: 'A gateway to Sri Lanka’s tea country, where colonial-era plantations, misty hills, and estate traditions create a calm cultural escape with breathtaking views.',
+                url: './hatton-sri-lanka.html'
+            },
+
+            yala: {
+                name: 'Yala',
+                type: 'Wildlife & Nature Heritage',
+                img: "img/wild-life-sri-lanka-home-1.webp",
+                isBeach: false,
+                description: 'A world-famous national park offering a unique blend of nature and heritage—home to Sri Lanka’s iconic wildlife, ancient forest landscapes, and unforgettable safari experiences.',
+                url: './yala-national-park-sri-lanka.html'
+            },
+
+            galle: {
+                name: 'Galle',
+                type: 'UNESCO Coastal Heritage Fort',
+                img: "img/galle/galle-top-banner.webp",
+                isBeach: false,
+                description: 'A UNESCO-listed fort city with cobblestone streets, colonial architecture, museums, and ocean views—perfect for cultural walks, sunsets, and artisan shopping.',
+                url: './galle-sri-lanka.html'
+            },
+
+            airport: {
+                name: 'Colombo Airport',
+                type: 'International Arrival Point',
+                img: "img/beach-honeymoon-tour/airport.webp",
+                isBeach: false,
+                description: 'Bandaranaike International Airport — your entry point to Sri Lanka, where your cultural discovery journey begins with smooth connections to the island’s heritage sites.',
+                url: ''
+            }
+        };
+
+
+
+        const markers = document.querySelectorAll('.location-marker');
+        const overlay = document.getElementById('popupOverlay');
+        const viewBtn = document.getElementById('popupLink');
+
+        markers.forEach(marker => {
+            marker.addEventListener('click', () => {
+                const data = destinations[marker.dataset.location];
+                document.getElementById('popupImg').src = data.img;
+                document.getElementById('popupTag').textContent = data.type;
+                document.getElementById('popupName').textContent = data.name;
+                document.getElementById('popupDesc').textContent = data.description;
+
+                selectedUrl = data.url || null;
+
+                viewBtn.disabled = !selectedUrl;
+                viewBtn.style.opacity = selectedUrl ? '1' : '0.6';
+                viewBtn.style.cursor = selectedUrl ? 'pointer' : 'not-allowed';
+                overlay.classList.add('active');
+            });
+        });
+
+        viewBtn.addEventListener('click', () => {
+            if (selectedUrl) window.location.href = selectedUrl;
+        });
+
+        document.getElementById('popupClose').addEventListener('click', () => overlay.classList.remove('active'));
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('active'); });
+    </script>
+
+
+</body>
+
+</html>

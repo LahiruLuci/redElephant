@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
+    <meta name="author" content="Ansonika">
+    <title>Red Elephant Travels | Sri Lanka </title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- COMMON CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link href="layerslider/css/layerslider.css" rel="stylesheet">
+
+    <style>
+        /* Styling for the overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            display: none;
+            /* Hide the overlay by default */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Styling for the popup */
+        .popup {
+            background-color: black;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            /* Shadow effect */
+            position: relative;
+        }
+
+        /* Close button styling */
+        .close-btn {
+            position: absolute;
+            top: -5px;
+            right: -30px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Styling for the play icon */
+        .icon-play {
+            width: 48px;
+            /* Adjust the width as needed */
+            height: 48px;
+            /* Adjust the height as needed */
+            cursor: pointer;
+            animation: pulse 1s infinite alternate;
+            /* Add animation */
+        }
+
+        /* Animation for the icon */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        .text-content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .text-content-modern {
+            position: relative;
+        }
+
+        .heading-container {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #e63946, #E31C25);
+            border-radius: 2px;
+            margin-bottom: 16px;
+            animation: expandLine 0.8s ease-out;
+        }
+
+        @keyframes expandLine {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+
+            to {
+                width: 60px;
+                opacity: 1;
+            }
+        }
+
+        .text-content-modern h2 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            color: #1a1a2e;
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666666;
+            margin: 0 0 32px 0;
+            font-weight: 400;
+        }
+
+        .highlight-box {
+            position: relative;
+            background: linear-gradient(135deg, rgba(227, 28, 37, 0.03) 0%, rgba(230, 57, 70, 0.05) 100%);
+            border-left: 4px solid #e63946;
+            padding: 28px 28px 28px 70px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(230, 57, 70, 0.12);
+            border-left-width: 5px;
+        }
+
+        .icon-wrapper {
+            position: absolute;
+            left: 24px;
+            top: 28px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #e63946, #E31C25);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+        }
+
+        .highlight-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #1a1a2e;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .text-content-wrapper {
+                padding: 40px 16px;
+            }
+
+            .highlight-box {
+                padding: 24px 20px 24px 60px;
+            }
+
+            .icon-wrapper {
+                left: 16px;
+                top: 24px;
+                width: 28px;
+                height: 28px;
+            }
+
+            .icon-wrapper svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .intro-text {
+                font-size: 16px;
+            }
+
+            .highlight-text {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .highlight-box {
+                padding: 20px 16px;
+                padding-top: 56px;
+            }
+
+            .icon-wrapper {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="beach-honeymoon-package-page">
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <!-- Header================================================== -->
+    <header>
+        <div id="top_line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
+                </div><!-- End row -->
+            </div><!-- End container-->
+        </div><!-- End top line-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                        <h1><a href="#" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+                    </div>
+                </div>
+                <nav class="col-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
+                            mobile</span></a>
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <img src="img/logo-red-elephant.png" width="160" height="34" alt="Red Elephant sri lanka">
+                        </div>
+                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="index.html" class="show-submenu">Home</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="about.html" class="show-submenu">About Us</a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Tours <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="#">By Theme</a></li>
+                                    <li><a href="#">By Length</a></li>
+                                    <li class="third-level">
+
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <!-- <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Hotels <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a href="#">By City</a></li>
+                                    <li><a href="#">By Type</a></li>
+                                    <li><a href="#">By Chain</a></li>
+                                </ul>
+                            </li> -->
+
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu">Destinations <i
+                                        class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
+                                        <ul>
+                                            <li><a href="anuradhapura.html">Anuradhapura</a></li>
+                                            <li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
+                                            <li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+                                            <li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+                                            <li><a href="kandy-sri-lanka.html">Kandy </a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="hill-country.html">Hill Country</a>
+
+                                        <ul>
+                                            <li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+                                            <li><a href="ella-sri-lanka.html">Ella</a></li>
+                                            <li><a href="hatton-sri-lanka.html">Haton</a></li>
+                                            <li><a href="badulla-sri-lanka.html">Badulla</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
+
+
+                                        <ul>
+                                            <li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+                                            <li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+                                            <li><a href="ahungalla-beach.html">Ahungalla</a></li>
+                                            <li><a href="bentota-beach.html">Bentota</a></li>
+                                            <li><a href="galle-sri-lanka.html">Galle</a></li>
+                                            <li><a href="negombo-sri-lanka.html">Negambo</a></li>
+                                            <li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+                                            <li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+                                            <li><a href="koggala-sri-lanka.html">Koggala</a></li>
+                                            <li><a href="pasikuda-beach.html">Pasikuda</a></li>
+                                            <li><a href="unawatuna-beach.html">Unawatuna</a></li>
+                                            <li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+                                            <li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+                                            <li><a href="weligama-beach.html">Weligama</a></li>
+                                            <li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+                                        </ul>
+
+
+
+
+                                    </li>
+                                    <li class="third-level"><a href="wild-life.html">Wildlife</a>
+
+                                        <ul>
+                                            <li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+                                            <li><a href="udawalawe-national-park.html">Udawalawe Natinal Park</a></li>
+                                            <li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+                                            <li><a href="bundala-national-park.html">Bundala National Park</a></li>
+                                            <li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a>
+                                            </li>
+                                            <li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National
+                                                    Park</a></li>
+                                            <li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a>
+                                            </li>
+                                            <li><a href="habarana-sri-lanka.html">Habarana</a></li>
+                                            <li><a href="wilpattu-national-park-sri-lanka.html">Wilpththu</a></li>
+                                            <li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+                                            <li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+                                            <li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
+                                        <ul>
+                                            <li><a href="#">Galle Fort</a></li>
+                                            <li><a href="#">Anuradhapura</a></li>
+                                            <li><a href="#">Jaffna</a></li>
+                                            <li><a href="#">Dambulla</a></li>
+                                            <li><a href="#">Polonnaruwa</a></li>
+                                            <li><a href="#">Kandy</a></li>
+                                            <li><a href="#">Sigiriya</a></li>
+                                            <li><a href="#">Colombo</a></li>
+                                            <li><a href="#">Chilaw</a></li>
+                                            <li><a href="#">Sinharaja</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+                                    <li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
+
+                                        <ul>
+                                            <li><a href="#">Colombo Seaport</a></li>
+                                            <li><a href="#">Hambantota Seaport</a></li>
+                                            <li><a href="#">B. Airport</a></li>
+                                            <li><a href="#">R. Airport</a></li>
+                                            <li><a href="#">M.R Airport</a></li>
+                                            <li><a href="#">Aaffna Airport</a></li>
+                                            <li><a href="#">Batticaloa Airport</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="#" class="show-submenu">Wellness <i class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="#" class="show-submenu">Weddings & Events <i
+                                        class="icon-down-open-mini"></i></a>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="contact-us.html" class="show-submenu">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End main-menu -->
+                </nav>
+            </div>
+        </div><!-- container -->
+    </header><!-- End Header -->
+
+
+    <main>
+        <section class="hero beach-honeymoon-package" data-bg="img/wild-life/yala-national-park-sri-lanka-2.webp"
+            style="background-image: url('img/wild-life/yala-national-park-sri-lanka-2.webp');" id="home">
+            <div class="hero-overlay beach-honeymoon-package"></div>
+            <div class="hero-content beach-honeymoon-package">
+                <h1>Ultimate Wildlife & Birding Tour</h1>
+                <p>A journey through Sri Lanka's premier national parks, home to leopards, elephants, and a myriad of
+                    bird species.</p>
+
+            </div>
+        </section>
+
+        <section>
+            <section class="section-wrapper">
+                <div class="modern-container">
+
+                    <div class="header-column">
+                        <span class="tag">Safari • Bird Watching</span>
+                        <p class="sub-title">Wildlife of Sri Lanka</p>
+                        <h1 class="main-title">Safari<br>Expedition</h1>
+
+                        <div class="days-indicator">
+                            <div class="red-dot"></div>
+                            <span>11 NIGHTS / 12 DAYS</span>
+                        </div>
+                    </div>
+
+                    <div class="content-column">
+                        <p class="greeting-text">Welcome to the Jungle!</p>
+                        <p class="description-text">
+                            Sri Lanka is one of the best places in Asia for seeing wildlife. On this tour, you will
+                            visit the most famous national parks, each offering a unique experience.
+                            <br><br>
+                            Spot the elusive leopard in Yala, watch elephants bathe in Udawalawe, see sloth bears in
+                            Wilpattu, and observe thousands of migratory birds in Kumana. This is the ultimate safari
+                            experience.
+                        </p>
+
+                        <a href="#" class="inquire-btn" id="inquireBtn">
+                            <span>INQUIRE NOW</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                style="position: relative; z-index: 2;">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+        <div class="section-header">
+            <h2>Explore Our National Parks</h2>
+            <p>From the dry zone of the north to the wetlands of the south, experience the diversity of Sri Lanka's
+                wildlife sanctuaries.</p>
+
+        </div>
+        <section class="itinerary-wrapper">
+
+            <div class="itinerary-header" onclick="toggleMainTimeline()">
+                <div class="header-left">
+                    <span class="badge">12 Days Journey</span>
+                    <h2>Wildlife Safari Expedition</h2>
+                </div>
+                <div class="header-right">
+                    <span id="toggle-text">View Full Route</span>
+                    <div class="arrow-icon">▼</div>
+                </div>
+            </div>
+            <div class="timeline-collapsible" id="timelineCollapsible">
+                <div class="timeline-container">
+                    <div class="road"></div>
+                    <div class="marker start-sign">START</div>
+                    <div class="marker finish-sign">FINISH</div>
+
+                    <div class="car" id="car">
+                        <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20,35 Q50,5 80,35 L85,165 Q50,195 15,165 Z" fill="#d97706" />
+                            <path d="M22,40 Q50,12 78,40 L82,160 Q50,185 18,160 Z" fill="#f59e0b" />
+                            <path d="M30,55 Q50,45 70,55 L68,85 Q50,75 32,85 Z" fill="#1e293b" />
+                            <path d="M35,130 Q50,125 65,130 L63,145 Q50,140 37,145 Z" fill="#1e293b" opacity="0.7" />
+                            <rect x="47" y="15" width="6" height="170" fill="white" opacity="0.2" />
+                            <path d="M25,35 Q30,30 35,35" fill="none" stroke="#fef08a" stroke-width="3" />
+                            <path d="M65,35 Q70,30 75,35" fill="none" stroke="#fef08a" stroke-width="3" />
+                        </svg>
+                    </div>
+
+                    <div class="timeline-item open">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 1</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/negembo-destination/Negombo_Lagoon_natural_harbour.webp"
+                                    alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">ARRIVAL / AREA 01</span>
+                                <h2>Negombo</h2>
+                                <p class="description">Arrive at Colombo Airport and transfer to Negombo. Relax by the
+                                    beach or take a boat tour in the lagoon.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Negombo Beach, Lagoon</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Activity</h3>
+                                        <p>Relaxation, Boat Ride</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 2-3</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/wild-life/wilpattu-national-park-sri-lanka.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">NORTH WEST / AREA 02</span>
+                                <h2>Wilpattu National Park</h2>
+                                <p class="description">Travel to Wilpattu, the land of lakes ("Willu"). It is famous for
+                                    leopards and sloth bears. Enjoy full day safaris.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Wilpattu National Park</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Activity</h3>
+                                        <p>Jeep Safari (Leopard & Sloth Bear)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 4-5</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/wild-life/minneriya-national-park.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">NORTH CENTRAL / AREA 03</span>
+                                <h2>Minneriya & Kaudulla</h2>
+                                <p class="description">Visit the Minneriya or Kaudulla National Parks to witness the
+                                    "Great Gathering" of elephants.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Minneriya Tank, Kaudulla Park</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Activity</h3>
+                                        <p>Elephant Safari</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 6-7</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/wild-life/galoya-national-park.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">EAST / AREA 04</span>
+                                <h2>Gal Oya National Park</h2>
+                                <p class="description">Experience a unique boat safari on the Senanayake Samudra
+                                    reservoir. Watch elephants swimming between islands.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Senanayake Samudra, Gal Oya</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Activity</h3>
+                                        <p>Boat Safari, Jungle Walk with Veddas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 8-9</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/wild-life/kumana-national-park.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">SOUTH EAST / AREA 05</span>
+                                <h2>Kumana National Park</h2>
+                                <p class="description">Kumana is Sri Lanka's bird watching paradise. It is also home to
+                                    leopards and elephants, but less crowded than Yala.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Kumana Villu (Bird Sanctuary)</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Activity</h3>
+                                        <p>Bird Watching, Safari</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 10-11</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/wild-life/yala-national-park-sri-lanka-top.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">SOUTH / AREA 06</span>
+                                <h2>Yala National Park</h2>
+                                <p class="description">The most famous park for leopards. Enjoy multiple game drives to
+                                    increase your chances of spotting the big cats.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Yala National Park</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Activity</h3>
+                                        <p>Game Drives (Morning/Evening)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="day-badge" onclick="toggleItem(this)">Day 12</div>
+                        <div class="timeline-content">
+                            <div class="image-section">
+                                <img src="./img/wild-life/udawalawe-national-park.webp" alt="Destination">
+                            </div>
+                            <div class="text-section">
+                                <span class="location">SOUTH / AREA 07</span>
+                                <h2>Udawalawe & Departure</h2>
+                                <p class="description">A quick morning safari in Udawalawe to see elephants one last
+                                    time before heading to the airport.</p>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <h3>Attraction</h3>
+                                        <p>Udawalawe National Park</p>
+                                    </div>
+                                    <div class="info-item">
+                                        <h3>Activity</h3>
+                                        <p>Safari, Transfer to Airport</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="map-section">
+            <div class="trip-map-section">
+                <div class="map-content">
+                    <div class="text-content-wrapper">
+                        <div class="text-content-modern">
+                            <div class="heading-container">
+                                <div class="accent-line"></div>
+                                <h2>Explore Your Wildlife Route</h2>
+                            </div>
+
+                            <p class="intro-text">
+                                This route takes you to the best wildlife spots in the country, maximizing your chances
+                                of seeing the "Big Four" of Sri Lanka.
+                            </p>
+
+                            <div class="highlight-box">
+                                <p class="highlight-text">
+                                    Tap a destination on the map to uncover details about national parks and
+                                    sanctuaries.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-wrapper">
+                        <!-- Using the same map image as it's a general relief map -->
+                        <img src="./img/slmap.png" alt="Sri Lanka Relief Map" class="map-image">
+
+                        <svg class="map-svg-overlay" viewBox="0 0 100 134" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Approximate route line for wildlife tour -->
+                            <polygon class="route-line" points="20,88 28,60 48,65 65,75 80,95 76,113 50,120 21,91" />
+
+                            <g class="location-marker" data-location="negombo">
+                                <circle class="location-dot" cx="20" cy="88" r="1.3" />
+                                <text class="location-label" x="23" y="88">Negombo</text>
+                            </g>
+
+                            <g class="location-marker" data-location="wilpattu">
+                                <circle class="location-dot" cx="28" cy="60" r="1.3" />
+                                <text class="location-label" x="31" y="60">Wilpattu</text>
+                            </g>
+
+                            <g class="location-marker" data-location="minneriya">
+                                <circle class="location-dot" cx="48" cy="65" r="1.3" />
+                                <text class="location-label" x="51" y="65">Minneriya</text>
+                            </g>
+
+                            <g class="location-marker" data-location="galoya">
+                                <circle class="location-dot" cx="65" cy="75" r="1.3" />
+                                <text class="location-label" x="68" y="75">Gal Oya</text>
+                            </g>
+
+                            <g class="location-marker" data-location="kumana">
+                                <circle class="location-dot" cx="80" cy="95" r="1.3" />
+                                <text class="location-label" x="83" y="95">Kumana</text>
+                            </g>
+
+                            <g class="location-marker" data-location="yala">
+                                <circle class="location-dot" cx="76" cy="113" r="1.3" />
+                                <text class="location-label" x="79" y="113">Yala</text>
+                            </g>
+
+                            <g class="location-marker" data-location="udawalawe">
+                                <circle class="location-dot" cx="50" cy="120" r="1.3" />
+                                <text class="location-label" x="53" y="121">Udawalawe</text>
+                            </g>
+
+                            <g class="location-marker city" data-location="airport">
+                                <circle class="location-dot" cx="21" cy="91" r="1.3" />
+                                <text class="location-label" x="24" y="92">Airport</text>
+                            </g>
+
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modern-overlay" id="popupOverlay">
+                <div class="capsule-window">
+                    <button class="close-circle" id="popupClose">✕</button>
+                    <div class="capsule-header" id="popupHeader">
+                        <img id="popupImg" src="" alt="" class="capsule-img">
+                    </div>
+                    <div class="capsule-body">
+                        <span class="category-tag" id="popupTag">Destination</span>
+                        <h2 class="capsule-title" id="popupName">Destination</h2>
+                        <p class="capsule-desc" id="popupDesc"></p>
+
+                        <button class="capsule-btn" id="popupLink">View destination</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="tour-gallery-section">
+            <div class="tour-gallery-container">
+
+                <!-- Section Header -->
+                <div class="tour-gallery-section-header">
+                    <h2>Wildlife Highlights</h2>
+                    <p>Encounter Sri Lanka's amazing biodiversity.</p>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="tour-gallery-gallery-grid">
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/wild-life/yala-national-park-sri-lanka-2.webp" alt="Leopard">
+                        <div class="tour-gallery-overlay">Leopards</div>
+                    </div>
+
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/wild-life/udawalawe-national-park-4.webp" alt="Elephant Gathering">
+                        <div class="tour-gallery-overlay">Elephants</div>
+                    </div>
+
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/wild-life/kumana-national-park.webp" alt="Birds">
+                        <div class="tour-gallery-overlay">Exotic Birds</div>
+                    </div>
+
+                    <div class="tour-gallery-gallery-item">
+                        <img src="./img/wild-life/wilpattu-national-park-sri-lanka.webp" alt="Bears">
+                        <div class="tour-gallery-overlay">Sloth Bears</div>
+                    </div>
+                </div>
+
+                <!-- Inclusions / Exclusions -->
+                <div class="tour-gallery-tour-details">
+
+                    <div class="tour-gallery-details-box included">
+                        <h3>What’s Included</h3>
+                        <ul>
+                            <li>Luxury / Eco Camping Accommodation</li>
+                            <li>Private Safari Jeep (4x4)</li>
+                            <li>Expert Tracker Services</li>
+                            <li>Park Entrance Fees</li>
+                            <li>All Meals (Breakfast, Lunch, Dinner)</li>
+                            <li>Private A/C Transport</li>
+                        </ul>
+                    </div>
+
+                    <div class="tour-gallery-details-box excluded">
+                        <h3>What’s Not Included</h3>
+                        <ul>
+                            <li>International Airfare & Visa</li>
+                            <li>Tips for Guides/Drivers</li>
+                            <li>Alcoholic Beverages</li>
+                            <li>Personal Expenses</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- QandA Section -->
+
+        <section class="faq-section">
+            <div class="faq-header">
+                <div class="faq-badge">FAQ</div>
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <p class="faq-subtitle">
+                    Tips for your wildlife adventure
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the best time to see leopards?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Early morning (6:00 AM - 9:00 AM) and late afternoon (3:00 PM - 6:00 PM) are the best times.
+                            Yala Block 1 is famous for sightings, but Wilpattu offers a more secluded experience.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is it safe to go on a safari?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, it is very safe. You will be in a sturdy 4x4 jeep with an experienced driver and often
+                            a park tracker. Do not get out of the vehicle unless permitted.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What lens should I bring for photography?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            A telephoto lens of at least 300mm to 400mm is recommended for birds and elusive animals. A
+                            wider lens is great for landscapes.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are parks open all year round?</span>
+                        <div class="faq-icon-wrapper">
+                            <span class="faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Most parks are open year-round. However, Yala Block 1 sometimes closes in September/October
+                            for drought relief. During this time, we visit other blocks or parks like Bundala.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End main -->
+
+    <footer class="revealed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Need help?</h3>
+                    <a href="tel://004542344599" id="phone">+94 77 315 71 71</a>
+                    <a href="mailto:help@citytours.com" id="email_footer">info@redelephanttravel.com</a>
+                </div>
+                <div class="col-md-3">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Distination</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Discover</h3>
+                    <ul>
+                        <li><a href="#">Cultural Trangle</a></li>
+                        <li><a href="#">Hill Country</a></li>
+                        <li><a href="#">Sun and Sand</a></li>
+                        <li><a href="#">Wild Life</a></li>
+                        <li><a href="#">Heritage</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h3>Address</h3>
+                    <ul>
+                        <li><a href="#">50/5 Rajamahavihara Road,</a></li>
+                        <li><a href="#">Mirihana</a></li>
+                        <li><a href="#">Kotte.</a></li>
+                    </ul>
+                </div>
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="social_footer">
+                        <ul>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-google"></i></a></li>
+                            <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                            <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                        </ul>
+                        <p>© RedElephant 2024 by GAMBA</p>
+                    </div>
+                </div>
+            </div><!-- End row -->
+        </div><!-- End container -->
+    </footer>
+
+
+
+    <!-- Common scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+
+    <!-- Specific scripts -->
+    <script src="js/jquery-migrate.min.js"></script>
+    <script src="layerslider/js/greensock.js"></script>
+    <script src="layerslider/js/layerslider.transitions.js"></script>
+    <script src="layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            'use strict';
+            $('#layerslider').layerSlider({
+                autoStart: true,
+                responsive: true,
+                responsiveUnder: 1280,
+                layersContainer: 1170,
+                skinsPath: 'layerslider/skins/'
+            });
+        });
+        document.getElementById('inquireBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log("Inquiry request sent.");
+        });
+
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.main-title, .description-text');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                if (position < window.innerHeight - 100) {
+                    el.style.opacity = "1";
+                    el.style.transform = "translateY(0)";
+                }
+            });
+        });
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            const question = item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+
+                faqItems.forEach(i => {
+                    i.classList.remove("active");
+                });
+
+                if (!isActive) {
+                    item.classList.add("active");
+                }
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script>
+        const destinations = {
+            negombo: {
+                name: 'Negombo',
+                type: 'Coastal Wetland',
+                img: 'img/negembo-destination/Negombo_Lagoon_natural_harbour.webp',
+                isBeach: false,
+                description: 'Start your journey.',
+                url: './negombo-sri-lanka.html'
+            },
+            wilpattu: {
+                name: 'Wilpattu',
+                type: 'Leopards & Bears',
+                img: 'img/wild-life/wilpattu-national-park-sri-lanka.webp',
+                isBeach: false,
+                description: 'Sri Lanka’s largest national park, famous for its "Willus" (Lakes) and leopards.',
+                url: './wilpattu-national-park-sri-lanka.html'
+            },
+            minneriya: {
+                name: 'Minneriya',
+                type: 'Elephant Gathering',
+                img: 'img/wild-life/minneriya-national-park.webp',
+                isBeach: false,
+                description: 'Home to the famous Elephant Gathering, where hundreds of elephants congregate.',
+                url: './minneriya-national-park.html'
+            },
+            galoya: {
+                name: 'Gal Oya',
+                type: 'Boat Safari',
+                img: "img/wild-life/galoya-national-park.webp",
+                isBeach: false,
+                description: 'The only park in Sri Lanka where you can take a boat safari to see swimming elephants.',
+                url: './gal-oya-national-park-sri-lanka.html'
+            },
+            kumana: {
+                name: 'Kumana',
+                type: 'Bird Sanctuary',
+                img: "img/wild-life/kumana-national-park.webp",
+                isBeach: false,
+                description: 'A paradise for birdwatchers, especially for seeing migratory waterfowl.',
+                url: './kumana-national-park-sri-lanka.html'
+            },
+            yala: {
+                name: 'Yala',
+                type: 'Leopards',
+                img: "img/wild-life/yala-national-park-sri-lanka-top.webp",
+                isBeach: false,
+                description: 'Famous for the highest density of leopards in the world.',
+                url: './yala-national-park-sri-lanka.html'
+            },
+            udawalawe: {
+                name: 'Udawalawe',
+                type: 'Elephants',
+                img: 'img/wild-life/udawalawe-national-park.webp',
+                isBeach: false,
+                description: 'Guaranteed elephant sightings in their natural habitat.',
+                url: './udawalawe-national-park.html'
+            },
+            airport: {
+                name: 'Colombo Airport',
+                type: 'Departure',
+                img: "img/beach-honeymoon-tour/airport.webp",
+                isBeach: false,
+                description: 'Your departure point.',
+                url: ''
+            }
+        };
+
+
+
+        const markers = document.querySelectorAll('.location-marker');
+        const overlay = document.getElementById('popupOverlay');
+        const viewBtn = document.getElementById('popupLink');
+
+        markers.forEach(marker => {
+            marker.addEventListener('click', () => {
+                const data = destinations[marker.dataset.location];
+                document.getElementById('popupImg').src = data.img;
+                document.getElementById('popupTag').textContent = data.type;
+                document.getElementById('popupName').textContent = data.name;
+                document.getElementById('popupDesc').textContent = data.description;
+
+                selectedUrl = data.url || null;
+
+                viewBtn.disabled = !selectedUrl;
+                viewBtn.style.opacity = selectedUrl ? '1' : '0.6';
+                viewBtn.style.cursor = selectedUrl ? 'pointer' : 'not-allowed';
+                overlay.classList.add('active');
+            });
+        });
+
+        viewBtn.addEventListener('click', () => {
+            if (selectedUrl) window.location.href = selectedUrl;
+        });
+
+        document.getElementById('popupClose').addEventListener('click', () => overlay.classList.remove('active'));
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('active'); });
+    </script>
+
+
+</body>
+
+</html>

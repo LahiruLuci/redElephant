@@ -1,0 +1,458 @@
+/* ==============================================
+   SPA & WELLNESS PAGE STYLES (NEW DESIGN)
+============================================== */
+:root {
+    --spa-primary: #e63946;
+    --spa-primary-dark: #c1121f;
+    --spa-dark: #121212;
+    --spa-light: #ffffff;
+    --spa-soft-gray: #F9F9F9;
+    --spa-text-gray: #666666;
+    --spa-glass: rgba(255, 255, 255, 0.85);
+    --spa-ocean-blue: #54a5d5;
+    --spa-deep-blue: #3892c6;
+}
+
+/* Base resets for spa sections */
+.spa-wrapper * {
+    box-sizing: border-box;
+}
+
+.spa-wrapper {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--spa-soft-gray);
+    color: var(--spa-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.spa-wrapper h1,
+.spa-wrapper h2,
+.spa-wrapper h3,
+.spa-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Animations */
+.spa-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.spa-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Global Elements in Spa Wrapper */
+.spa-section {
+    padding: 100px 10%;
+    position: relative;
+}
+
+.spa-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    border-left: 3px solid var(--spa-primary);
+    background: var(--spa-light);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--spa-primary);
+}
+
+.spa-Btn {
+    display: inline-block;
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.spa-btn-main {
+    background: var(--spa-primary);
+    color: var(--spa-light);
+    box-shadow: 0 10px 20px rgba(227, 28, 37, 0.2);
+}
+
+.spa-btn-main:hover {
+    transform: translateY(-5px);
+    background: var(--spa-primary-dark);
+    color: var(--spa-light);
+    box-shadow: 0 15px 30px rgba(227, 28, 37, 0.4);
+}
+
+/* 1. Hero Section */
+.spa-hero {
+    height: 90vh;
+    min-height: 600px;
+    background: linear-gradient(to right, rgba(234, 248, 248, 0.9) 30%, rgba(234, 248, 248, 0.1)),
+        url('../img/spa-and-wellness/wellness.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    margin-top: 0;
+    /* Adjust if header is fixed, but style.css usually handles padding-top on body or main */
+}
+
+.spa-hero-content {
+    max-width: 650px;
+}
+
+.spa-hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--spa-dark);
+}
+
+.spa-hero-content h1 i {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--spa-text-gray);
+}
+
+.spa-hero-content span {
+    color: var(--spa-primary);
+}
+
+.spa-hero-content p {
+    font-size: 1.2rem;
+    color: var(--spa-text-gray);
+    margin-bottom: 40px;
+}
+
+/* 2. Philosophy / Intro (Welcome to serenity) */
+.spa-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    background: var(--spa-light);
+}
+
+.spa-intro-img img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 40px 40px 0px var(--spa-ocean-blue);
+}
+
+.spa-intro-text h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+/* 3. Wellness Experiences Grid */
+.spa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.spa-exp-card {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+    transition: 0.5s;
+}
+
+.spa-exp-card:hover {
+    transform: scale(1.02);
+}
+
+.spa-exp-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.spa-exp-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(18, 18, 18, 0.9));
+    z-index: 2;
+    color: var(--spa-light);
+}
+
+.spa-exp-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--spa-primary);
+    padding-left: 15px;
+    color: #fff;
+}
+
+/* 4. Signature Treatments */
+.spa-treatments {
+    background: var(--spa-dark);
+    color: var(--spa-light);
+}
+
+.spa-t-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s;
+}
+
+.spa-t-row:hover {
+    color: var(--spa-ocean-blue);
+    padding-left: 20px;
+}
+
+.spa-t-meta {
+    text-align: right;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.spa-t-row h4 {
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+/* 5. Destinations */
+.spa-dest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.spa-dest-item {
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--spa-light);
+    text-align: center;
+}
+
+.spa-dest-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+}
+
+.spa-dest-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.spa-dest-item h3 {
+    z-index: 2;
+    font-size: 2rem;
+    color: #fff;
+    position: relative;
+}
+
+/* 6. Embrace The Calm (Parallax) */
+.spa-parallax {
+    background: url('../img/spa-and-wellness/Yoga.webp') fixed center center/cover;
+    padding: 150px 0;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.spa-parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.spa-parallax-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.spa-parallax h2 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.spa-parallax p {
+    font-size: 1.4rem;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.spa-btn-outline {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.spa-btn-outline:hover {
+    background: #fff;
+    color: var(--spa-primary);
+}
+
+
+/* 7. Transparency */
+.spa-transparency {
+    background: var(--spa-light);
+    display: flex;
+    gap: 40px;
+}
+
+.spa-box {
+    flex: 1;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+.spa-box.inc {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+.spa-box.not {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.spa-box ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.spa-box li {
+    margin-bottom: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.spa-box i {
+    margin-right: 15px;
+}
+
+/* 8. Final CTA */
+.spa-final-cta {
+    text-align: center;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)),
+        url('../img/spa-and-wellness/Luxury-Couple-Spa-Experiences.webp');
+    background-size: cover;
+    color: var(--spa-light);
+    padding: 150px 10%;
+}
+
+.spa-glass-box {
+    background: var(--spa-glass);
+    backdrop-filter: blur(15px);
+    padding: 80px;
+    border-radius: 40px;
+    color: var(--spa-dark);
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* 9. Guest Stories (Refined) */
+.spa-stories {
+    background: var(--spa-soft-gray);
+}
+
+.spa-testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.spa-story-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.spa-story-card blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.spa-story-card .author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.spa-story-card .author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.spa-story-card .author span {
+    font-weight: 700;
+    color: var(--spa-dark);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .spa-intro,
+    .spa-transparency {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    .spa-hero {
+        text-align: center;
+        justify-content: center;
+        background: linear-gradient(rgba(234, 248, 248, 0.8), rgba(234, 248, 248, 0.8)),
+            url('../img/spa-and-wellness/wellness.webp');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .spa-section {
+        padding: 60px 5%;
+    }
+}
