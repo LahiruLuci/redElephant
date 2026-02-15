@@ -202,3 +202,233 @@
         font-size: 3.5rem;
     }
 }
+
+/* --- ABOUT US PAGE (RE PREFIX) --- */
+:root {
+    --re-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --re-playfair: 'Playfair Display', serif;
+    --re-ocean-blue: #54a5d5;
+    --re-soft-gray: #F9F9F9;
+}
+
+.re-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.re-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.re-hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background: linear-gradient(to right,
+            rgba(26, 60, 90, 0.95) 0%,
+            rgba(56, 107, 140, 0.8) 40%,
+            rgba(255, 255, 255, 0) 100%),
+        url('../img/about-us.webp');
+    background-size: cover;
+    /* background-position: center; */
+    padding: 0 10%;
+}
+
+.re-hero-content {
+    max-width: 700px;
+}
+
+.re-hero-content h1 {
+    font-family: var(--re-playfair);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.re-hero-content h1 span {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.re-hero-content p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 300;
+}
+
+.re-story {
+    padding: 120px 10%;
+    background: var(--light);
+    position: relative;
+}
+
+.re-story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.re-story-img-wrap {
+    position: relative;
+}
+
+.re-story-img-wrap img {
+    width: 100%;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+}
+
+.re-story-img-wrap::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background: var(--re-ocean-blue);
+    opacity: 0.1;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.re-story-text h2 {
+    font-family: var(--re-playfair);
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--dark);
+    line-height: 1.2;
+}
+
+.re-story-text p {
+    color: var(--text-gray);
+    margin-bottom: 25px;
+}
+
+.re-pillars {
+    padding: 100px 10%;
+    background: var(--re-soft-gray);
+}
+
+.re-pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.re-pillar-card {
+    background: var(--light);
+    padding: 50px 40px;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    border-bottom: 4px solid transparent;
+}
+
+.re-pillar-card:hover {
+    transform: translateY(-15px);
+    border-bottom-color: var(--primary);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+.re-pillar-card i {
+    font-size: 2rem;
+    color: var(--re-ocean-blue);
+    margin-bottom: 25px;
+}
+
+.re-pillar-card h3 {
+    font-family: var(--re-playfair);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.re-commit {
+    padding: 120px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.re-commit-item {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-left: 2px solid #eee;
+    transition: 0.4s;
+}
+
+.re-commit-item:hover {
+    border-left-color: var(--primary);
+    background: var(--re-soft-gray);
+}
+
+.re-commit-item h4 {
+    font-family: var(--re-playfair);
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.re-cta-section {
+    padding: 140px 10%;
+    text-align: center;
+    background: var(--light);
+}
+
+.re-cta-section h2 {
+    font-family: var(--re-playfair);
+    font-size: 4rem;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.re-cta-btn {
+    display: inline-block;
+    padding: 25px 60px;
+    border: 2px solid var(--dark);
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
+
+@media (min-width: 1024px) {
+    .re-story-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .re-commit {
+        flex-direction: row;
+    }
+
+    .re-commit-item {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .re-hero {
+        justify-content: center;
+        text-align: center;
+        background-position: center;
+    }
+
+    .re-story-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .re-cta-section h2 {
+        font-size: 2.5rem;
+    }
+}
