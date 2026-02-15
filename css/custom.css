@@ -1,3 +1,204 @@
-@charset "UTF-8";
-/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
 
+:root {
+    --primary: #e63946;
+    --red-accent: #E31C25;
+    --dark: #121212;
+    --light: #ffffff;
+    --text-gray: #666666;
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --sky-blue: #caebf2;
+}
+
+/* --- UNIQUE TRUST SECTION --- */
+.unique-trust-section {
+    padding: 100px 5%;
+    background: radial-gradient(circle at 10% 10%, var(--sky-blue) 0%, #ffffff 50%, #fff5f5 100%);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- ORBIT SYSTEM --- */
+.orbit-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- CENTRAL COUNTER CORE --- */
+.central-core {
+    background: var(--dark);
+    color: var(--light);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+    border: 8px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+}
+
+.counter-box {
+    margin-bottom: 10px;
+}
+
+.counter-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    line-height: 1;
+    display: block;
+    color: var(--light);
+    /* Changed to var(--light) to match other vars, original was var(--white) which might not be defined */
+}
+
+.counter-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.core-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* --- ORBITING TRUST PILLARS --- */
+.trust-pillar {
+    position: absolute;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    padding: 20px 30px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 320px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+}
+
+.trust-pillar:hover {
+    transform: scale(1.1);
+    background: var(--light);
+    border-color: var(--red-accent);
+    z-index: 20;
+}
+
+.pillar-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--light);
+    /* Changed from var(--white) */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red-accent);
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(227, 28, 37, 0.1);
+}
+
+.pillar-info h4 {
+    font-size: 1rem;
+    color: var(--dark);
+    margin: 0;
+}
+
+.pillar-info p {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+/* --- FLOATING ANIMATION & POSITIONS --- */
+@keyframes orbitFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, -20px);
+    }
+}
+
+.p1 {
+    top: -40px;
+    left: 0;
+    animation: orbitFloat 7s infinite ease-in-out;
+}
+
+.p2 {
+    top: 20px;
+    right: 0;
+    animation: orbitFloat 8s infinite ease-in-out -1s;
+}
+
+.p3 {
+    bottom: 20px;
+    left: -30px;
+    animation: orbitFloat 9s infinite ease-in-out -2s;
+}
+
+.p4 {
+    bottom: -40px;
+    right: 20px;
+    animation: orbitFloat 6s infinite ease-in-out -3s;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .unique-trust-section {
+        height: auto;
+        padding: 100px 5%;
+    }
+
+    .orbit-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .central-core {
+        width: 300px;
+        height: 300px;
+        order: -1;
+    }
+
+    .trust-pillar {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        max-width: 400px;
+        animation: none;
+    }
+
+    .counter-number {
+        font-size: 3.5rem;
+    }
+}
