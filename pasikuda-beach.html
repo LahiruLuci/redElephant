@@ -31,6 +31,17 @@
 	<!-- CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
 
+
+	<!-- Fonts for Navigation -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;500;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Navigation CSS -->
+	<link rel="stylesheet" href="wanderlust-hero.css">
+
 </head>
 
 <body>
@@ -46,196 +57,262 @@
 	</div>
 	<!-- End Preload -->
 
-	<div class="layer"></div>
-	<!-- Mobile menu overlay mask -->
+
+
 	<!-- Header================================================== -->
-	<header>
-		<div id="top_line">
-			<div class="container">
-				<div class="row">
-					<div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
-				</div><!-- End row -->
-			</div><!-- End container-->
-		</div><!-- End top line-->
 
-		<div class="container">
-			<div class="row">
-				<div class="col-3">
-					<div id="logo_home">
-						<h1><a href="#" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+	<!-- Navigation Overlay (Mobile) -->
+	<div class="wl-mobile-nav-overlay" id="wlMobileNav">
+		<button class="wl-close-menu" id="wlCloseMenu" aria-label="Close Menu">&times;</button>
+		<div class="wl-mobile-menu-container">
+			<ul class="wl-mobile-menu-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="weddings-events.html">Weddings & Events</a></li>
+				<li class="has-submenu">
+					<button class="wl-submenu-toggle">Destinations <i class="fas fa-chevron-down"></i></button>
+					<ul class="wl-submenu">
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Cultural Triangle <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="cultural-triangle.html">Cultural Triangle Overview</a></li>
+								<li><a href="anuradhapura.html">Anuradhapura</a></li>
+								<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+								<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+								<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+								<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Hill Country <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="hill-country.html">Hill Country Overview</a></li>
+								<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+								<li><a href="ella-sri-lanka.html">Ella</a></li>
+								<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+								<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Sun and Sand <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="sun-and-sand.html">Sun and Sand Overview</a></li>
+								<li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+								<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+								<li><a href="ahungalla-beach.html">Ahungalla</a></li>
+								<li><a href="bentota-beach.html">Bentota</a></li>
+								<li><a href="galle-sri-lanka.html">Galle</a></li>
+								<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+								<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+								<li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+								<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+								<li><a href="pasikuda-beach.html">Pasikuda</a></li>
+								<li><a href="unawatuna-beach.html">Unawatuna</a></li>
+								<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+								<li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+								<li><a href="weligama-beach.html">Weligama</a></li>
+								<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Wildlife <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="wild-life.html">Wildlife Overview</a></li>
+								<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+								<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+								<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+								<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+								<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+								<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+								<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+								<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+								<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+								<li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+								<li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+								<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Culture and Heritage <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="culture-and-heritage.html">Culture Overview</a></li>
+								<li><a href="#">Galle Fort</a></li>
+								<li><a href="#">Anuradhapura</a></li>
+								<li><a href="#">Jaffna</a></li>
+								<li><a href="#">Dambulla</a></li>
+								<li><a href="#">Polonnaruwa</a></li>
+								<li><a href="#">Kandy</a></li>
+								<li><a href="#">Sigiriya</a></li>
+								<li><a href="#">Colombo</a></li>
+								<li><a href="#">Chilaw</a></li>
+								<li><a href="#">Sinharaja</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Air/Sea Ports <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="air-sea-ports.html">Overview</a></li>
+								<li><a href="#">Colombo Seaport</a></li>
+								<li><a href="#">Hambantota Seaport</a></li>
+								<li><a href="#">B. Airport</a></li>
+								<li><a href="#">R. Airport</a></li>
+								<li><a href="#">M.R Airport</a></li>
+								<li><a href="#">Jaffna Airport</a></li>
+								<li><a href="#">Batticaloa Airport</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="wellness-spa.html">Wellness & Spa</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="wl-main-header" id="wlMainHeader">
+		<div class="wl-header-container">
+			<!-- Mobile Toggle -->
+			<button class="wl-menu-toggle" id="wlMenuToggle" aria-label="Open Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<!-- Logo (Independent Layer) -->
+			<div class="wl-logo-wrapper">
+				<a href="index.html" class="wl-logo-content">
+					<img src="img/headder-logo.png" class="wl-logo-image" alt="Red Elephant Travel" />
+					<div class="wl-logo-text-container">
+						<span class="wl-logo-highlight">Red</span>
+						<span class="typing-text">Elephant Travel</span>
 					</div>
-				</div>
-				<nav class="col-9">
-					<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
-							mobile</span></a>
-					<div class="main-menu">
-						<div id="header_menu">
-							<img src="img/logo-red-elephant.png" width="160" height="34" alt="City tours">
+				</a>
+			</div>
+
+			<!-- Desktop Navigation (Unified) -->
+			<nav class="wl-desktop-nav">
+				<ul class="wl-nav-list ml-main-nav-list">
+					<!-- Left Group -->
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="weddings-events.html">Weddings & Events</a></li>
+
+					<!-- The Magic Spacer -->
+					<li class="wl-nav-spacer"></li>
+
+					<!-- Right Group -->
+					<li class="wl-dropdown-item wl-mega-dropdown-item">
+						<a href="#">Destinations <i class="fas fa-chevron-down"></i></a>
+						<div class="wl-mega-menu">
+							<!-- Col 1: Cultural & Hill Country -->
+							<div class="wl-mega-column">
+								<h3>Cultural Triangle</h3>
+								<ul>
+									<li><a href="cultural-triangle.html">All Cultural Sites</a></li>
+									<li><a href="anuradhapura.html">Anuradhapura</a></li>
+									<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+									<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+									<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+									<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Hill Country</h3>
+								<ul>
+									<li><a href="hill-country.html">All Hill Country</a></li>
+									<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+									<li><a href="ella-sri-lanka.html">Ella</a></li>
+									<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+									<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 2: Sun & Sand -->
+							<div class="wl-mega-column">
+								<h3>Sun and Sand</h3>
+								<ul>
+									<li><a href="sun-and-sand.html">All Beaches</a></li>
+									<li><a href="ahangama-beach-sri-lanka.html">Ahangama/Ahungalla</a></li>
+									<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+									<li><a href="bentota-beach.html">Bentota</a></li>
+									<li><a href="galle-sri-lanka.html">Galle & Unawatuna</a></li>
+									<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+									<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+									<li><a href="mirissa-sri-lanka.html">Mirissa/Weligama</a></li>
+									<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+									<li><a href="pasikuda-beach.html">Pasikuda/Trinco</a></li>
+									<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+									<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 3: Wildlife -->
+							<div class="wl-mega-column">
+								<h3>Wildlife</h3>
+								<ul>
+									<li><a href="wild-life.html">All Parks</a></li>
+									<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+									<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+									<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+									<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+									<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+									<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+									<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+									<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+									<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+									<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 4: Culture & Ports -->
+							<div class="wl-mega-column">
+								<h3>Culture & Heritage</h3>
+								<ul>
+									<li><a href="culture-and-heritage.html">All Heritage</a></li>
+									<li><a href="#">Galle Fort</a></li>
+									<li><a href="#">Anuradhapura</a></li>
+									<li><a href="#">Jaffna</a></li>
+									<li><a href="#">Colombo</a></li>
+									<li><a href="#">Chilaw</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Air/Sea Ports</h3>
+								<ul>
+									<li><a href="air-sea-ports.html">All Ports</a></li>
+									<li><a href="#">Colombo/Hambantota Seaport</a></li>
+									<li><a href="#">B. / R. / M.R Airport</a></li>
+									<li><a href="#">Jaffna / Batticaloa Airport</a></li>
+								</ul>
+							</div>
 						</div>
-						<a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
-						<ul>
-							<li class="submenu">
-								<a href="index.html" class="show-submenu">Home</a>
-							</li>
+					</li>
 
-							<li class="submenu">
-								<a href="about.html" class="show-submenu">About Us</a>
-
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Tours <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By Theme</a></li>
-									<li><a href="#">By Length</a></li>
-									<li class="third-level">
-
-									</li>
-
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Hotels <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By City</a></li>
-									<li><a href="#">By Type</a></li>
-									<li><a href="#">By Chain</a></li>
-								</ul>
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Destinations <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
-										<ul>
-											<li><a href="anuradhapura.html">Anuradhapura</a></li>
-											<li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
-											<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
-											<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
-											<li><a href="kandy-sri-lanka.html">Kandy </a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="hill-country.html">Hill Country</a>
-
-										<ul>
-											<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
-											<li><a href="ella-sri-lanka.html">Ella</a></li>
-											<li><a href="hatton-sri-lanka.html">Haton</a></li>
-											<li><a href="badulla-sri-lanka.html">Badulla</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
+					<li><a href="wellness-spa.html">Wellness</a></li>
+					<li><a href="contact-us.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
 
 
-										<ul>
-											<li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
-											<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
-											<li><a href="ahungalla-beach.html">Ahungalla</a></li>
-											<li><a href="bentota-beach.html">Bentota</a></li>
-											<li><a href="galle-sri-lanka.html">Galle</a></li>
-											<li><a href="negombo-sri-lanka.html">Negambo</a></li>
-											<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
-											<li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
-											<li><a href="koggala-sri-lanka.html">Koggala</a></li>
-											<li><a href="pasikuda-beach.html">Pasikuda</a></li>
-											<li><a href="unawatuna-beach.html">Unawatuna</a></li>
-											<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
-											<li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
-											<li><a href="weligama-beach.html">Weligama</a></li>
-											<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
-										</ul>
-
-
-
-
-									</li>
-									<li class="third-level"><a href="wild-life.html">Wildlife</a>
-
-										<ul>
-											<li><a href="#">Yala National Park</a></li>
-											<li><a href="#">Udawalawe Natinal Park</a></li>
-											<li><a href="#">Minneriya National Park</a></li>
-											<li><a href="#">Bundala National Park</a></li>
-											<li><a href="#">Kumana National Park</a></li>
-											<li><a href="#">Kaudulla National Park</a></li>
-											<li><a href="#">Galoya National Park</a></li>
-											<li><a href="#">Habarana</a></li>
-											<li><a href="#">Wilpththu</a></li>
-											<li><a href="#">Pinnawala</a></li>
-											<li><a href="#">Wasgamuwa National Park</a></li>
-											<li><a href="#">Sinharaja Forest</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
-										<ul>
-											<li><a href="#">Galle Fort</a></li>
-											<li><a href="#">Anuradhapura</a></li>
-											<li><a href="#">Jaffna</a></li>
-											<li><a href="#">Dambulla</a></li>
-											<li><a href="#">Polonnaruwa</a></li>
-											<li><a href="#">Kandy</a></li>
-											<li><a href="#">Sigiriya</a></li>
-											<li><a href="#">Colombo</a></li>
-											<li><a href="#">Chilaw</a></li>
-											<li><a href="#">Sinharaja</a></li>
-										</ul>
-									</li>
-
-
-
-									<li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
-
-										<ul>
-											<li><a href="#">Colombo Seaport</a></li>
-											<li><a href="#">Hambantota Seaport</a></li>
-											<li><a href="#">B. Airport</a></li>
-											<li><a href="#">R. Airport</a></li>
-											<li><a href="#">M.R Airport</a></li>
-											<li><a href="#">Aaffna Airport</a></li>
-											<li><a href="#">Batticaloa Airport</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="submenu">
-                                <a href="#" class="show-submenu">Wellness <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="#" class="show-submenu">Weddings & Events <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-					<!-- End main-menu -->
-				</nav>
-			</div>
-		</div><!-- container -->
-	</header><!-- End Header -->
-
-
-	<section class="parallax-window" data-parallax="scroll" data-image-src="img/sunandsand/pasikuda-top-banner.webp"
+	<section class="dest-hero" id="home" data-parallax="scroll" data-image-src="img/sunandsand/pasikuda-top-banner.webp"
 		data-natural-width="1400" data-natural-height="470">
-		<div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
-			<div class="animated fadeInDown">
-				<h1>Pasikuda Beach, Sri lanka</h1>
-				<p> Discover Blissful Serenity at Pasikuda Beach, Where Tranquility Meets Tropical Paradise</p>
-			</div>
+		<div class="dest-hero-bg"></div>
+		<div class="dest-hero-content">
+			<h1>Pasikuda Beach</h1>
+			<p class="dest-hero-subtitle">Where Tranquility Meets Tropical Paradise</p>
+		</div>
+		<div class="dest-scroll-indicator">
+			<svg viewBox="0 0 24 24" fill="none">
+				<path d="M12 5v14M12 19l-7-7M12 19l7-7" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
 		</div>
 	</section>
-	<!-- End section -->
-	<!-- End Section -->
 
 	<main>
 		<div id="position">
@@ -251,253 +328,163 @@
 		</div>
 		<!-- End Position -->
 
-		<div class="container margin_60">
-
-
-
-
-
-			<p style="text-align: justify; font-size: 15px"><strong style="font-weight: 700">Certainly! Pasikuda Beach
-					is a renowned coastal destination situated on the eastern coast of Sri Lanka, known for its pristine
-					white sands, crystal-clear turquoise waters, and tranquil ambiance. Here's a comprehensive overview
-					of Pasikuda Beach:</strong>
-				<br>
-				<strong style="font-weight: 700">Location:</strong>
-				Pasikuda Beach is located in the Batticaloa District of the Eastern Province of Sri Lanka, approximately
-				35 kilometers northwest of the city of Batticaloa. It occupies a strategic position along the Bay of
-				Bengal, offering stunning views of the Indian Ocean.
-				<br><br>
-				<strong style="font-weight: 700">Geography:</strong>
-				<br>Pasikuda Beach boasts a crescent-shaped coastline adorned with powdery white sands and shallow
-				waters, making it ideal for swimming, sunbathing, and water sports. The beach is fringed by lush palm
-				trees and coconut groves, adding to its tropical charm.
-				<br><br>
-				<strong style="font-weight: 700">Attractions:</strong>
-				<br><strong style="font-weight: 700">1. Beach Activities:</strong> Pasikuda Beach offers a wide range of
-				activities for visitors to enjoy, including swimming, snorkeling, scuba diving, and kayaking. The calm
-				and shallow waters make it perfect for families with children and novice swimmers.
-				<br><br>
-				<strong style="font-weight: 700">2. Water Sports:</strong> Adventure enthusiasts can indulge in a
-				variety of water sports such as windsurfing, jet skiing, banana boat rides, and kite surfing. The steady
-				breeze and clear waters create ideal conditions for adrenaline-pumping activities.
-				<br><br>
-				<strong style="font-weight: 700">3. Diving and Snorkeling:</strong> Explore the vibrant underwater world
-				of Pasikuda through diving and snorkeling excursions. The coral reefs teem with colorful marine life,
-				including tropical fish, sea turtles, and vibrant corals, offering unforgettable underwater experiences.
-				<br><br>
-				<strong style="font-weight: 700">4. Historical Sites:</strong> Nearby attractions include the historic
-				city of Batticaloa, known for its Dutch Fort, ancient temples, and vibrant cultural heritage. Visitors
-				can explore colonial-era architecture, bustling markets, and traditional fishing villages in the area.
-				<br><br>
-				<strong style="font-weight: 700">Accommodation:</strong>
-				<br>Pasikuda Beach offers a range of accommodation options to suit every traveler's preferences, from
-				luxury beach resorts and boutique hotels to cozy guesthouses and beachfront villas. Visitors can enjoy
-				comfortable stays amidst the natural beauty of Pasikuda, with many accommodations offering stunning
-				ocean views and modern amenities.
-				<br><br>
-				<strong style="font-weight: 700">Dining:</strong>
-				<br>Savor the flavors of Sri Lankan cuisine and fresh seafood at beachfront restaurants, cafes, and
-				eateries lining Pasikuda Beach. From traditional rice and curry to grilled seafood delicacies, the
-				culinary scene reflects the region's coastal bounty and cultural diversity.
-				<br><br>
-				<strong style="font-weight: 700">Nearby Attractions:</strong>
-				<br><strong style="font-weight: 700">1. Kalkudah Beach: </strong>Visit the neighboring Kalkudah Beach,
-				known for its tranquil atmosphere, shallow waters, and picturesque setting. Enjoy leisurely walks along
-				the shoreline or indulge in water sports activities.
-				<br><br>
-				<strong style="font-weight: 700">2. Batticaloa Lagoon:</strong> Explore the scenic Batticaloa Lagoon, a
-				sprawling estuarine lagoon surrounded by mangrove forests and dotted with small islands. Take boat
-				rides, birdwatching tours, or explore historic sites along the lagoon's shores.
-				<br><br>
-				<strong style="font-weight: 700">Conclusion:</strong>
-				<br>In conclusion, Pasikuda Beach offers a perfect blend of natural beauty, adventure, and relaxation,
-				making it an ideal destination for travelers seeking sun, sea, and sand on the eastern coast of Sri
-				Lanka. Whether you're lounging on the beach, exploring underwater wonders, or immersing yourself in
-				local culture, Pasikuda promises an unforgettable beach getaway for visitors of all ages.
-
-
-
-
-			</p>
-			<hr>
-
-
-
-
-
-			<div id="Img_carousel" class="slider-pro">
-				<div class="sp-slides">
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-1.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-1.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-1.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-1.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-1.webp">
+		<section class="dest-intro" id="about">
+			<div class="dest-intro-grid">
+				<div class="dest-intro-text dest-reveal">
+					<div class="main_title">
+						<h2>A Slice of <span>Paradise</span></h2>
 					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-2.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-2.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-2.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-2.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-2.webp">
+					<p>
+						Pasikuda Beach, located in the Batticaloa District of Sri Lanka's Eastern Province, is famed
+						for its pristine white sands and one of the longest shallow reef coastlines in the world.
+						This unique geography allows visitors to walk kilometers into the ocean with the water level
+						barely reaching their knees.
+					</p>
+					<p>
+						Approximately 35 kilometers from Batticaloa city, Pasikuda is a haven for those seeking blissful
+						serenity. Fringed by lush coconut groves and dotted with luxury resorts, it offers the perfect
+						blend of relaxation and aquatic adventure along the sparkling Bay of Bengal.
+					</p>
+					<div class="dest-intro-stats">
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">28°C</div>
+							<div class="dest-stat-label">Avg Temp</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">300</div>
+							<div class="dest-stat-label">KM from Colombo</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">Shallow</div>
+							<div class="dest-stat-label">Reef Coast</div>
+						</div>
 					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-3.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-3.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-3.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-3.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-3.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-4.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-4.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-4.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-4.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-4.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-5.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-5.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-5.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-5.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-5.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-6.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-6.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-6.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-6.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-6.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-7.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-7.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-7.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-7.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-7.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-8.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-8.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-8.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-8.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-8.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-9.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-9.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-9.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-9.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-9.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-10.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-10.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-10.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-10.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-10.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-11.webp"
-							data-small="img/sunandsand/pasikuda-beach-sri-lanka-gallery-11.webp"
-							data-medium="img/sunandsand/pasikuda-beach-sri-lanka-gallery-11.webp"
-							data-large="img/sunandsand/pasikuda-beach-sri-lanka-gallery-11.webp"
-							data-retina="img/sunandsand/pasikuda-beach-sri-lanka-gallery-11.webp">
-					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				</div>
-				<div class="sp-thumbnails">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-1.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-2.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-3.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-4.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-5.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-6.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-7.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-8.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-9.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-10.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-11.webp">
-
-
-
-
+				<div class="dest-intro-image dest-reveal">
+					<img src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-1.webp" alt="Pasikuda Beach">
 				</div>
 			</div>
+		</section>
 
-
-
-
-
-
-
-			<!-- End row -->
-		</div>
-		<!-- End container -->
-
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6 nopadding features-intro-img">
-					<div class="featurpasikuda-bg">
-						<div class="features-img"></div>
+		<section class="dest-attractions" id="attractions">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPLORE</div>
+				<div class="main_title">
+					<h2>Coastal <span>Wonders</span></h2>
+				</div>
+			</div>
+			<div class="dest-attractions-grid">
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">01</div>
+						<img src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-2.webp" alt="The Golden Bay">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>The Bay</h3>
+						<p>
+							The calm, turquoise waters of Pasikuda Bay are protected by a coral reef, making it one of
+							the
+							safest places for swimming and snorkeling in Sri Lanka.
+						</p>
 					</div>
 				</div>
-				<div class="col-lg-6 nopadding">
-					<div class="features-content">
-						<h3>"Accommodation Pasikuda Beach"</h3>
-						<p>Experience unparalleled beachfront luxury and comfort at Pasikuda Beach with a diverse range
-							of accommodation options, from exquisite resorts to cozy guesthouses, ensuring a memorable
-							stay amidst the breathtaking beauty of Sri Lanka's eastern coast</p>
-						<p><a href="#" class=" btn_1 white">Read more</a>
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">02</div>
+						<img src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-3.webp" alt="Coconut Cultural Park">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Coconut Cultural Park</h3>
+						<p>
+							located nearby, this park offers a glimpse into the coconut industry, a vital part of the
+							region's economy and culture.
+						</p>
+					</div>
+				</div>
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">03</div>
+						<img src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-4.webp" alt="Batticaloa Lagoon">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Batticaloa Lagoon</h3>
+						<p>
+							Explore the scenic Batticaloa Lagoon nearby, a vast estuarine system home to diverse
+							birdlife
+							and the famous "Singing Fish" legend.
+						</p>
+					</div>
+				</div>
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">04</div>
+						<img src="img/sunandsand/pasikuda-beach-sri-lanka-gallery-5.webp" alt="Kalkudah Beach">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Kalkudah Beach</h3>
+						<p>
+							Ideally located adjacent to Pasikuda, Kalkudah offers a more secluded and untouched beach
+							experience for those seeking absolute privacy.
 						</p>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- End container-fluid  -->
+		</section>
+
+		<section class="dest-activities" id="activities">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPERIENCE</div>
+				<div class="main_title">
+					<h2>Sun & <span>Sea</span></h2>
+				</div>
+			</div>
+			<div class="dest-activities-flex">
+				<div class="dest-activities-list">
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-swimming"></div>
+						<div class="dest-activity-text">
+							<h4>Water Sports</h4>
+							<p>
+								From jet skiing and windsurfing to banana boat rides, Pasikuda is a playground for
+								water sports enthusiasts thanks to its calm waters.
+							</p>
+						</div>
+					</div>
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-scuba"></div>
+						<div class="dest-activity-text">
+							<h4>Diving & Snorkeling</h4>
+							<p>
+								Discover the vibrant marine life beneath the surface. The outer reef offers excellent
+								diving spots, including the famous HMS Hermes shipwreck.
+							</p>
+						</div>
+					</div>
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-cycling"></div>
+						<div class="dest-activity-text">
+							<h4>Cycling Tours</h4>
+							<p>
+								Rent a bicycle and explore the local fishing villages and palmyrah groves to experience
+								the authentic lifestyle of the eastern coast.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="dest-activities-sidebar">
+					<div class="dest-sidebar-card reveal">
+						<h3>Plan Your Visit</h3>
+						<p>
+							The best time to visit the East Coast is from May to September when the sea is calmest.
+							Don't miss the sunrise over the ocean.
+						</p>
+						<a href="#" class="cta-button">Book Your Stay</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<div class="container margin_60">
-
-
 			<hr>
 			<div class="row">
 				<div class="col-lg-3 col-md-6 text-center">
@@ -561,7 +548,7 @@
 				<div class="col-md-3">
 					<h3>Discover</h3>
 					<ul>
-						<li><a href="#">Cultural Trangle</a></li>
+						<li><a href="#">Cultural Triangle</a></li>
 						<li><a href="#">Hill Country</a></li>
 						<li><a href="#">Sun and Sand</a></li>
 						<li><a href="#">Wild Life</a></li>
@@ -623,6 +610,10 @@
 			});
 		});
 	</script>
+
+
+	<!-- Navigation JS -->
+	<script src="wanderlust-hero.js" defer></script>
 
 </body>
 

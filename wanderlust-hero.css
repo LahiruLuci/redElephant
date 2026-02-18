@@ -209,7 +209,8 @@
         gap: 5px;
     }
 
-    .wl-nav-list>li>a:hover {
+    .wl-nav-list>li>a:hover,
+    .wl-nav-list>li>a.active {
         color: var(--wl-light-red);
     }
 
@@ -378,7 +379,8 @@
     transition: 0.3s;
 }
 
-.wl-mega-column ul a:hover {
+.wl-mega-column ul a:hover,
+.wl-mega-column ul a.active {
     color: white;
     padding-left: 5px;
 }
@@ -465,7 +467,9 @@
 }
 
 .wl-mobile-menu-links a:hover,
-.wl-submenu-toggle:hover {
+.wl-mobile-menu-links a.active,
+.wl-submenu-toggle:hover,
+.wl-submenu-toggle.active {
     color: var(--wl-light-red);
     padding-left: 0.5rem;
 }
@@ -642,6 +646,7 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .wl-btn-primary {

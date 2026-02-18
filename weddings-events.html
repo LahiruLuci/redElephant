@@ -93,7 +93,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519225468359-4058d927cbd4?q=80&w=2072&auto=format&fit=crop');
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('./img/wedding-hero-section.webp');
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -287,6 +287,10 @@
             min-width: 300px;
         }
 
+        .event-page-venue-overlay h3 {
+            color: white;
+        }
+
         .event-page-contact-form {
             flex: 1.5;
             padding: 20px;
@@ -335,6 +339,17 @@
             }
         }
     </style>
+
+    <!-- Fonts for Navigation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Navigation CSS -->
+    <link rel="stylesheet" href="wanderlust-hero.css">
+
 </head>
 
 <body>
@@ -350,187 +365,255 @@
     </div>
     <!-- End Preload -->
 
-    <div class="layer"></div>
-    <!-- Mobile menu overlay mask -->
+
+
 
     <!-- Header================================================== -->
-    <header>
-        <div id="top_line">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
-                </div><!-- End row -->
-            </div><!-- End container-->
-        </div><!-- End top line-->
 
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <div id="logo_home">
-                        <h1><a href="index.html" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+    <!-- Navigation Overlay (Mobile) -->
+    <div class="wl-mobile-nav-overlay" id="wlMobileNav">
+        <button class="wl-close-menu" id="wlCloseMenu" aria-label="Close Menu">&times;</button>
+        <div class="wl-mobile-menu-container">
+            <ul class="wl-mobile-menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="weddings-events.html">Weddings & Events</a></li>
+                <li class="has-submenu">
+                    <button class="wl-submenu-toggle">Destinations <i class="fas fa-chevron-down"></i></button>
+                    <ul class="wl-submenu">
+                        <li class="has-nested-submenu">
+                            <button class="wl-submenu-toggle wl-nested-toggle">Cultural Triangle <i
+                                    class="fas fa-chevron-down"></i></button>
+                            <ul class="wl-nested-submenu">
+                                <li><a href="cultural-triangle.html">Cultural Triangle Overview</a></li>
+                                <li><a href="anuradhapura.html">Anuradhapura</a></li>
+                                <li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+                                <li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+                                <li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+                                <li><a href="kandy-sri-lanka.html">Kandy</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-nested-submenu">
+                            <button class="wl-submenu-toggle wl-nested-toggle">Hill Country <i
+                                    class="fas fa-chevron-down"></i></button>
+                            <ul class="wl-nested-submenu">
+                                <li><a href="hill-country.html">Hill Country Overview</a></li>
+                                <li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+                                <li><a href="ella-sri-lanka.html">Ella</a></li>
+                                <li><a href="hatton-sri-lanka.html">Hatton</a></li>
+                                <li><a href="badulla-sri-lanka.html">Badulla</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-nested-submenu">
+                            <button class="wl-submenu-toggle wl-nested-toggle">Sun and Sand <i
+                                    class="fas fa-chevron-down"></i></button>
+                            <ul class="wl-nested-submenu">
+                                <li><a href="sun-and-sand.html">Sun and Sand Overview</a></li>
+                                <li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+                                <li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+                                <li><a href="ahungalla-beach.html">Ahungalla</a></li>
+                                <li><a href="bentota-beach.html">Bentota</a></li>
+                                <li><a href="galle-sri-lanka.html">Galle</a></li>
+                                <li><a href="negombo-sri-lanka.html">Negambo</a></li>
+                                <li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+                                <li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+                                <li><a href="koggala-sri-lanka.html">Koggala</a></li>
+                                <li><a href="pasikuda-beach.html">Pasikuda</a></li>
+                                <li><a href="unawatuna-beach.html">Unawatuna</a></li>
+                                <li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+                                <li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+                                <li><a href="weligama-beach.html">Weligama</a></li>
+                                <li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-nested-submenu">
+                            <button class="wl-submenu-toggle wl-nested-toggle">Wildlife <i
+                                    class="fas fa-chevron-down"></i></button>
+                            <ul class="wl-nested-submenu">
+                                <li><a href="wild-life.html">Wildlife Overview</a></li>
+                                <li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+                                <li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+                                <li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+                                <li><a href="bundala-national-park.html">Bundala National Park</a></li>
+                                <li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+                                <li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+                                <li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+                                <li><a href="habarana-sri-lanka.html">Habarana</a></li>
+                                <li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+                                <li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+                                <li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+                                <li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-nested-submenu">
+                            <button class="wl-submenu-toggle wl-nested-toggle">Culture and Heritage <i
+                                    class="fas fa-chevron-down"></i></button>
+                            <ul class="wl-nested-submenu">
+                                <li><a href="culture-and-heritage.html">Culture Overview</a></li>
+                                <li><a href="#">Galle Fort</a></li>
+                                <li><a href="#">Anuradhapura</a></li>
+                                <li><a href="#">Jaffna</a></li>
+                                <li><a href="#">Dambulla</a></li>
+                                <li><a href="#">Polonnaruwa</a></li>
+                                <li><a href="#">Kandy</a></li>
+                                <li><a href="#">Sigiriya</a></li>
+                                <li><a href="#">Colombo</a></li>
+                                <li><a href="#">Chilaw</a></li>
+                                <li><a href="#">Sinharaja</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-nested-submenu">
+                            <button class="wl-submenu-toggle wl-nested-toggle">Air/Sea Ports <i
+                                    class="fas fa-chevron-down"></i></button>
+                            <ul class="wl-nested-submenu">
+                                <li><a href="air-sea-ports.html">Overview</a></li>
+                                <li><a href="#">Colombo Seaport</a></li>
+                                <li><a href="#">Hambantota Seaport</a></li>
+                                <li><a href="#">B. Airport</a></li>
+                                <li><a href="#">R. Airport</a></li>
+                                <li><a href="#">M.R Airport</a></li>
+                                <li><a href="#">Jaffna Airport</a></li>
+                                <li><a href="#">Batticaloa Airport</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="wellness-spa.html">Wellness & Spa</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="wl-main-header" id="wlMainHeader">
+        <div class="wl-header-container">
+            <!-- Mobile Toggle -->
+            <button class="wl-menu-toggle" id="wlMenuToggle" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Logo (Independent Layer) -->
+            <div class="wl-logo-wrapper">
+                <a href="index.html" class="wl-logo-content">
+                    <img src="img/headder-logo.png" class="wl-logo-image" alt="Red Elephant Travel" />
+                    <div class="wl-logo-text-container">
+                        <span class="wl-logo-highlight">Red</span>
+                        <span class="typing-text">Elephant Travel</span>
                     </div>
-                </div>
-                <nav class="col-9">
-                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
-                            mobile</span></a>
-                    <div class="main-menu">
-                        <div id="header_menu">
-                            <img src="img/logo-red-elephant.png" width="160" height="34" alt="Red Elephant sri lanka">
-                        </div>
-                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
-                        <ul>
-                            <li class="submenu">
-                                <a href="index.html" class="show-submenu">Home</a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="about.html" class="show-submenu">About Us</a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Tours <i
-                                        class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="#">By Theme</a></li>
-                                    <li><a href="#">By Length</a></li>
-                                    <li class="third-level">
-
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Destinations <i
-                                        class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
-                                        <ul>
-                                            <li><a href="anuradhapura.html">Anuradhapura</a></li>
-                                            <li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
-                                            <li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
-                                            <li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
-                                            <li><a href="kandy-sri-lanka.html">Kandy </a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="third-level"><a href="hill-country.html">Hill Country</a>
-
-                                        <ul>
-                                            <li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
-                                            <li><a href="ella-sri-lanka.html">Ella</a></li>
-                                            <li><a href="hatton-sri-lanka.html">Haton</a></li>
-                                            <li><a href="badulla-sri-lanka.html">Badulla</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
-
-
-                                        <ul>
-                                            <li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
-                                            <li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
-                                            <li><a href="ahungalla-beach.html">Ahungalla</a></li>
-                                            <li><a href="bentota-beach.html">Bentota</a></li>
-                                            <li><a href="galle-sri-lanka.html">Galle</a></li>
-                                            <li><a href="negombo-sri-lanka.html">Negambo</a></li>
-                                            <li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
-                                            <li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
-                                            <li><a href="koggala-sri-lanka.html">Koggala</a></li>
-                                            <li><a href="pasikuda-beach.html">Pasikuda</a></li>
-                                            <li><a href="unawatuna-beach.html">Unawatuna</a></li>
-                                            <li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
-                                            <li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
-                                            <li><a href="weligama-beach.html">Weligama</a></li>
-                                            <li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
-                                        </ul>
-
-
-
-
-                                    </li>
-                                    <li class="third-level"><a href="wild-life.html">Wildlife</a>
-
-                                        <ul>
-                                            <li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
-                                            <li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
-                                            <li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
-                                            <li><a href="bundala-national-park.html">Bundala National Park</a></li>
-                                            <li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a>
-                                            </li>
-                                            <li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National
-                                                    Park</a></li>
-                                            <li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a>
-                                            </li>
-                                            <li><a href="habarana-sri-lanka.html">Habarana</a></li>
-                                            <li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National
-                                                    Park</a></li>
-                                            <li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
-                                            <li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
-                                            <li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
-                                        <ul>
-                                            <li><a href="#">Galle Fort</a></li>
-                                            <li><a href="#">Anuradhapura</a></li>
-                                            <li><a href="#">Jaffna</a></li>
-                                            <li><a href="#">Dambulla</a></li>
-                                            <li><a href="#">Polonnaruwa</a></li>
-                                            <li><a href="#">Kandy</a></li>
-                                            <li><a href="#">Sigiriya</a></li>
-                                            <li><a href="#">Colombo</a></li>
-                                            <li><a href="#">Chilaw</a></li>
-                                            <li><a href="#">Sinharaja</a></li>
-                                        </ul>
-                                    </li>
-
-
-
-                                    <li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
-
-                                        <ul>
-                                            <li><a href="#">Colombo Seaport</a></li>
-                                            <li><a href="#">Hambantota Seaport</a></li>
-                                            <li><a href="#">B. Airport</a></li>
-                                            <li><a href="#">R. Airport</a></li>
-                                            <li><a href="#">M.R Airport</a></li>
-                                            <li><a href="#">Aaffna Airport</a></li>
-                                            <li><a href="#">Batticaloa Airport</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li class="submenu">
-                                <a href="wellness-spa.html" class="show-submenu">Wellness <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="weddings-events.html" class="show-submenu">Weddings & Events <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="contact-us.html" class="show-submenu">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End main-menu -->
-                </nav>
+                </a>
             </div>
-        </div><!-- container -->
-    </header><!-- End Header -->
+
+            <!-- Desktop Navigation (Unified) -->
+            <nav class="wl-desktop-nav">
+                <ul class="wl-nav-list ml-main-nav-list">
+                    <!-- Left Group -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="weddings-events.html">Weddings & Events</a></li>
+
+                    <!-- The Magic Spacer -->
+                    <li class="wl-nav-spacer"></li>
+
+                    <!-- Right Group -->
+                    <li class="wl-dropdown-item wl-mega-dropdown-item">
+                        <a href="#">Destinations <i class="fas fa-chevron-down"></i></a>
+                        <div class="wl-mega-menu">
+                            <!-- Col 1: Cultural & Hill Country -->
+                            <div class="wl-mega-column">
+                                <h3>Cultural Triangle</h3>
+                                <ul>
+                                    <li><a href="cultural-triangle.html">All Cultural Sites</a></li>
+                                    <li><a href="anuradhapura.html">Anuradhapura</a></li>
+                                    <li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+                                    <li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+                                    <li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+                                    <li><a href="kandy-sri-lanka.html">Kandy</a></li>
+                                </ul>
+                                <h3 style="margin-top: 20px;">Hill Country</h3>
+                                <ul>
+                                    <li><a href="hill-country.html">All Hill Country</a></li>
+                                    <li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+                                    <li><a href="ella-sri-lanka.html">Ella</a></li>
+                                    <li><a href="hatton-sri-lanka.html">Hatton</a></li>
+                                    <li><a href="badulla-sri-lanka.html">Badulla</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Col 2: Sun & Sand -->
+                            <div class="wl-mega-column">
+                                <h3>Sun and Sand</h3>
+                                <ul>
+                                    <li><a href="sun-and-sand.html">All Beaches</a></li>
+                                    <li><a href="ahangama-beach-sri-lanka.html">Ahangama/Ahungalla</a></li>
+                                    <li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+                                    <li><a href="bentota-beach.html">Bentota</a></li>
+                                    <li><a href="galle-sri-lanka.html">Galle & Unawatuna</a></li>
+                                    <li><a href="negombo-sri-lanka.html">Negambo</a></li>
+                                    <li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+                                    <li><a href="mirissa-sri-lanka.html">Mirissa/Weligama</a></li>
+                                    <li><a href="koggala-sri-lanka.html">Koggala</a></li>
+                                    <li><a href="pasikuda-beach.html">Pasikuda/Trinco</a></li>
+                                    <li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+                                    <li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Col 3: Wildlife -->
+                            <div class="wl-mega-column">
+                                <h3>Wildlife</h3>
+                                <ul>
+                                    <li><a href="wild-life.html">All Parks</a></li>
+                                    <li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+                                    <li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+                                    <li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+                                    <li><a href="bundala-national-park.html">Bundala National Park</a></li>
+                                    <li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+                                    <li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+                                    <li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+                                    <li><a href="habarana-sri-lanka.html">Habarana</a></li>
+                                    <li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+                                    <li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Col 4: Culture & Ports -->
+                            <div class="wl-mega-column">
+                                <h3>Culture & Heritage</h3>
+                                <ul>
+                                    <li><a href="culture-and-heritage.html">All Heritage</a></li>
+                                    <li><a href="#">Galle Fort</a></li>
+                                    <li><a href="#">Anuradhapura</a></li>
+                                    <li><a href="#">Jaffna</a></li>
+                                    <li><a href="#">Colombo</a></li>
+                                    <li><a href="#">Chilaw</a></li>
+                                </ul>
+                                <h3 style="margin-top: 20px;">Air/Sea Ports</h3>
+                                <ul>
+                                    <li><a href="air-sea-ports.html">All Ports</a></li>
+                                    <li><a href="#">Colombo/Hambantota Seaport</a></li>
+                                    <li><a href="#">B. / R. / M.R Airport</a></li>
+                                    <li><a href="#">Jaffna / Batticaloa Airport</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="wellness-spa.html">Wellness</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
 
     <main>
         <!-- Hero Section -->
         <section class="event-page-hero">
             <div class="event-page-hero-bg"></div>
             <div class="event-page-hero-content event-page-reveal">
-                <h1>Celebrate Love <br> & Life Details</h1>
+                <h1 style="color: var(--bg-light);">Celebrate Love <br> & Life Details</h1>
                 <p>Destination Weddings • Private Parties • Corporate Events <br> Crafted with Elegance in Sri Lanka</p>
                 <a href="#plan-event" class="event-page-btn">Start Planning</a>
             </div>
@@ -587,7 +670,8 @@
         <section class="event-page-parallax">
             <div class="container event-page-reveal">
                 <i class="icon_quote_alt" style="font-size: 50px; color: var(--event-gold);"></i>
-                <h2 style="font-size: 3rem; margin: 30px 0;">"The most beautiful day of our lives."</h2>
+                <h2 style="font-size: 3rem; margin: 30px 0; color: var(--bg-light);">"The most beautiful day of our
+                    lives."</h2>
                 <p style="font-size: 1.2rem;">- Sarah & James, Wedding at Bentota, 2024</p>
             </div>
         </section>
@@ -603,8 +687,7 @@
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <div class="event-page-venue-card event-page-reveal">
-                            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=2088&auto=format&fit=crop"
-                                alt="Beach Venue">
+                            <img src="./img/wedding-and-events/beach-weddign.webp" alt="Beach Venue">
                             <div class="event-page-venue-overlay">
                                 <h3>Golden Beaches</h3>
                                 <p>Bentota, Mirissa, Tangalle</p>
@@ -613,8 +696,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="event-page-venue-card event-page-reveal">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
-                                alt="Hill Country Venue">
+                            <img src="./img/wedding-and-events/misty-hills.webp" alt="Hill Country Venue">
                             <div class="event-page-venue-overlay">
                                 <h3>Misty Hills</h3>
                                 <p>Nuwara Eliya, Ella, Kandy</p>
@@ -623,8 +705,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="event-page-venue-card event-page-reveal">
-                            <img src="https://images.unsplash.com/photo-1590059590636-6e14704b2b63?q=80&w=1955&auto=format&fit=crop"
-                                alt="Heritage Venue">
+                            <img src="./img/wedding-and-events/weddinggg.webp" alt="Heritage Venue">
                             <div class="event-page-venue-overlay">
                                 <h3>Colonial Heritage</h3>
                                 <p>Galle Fort, Colombo</p>
@@ -730,7 +811,7 @@
                 <div class="col-md-3">
                     <h3>Discover</h3>
                     <ul>
-                        <li><a href="#">Cultural Trangle</a></li>
+                        <li><a href="#">Cultural Triangle</a></li>
                         <li><a href="#">Hill Country</a></li>
                         <li><a href="#">Sun and Sand</a></li>
                         <li><a href="#">Wild Life</a></li>
@@ -792,6 +873,10 @@
             });
         });
     </script>
+
+    <!-- Navigation JS -->
+    <script src="wanderlust-hero.js" defer></script>
+
 </body>
 
 </html>

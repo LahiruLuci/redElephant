@@ -36,6 +36,17 @@
 	<!-- CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
 
+
+	<!-- Fonts for Navigation -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;500;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Navigation CSS -->
+	<link rel="stylesheet" href="wanderlust-hero.css">
+
 </head>
 
 <body>
@@ -51,448 +62,477 @@
 	</div>
 	<!-- End Preload -->
 
-	<div class="layer"></div>
-	<!-- Mobile menu overlay mask -->
+
+
 
 	<!-- Header================================================== -->
-	<header>
-		<div id="top_line">
-			<div class="container">
-				<div class="row">
-					<div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
-				</div><!-- End row -->
-			</div><!-- End container-->
-		</div><!-- End top line-->
 
-		<div class="container">
-			<div class="row">
-				<div class="col-3">
-					<div id="logo_home">
-						<h1><a href="#" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+	<!-- Navigation Overlay (Mobile) -->
+	<div class="wl-mobile-nav-overlay" id="wlMobileNav">
+		<button class="wl-close-menu" id="wlCloseMenu" aria-label="Close Menu">&times;</button>
+		<div class="wl-mobile-menu-container">
+			<ul class="wl-mobile-menu-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="weddings-events.html">Weddings & Events</a></li>
+				<li class="has-submenu">
+					<button class="wl-submenu-toggle">Destinations <i class="fas fa-chevron-down"></i></button>
+					<ul class="wl-submenu">
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Cultural Triangle <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="cultural-triangle.html">Cultural Triangle Overview</a></li>
+								<li><a href="anuradhapura.html">Anuradhapura</a></li>
+								<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+								<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+								<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+								<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Hill Country <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="hill-country.html">Hill Country Overview</a></li>
+								<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+								<li><a href="ella-sri-lanka.html">Ella</a></li>
+								<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+								<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Sun and Sand <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="sun-and-sand.html">Sun and Sand Overview</a></li>
+								<li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+								<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+								<li><a href="ahungalla-beach.html">Ahungalla</a></li>
+								<li><a href="bentota-beach.html">Bentota</a></li>
+								<li><a href="galle-sri-lanka.html">Galle</a></li>
+								<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+								<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+								<li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+								<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+								<li><a href="pasikuda-beach.html">Pasikuda</a></li>
+								<li><a href="unawatuna-beach.html">Unawatuna</a></li>
+								<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+								<li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+								<li><a href="weligama-beach.html">Weligama</a></li>
+								<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Wildlife <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="wild-life.html">Wildlife Overview</a></li>
+								<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+								<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+								<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+								<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+								<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+								<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+								<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+								<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+								<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+								<li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+								<li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+								<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Culture and Heritage <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="culture-and-heritage.html">Culture Overview</a></li>
+								<li><a href="#">Galle Fort</a></li>
+								<li><a href="#">Anuradhapura</a></li>
+								<li><a href="#">Jaffna</a></li>
+								<li><a href="#">Dambulla</a></li>
+								<li><a href="#">Polonnaruwa</a></li>
+								<li><a href="#">Kandy</a></li>
+								<li><a href="#">Sigiriya</a></li>
+								<li><a href="#">Colombo</a></li>
+								<li><a href="#">Chilaw</a></li>
+								<li><a href="#">Sinharaja</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Air/Sea Ports <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="air-sea-ports.html">Overview</a></li>
+								<li><a href="#">Colombo Seaport</a></li>
+								<li><a href="#">Hambantota Seaport</a></li>
+								<li><a href="#">B. Airport</a></li>
+								<li><a href="#">R. Airport</a></li>
+								<li><a href="#">M.R Airport</a></li>
+								<li><a href="#">Jaffna Airport</a></li>
+								<li><a href="#">Batticaloa Airport</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="wellness-spa.html">Wellness & Spa</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="wl-main-header" id="wlMainHeader">
+		<div class="wl-header-container">
+			<!-- Mobile Toggle -->
+			<button class="wl-menu-toggle" id="wlMenuToggle" aria-label="Open Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<!-- Logo (Independent Layer) -->
+			<div class="wl-logo-wrapper">
+				<a href="index.html" class="wl-logo-content">
+					<img src="img/headder-logo.png" class="wl-logo-image" alt="Red Elephant Travel" />
+					<div class="wl-logo-text-container">
+						<span class="wl-logo-highlight">Red</span>
+						<span class="typing-text">Elephant Travel</span>
 					</div>
-				</div>
-				<nav class="col-9">
-					<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
-							mobile</span></a>
-					<div class="main-menu">
-						<div id="header_menu">
-							<img src="img/logo-red-elephant.png" width="160" height="34" alt="City tours">
+				</a>
+			</div>
+
+			<!-- Desktop Navigation (Unified) -->
+			<nav class="wl-desktop-nav">
+				<ul class="wl-nav-list ml-main-nav-list">
+					<!-- Left Group -->
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="weddings-events.html">Weddings & Events</a></li>
+
+					<!-- The Magic Spacer -->
+					<li class="wl-nav-spacer"></li>
+
+					<!-- Right Group -->
+					<li class="wl-dropdown-item wl-mega-dropdown-item">
+						<a href="#">Destinations <i class="fas fa-chevron-down"></i></a>
+						<div class="wl-mega-menu">
+							<!-- Col 1: Cultural & Hill Country -->
+							<div class="wl-mega-column">
+								<h3>Cultural Triangle</h3>
+								<ul>
+									<li><a href="cultural-triangle.html">All Cultural Sites</a></li>
+									<li><a href="anuradhapura.html">Anuradhapura</a></li>
+									<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+									<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+									<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+									<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Hill Country</h3>
+								<ul>
+									<li><a href="hill-country.html">All Hill Country</a></li>
+									<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+									<li><a href="ella-sri-lanka.html">Ella</a></li>
+									<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+									<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 2: Sun & Sand -->
+							<div class="wl-mega-column">
+								<h3>Sun and Sand</h3>
+								<ul>
+									<li><a href="sun-and-sand.html">All Beaches</a></li>
+									<li><a href="ahangama-beach-sri-lanka.html">Ahangama/Ahungalla</a></li>
+									<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+									<li><a href="bentota-beach.html">Bentota</a></li>
+									<li><a href="galle-sri-lanka.html">Galle & Unawatuna</a></li>
+									<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+									<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+									<li><a href="mirissa-sri-lanka.html">Mirissa/Weligama</a></li>
+									<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+									<li><a href="pasikuda-beach.html">Pasikuda/Trinco</a></li>
+									<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+									<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 3: Wildlife -->
+							<div class="wl-mega-column">
+								<h3>Wildlife</h3>
+								<ul>
+									<li><a href="wild-life.html">All Parks</a></li>
+									<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+									<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+									<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+									<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+									<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+									<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+									<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+									<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+									<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+									<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 4: Culture & Ports -->
+							<div class="wl-mega-column">
+								<h3>Culture & Heritage</h3>
+								<ul>
+									<li><a href="culture-and-heritage.html">All Heritage</a></li>
+									<li><a href="#">Galle Fort</a></li>
+									<li><a href="#">Anuradhapura</a></li>
+									<li><a href="#">Jaffna</a></li>
+									<li><a href="#">Colombo</a></li>
+									<li><a href="#">Chilaw</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Air/Sea Ports</h3>
+								<ul>
+									<li><a href="air-sea-ports.html">All Ports</a></li>
+									<li><a href="#">Colombo/Hambantota Seaport</a></li>
+									<li><a href="#">B. / R. / M.R Airport</a></li>
+									<li><a href="#">Jaffna / Batticaloa Airport</a></li>
+								</ul>
+							</div>
 						</div>
-						<a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
-						<ul>
-							<li class="submenu">
-								<a href="index.html" class="show-submenu">Home</a>
-							</li>
+					</li>
 
-							<li class="submenu">
-								<a href="about.html" class="show-submenu">About Us</a>
+					<li><a href="wellness-spa.html">Wellness</a></li>
+					<li><a href="contact-us.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
 
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Tours <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By Theme</a></li>
-									<li><a href="#">By Length</a></li>
-									<li class="third-level">
-
-									</li>
-
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Hotels <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By City</a></li>
-									<li><a href="#">By Type</a></li>
-									<li><a href="#">By Chain</a></li>
-								</ul>
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Destinations <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li class="third-level"><a href="javascript:void(0);">Cultural Trangle </a>
-										<ul>
-											<li><a href="#">Anuradhapura</a></li>
-											<li><a href="#">Pollonnaruwa</a></li>
-											<li><a href="#">Dambulla</a></li>
-											<li><a href="#">Sigiriya</a></li>
-											<li><a href="#">Kandy </a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="javascript:void(0);">Hill Country</a>
-
-										<ul>
-											<li><a href="#">Nuwara Eliya</a></li>
-											<li><a href="#">Ella</a></li>
-											<li><a href="#">Haton</a></li>
-											<li><a href="#">Badulla</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="javascript:void(0);">Sun and Sand</a>
-
-
-										<ul>
-											<li><a href="#">Ahangama</a></li>
-											<li><a href="#">Arugam Bay</a></li>
-											<li><a href="#">Ahungalla</a></li>
-											<li><a href="#">Bentota</a></li>
-											<li><a href="#">Galle</a></li>
-											<li><a href="#">Negambo</a></li>
-											<li><a href="#">Kalpitiya</a></li>
-											<li><a href="#">Mirissa</a></li>
-											<li><a href="#">Koggala</a></li>
-											<li><a href="#">Pasikuda</a></li>
-											<li><a href="#">Unawatuna</a></li>
-											<li><a href="#">Hikkaduwa</a></li>
-											<li><a href="#">Trincomalee</a></li>
-											<li><a href="#">Weligama</a></li>
-											<li><a href="#">Hiriketiya</a></li>
-										</ul>
-
-
-
-
-									</li>
-									<li class="third-level"><a href="javascript:void(0);">Wildlife</a>
-
-										<ul>
-											<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
-											<li><a href="udawalawe-national-park.html">Udawalawe Natinal Park</a></li>
-											<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
-											<li><a href="bundala-national-park.html">Bundala National Park</a></li>
-											<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a>
-											</li>
-											<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National
-													Park</a></li>
-											<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a>
-											</li>
-											<li><a href="habarana-sri-lanka.html">Habarana</a></li>
-											<li><a href="wilpattu-national-park-sri-lanka.html">Wilpththu</a></li>
-											<li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
-											<li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
-											<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="javascript:void(0);">Culture and Heritage</a>
-										<ul>
-											<li><a href="#">Galle Fort</a></li>
-											<li><a href="#">Anuradhapura</a></li>
-											<li><a href="#">Jaffna</a></li>
-											<li><a href="#">Dambulla</a></li>
-											<li><a href="#">Polonnaruwa</a></li>
-											<li><a href="#">Kandy</a></li>
-											<li><a href="#">Sigiriya</a></li>
-											<li><a href="#">Colombo</a></li>
-											<li><a href="#">Chilaw</a></li>
-											<li><a href="#">Sinharaja</a></li>
-										</ul>
-									</li>
-
-
-
-									<li class="third-level"><a href="javascript:void(0);">Air/Sea Ports</a>
-
-										<ul>
-											<li><a href="#">Colombo Seaport</a></li>
-											<li><a href="#">Hambantota Seaport</a></li>
-											<li><a href="#">B. Airport</a></li>
-											<li><a href="#">R. Airport</a></li>
-											<li><a href="#">M.R Airport</a></li>
-											<li><a href="#">Aaffna Airport</a></li>
-											<li><a href="#">Batticaloa Airport</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="submenu">
-                                <a href="#" class="show-submenu">Wellness <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="#" class="show-submenu">Weddings & Events <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-					<!-- End main-menu -->
-				</nav>
-			</div>
-		</div><!-- container -->
-	</header><!-- End Header -->
-
-	<section class="parallax-window" data-parallax="scroll"
-		data-image-src="img/dambulla/dambulla-sri-lanka-top-banner.webp" data-natural-width="1400"
+	<section class="dest-hero" id="home" data-parallax="scroll"
+		data-image-src="img/dambulla/habarana-village-sri-lanka-gallery-2.webp" data-natural-width="1400"
 		data-natural-height="470">
-		<div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
-			<div class="animated fadeInDown">
-				<h1>Habarana</h1>
-				<p>Where Adventure Meets Serenity</p>
-			</div>
+		<div class="dest-hero-bg"></div>
+		<div class="dest-hero-content">
+			<h1>Habarana, Sri Lanka</h1>
+			<p class="dest-hero-subtitle">The Crossroads of Culture and Wilderness</p>
+		</div>
+		<div class="dest-scroll-indicator">
+			<svg viewBox="0 0 24 24" fill="none">
+				<path d="M12 5v14M12 19l-7-7M12 19l7-7" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
 		</div>
 	</section>
-	<!-- End section -->
 
 	<main>
 		<div id="position">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a>
-					</li>
-					<li><a href="anuradhapura.html">Dambulla</a>
-					</li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="wild-life.html">Wildlife</a></li>
 					<li>Habarana</li>
 				</ul>
 			</div>
 		</div>
-		<!-- End position -->
+
+		<section class="dest-intro" id="about">
+			<div class="dest-intro-grid">
+				<div class="dest-intro-text dest-reveal">
+					<div class="main_title">
+						<h2>A <span>Strategic</span> Sanctuary</h2>
+					</div>
+					<p>Nestled in the heart of Sri Lanka's Cultural Triangle, Habarana acts as a pivotal hub connecting
+						the ancient capitals of Anuradhapura and Polonnaruwa with the majestic Sigiriya Rock Fortress.
+						It is the perfect base for travelers seeking a blend of history and nature.</p>
+					<p>Beyond its location, Habarana is a wildlife paradise. It serves as the gateway to Minneriya,
+						Kaudulla, and Hurulu Eco Park, where hundreds of wild elephants gather. The tranquil Habarana
+						Lake and lush forests offer serene escapes for birdwatchers and nature enthusiasts.</p>
+					<div class="dest-intro-stats">
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">176</div>
+							<div class="dest-stat-label">KM from Colombo</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">3</div>
+							<div class="dest-stat-label">National Parks</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">100%</div>
+							<div class="dest-stat-label">Nature</div>
+						</div>
+					</div>
+				</div>
+				<div class="dest-intro-image dest-reveal">
+					<img src="img/dambulla/habarana-village-sri-lanka-gallery-1.webp" alt="Habarana Nature">
+				</div>
+			</div>
+		</section>
+
+		<section class="dest-attractions" id="attractions">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPLORE</div>
+				<div class="main_title">
+					<h2>Key <span>Highlights</span></h2>
+				</div>
+			</div>
+			<div class="dest-attractions-grid">
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">01</div>
+						<img src="img/wild-life/minneriya-national-park-1.webp" alt="Minneriya National Park">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Minneriya National Park</h3>
+						<p>Just minutes away, witness the 'Great Gathering' of Asian elephants, one of the world's most
+							spectacular wildlife events.</p>
+					</div>
+				</div>
+
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">02</div>
+						<img src="img/dambulla/habarana-village-sri-lanka-gallery-6.webp" alt="Habarana Lake">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Habarana Lake</h3>
+						<p>A serene reservoir surrounded by forest, ideal for peaceful boat rides, birdwatching, and
+							enjoying stunning sunsets.</p>
+					</div>
+				</div>
+
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">03</div>
+						<img src="img/dambulla/habarana-village-sri-lanka-gallery-4.webp" alt="Hiriwadunna Village">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Hiriwadunna Village</h3>
+						<p>Experience authentic Sri Lankan rural life with a trek through rice paddies, a catamaran
+							ride, and traditional village food.</p>
+					</div>
+				</div>
+
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">04</div>
+						<img src="img/dambulla/habarana-village-sri-lanka-gallery-5.webp" alt="Hurulu Eco Park">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Hurulu Eco Park</h3>
+						<p>An alternative biodiversity hotspot that hosts elephant herds when they migrate from
+							Minneriya and Kaudulla.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="dest-activities" id="activities">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPERIENCE</div>
+				<div class="main_title">
+					<h2>Things <span>To</span> Do</h2>
+				</div>
+			</div>
+			<div class="dest-activities-flex">
+				<div class="dest-activities-list">
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon">🚙</div>
+						<div class="dest-activity-text">
+							<h4>Jeep Safari</h4>
+							<p>Embark on a thrilling 4x4 safari to spot elephants, deer, and diverse birdlife in the
+								nearby national parks.</p>
+						</div>
+					</div>
+
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon">🐂</div>
+						<div class="dest-activity-text">
+							<h4>Bullock Cart Ride</h4>
+							<p>Take a nostalgic ride on a traditional bullock cart through scenic village paths and
+								cultivation fields.</p>
+						</div>
+					</div>
+
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon">🧖‍♀️</div>
+						<div class="dest-activity-text">
+							<h4>Ayurveda Spa</h4>
+							<p>Relax and rejuvenate your mind and body with traditional Ayurvedic treatments and
+								massages available in Habarana.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="dest-activities-sidebar">
+					<div class="dest-sidebar-card reveal">
+						<h3>Plan Your Visit</h3>
+						<p>Habarana is a year-round destination. The best time for elephant gatherings in
+							Minneriya/Kaudulla is usually July to October.</p>
+						<a href="#" class="cta-button">Book Your Trip</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<div class="container margin_60">
-			<div class="row">
-				<aside class="col-lg-3 add_bottom_30">
-
-
-					<!-- End Search -->
-
-					<div class="widget" id="cat_blog">
-						<h4>Dambulla</h4>
-						<ul>
-							<li><a class="active" href="habarana-sri-lanka.html">Habarana</a></li>
-							<li><a href="aluvihare-temple.html">Aluvihare Temple</a></li>
-							<li><a href="knuckles-sri-lanka.html">Knuckles</a></li>
-							<li><a href="spice-garden.html">Spice Garden</a></li>
-
-
-						</ul>
+			<div id="Img_carousel" class="slider-pro">
+				<div class="sp-slides">
+					<div class="sp-slide">
+						<img alt="Image" class="sp-image" src="css/images/blank.gif"
+							data-src="img/dambulla/habarana-village-sri-lanka-gallery-1.webp">
 					</div>
-					<!-- End widget -->
-					<hr>
-
-
-
-
-					<!-- End widget -->
-					<hr>
-					<div class="widget tags">
-						<h4>Tags</h4>
-						<a href="cultural-triangle.html">Cultural Traingle</a>
-						<a href="hill-country.html">Hill Country</a>
-						<a href="sun-and-sand.html">Sun and Sand</a>
-						<a href="wild-life.html">Wilf Life</a>
-						<a href="culture-and-heritage.html">Heritage</a>
-						<a href="air-sea-ports.html">Air/Sea Ports</a>
+					<div class="sp-slide">
+						<img alt="Image" class="sp-image" src="css/images/blank.gif"
+							data-src="img/dambulla/habarana-village-sri-lanka-gallery-2.webp">
 					</div>
-					<!-- End widget -->
-					<div class="box_style_4">
-						<i class="icon_set_1_icon-90"></i>
-						<h4><span>Book</span> by phone</h4>
-						<a href="tel://+94 77 315 71 71" class="phone">+94 77 315 71 71</a>
-						<small>Monday to Friday 9.00am - 7.30pm</small>
+					<div class="sp-slide">
+						<img alt="Image" class="sp-image" src="css/images/blank.gif"
+							data-src="img/dambulla/habarana-village-sri-lanka-gallery-3.webp">
 					</div>
-
-				</aside>
-				<!-- End aside -->
-
-				<div class="col-lg-9">
-					<div class="box_style_1">
-						<div class="post nopadding">
-
-
-
-
-
-							<div id="Img_carousel" class="slider-pro">
-								<div class="sp-slides">
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-1.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-1.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-1.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-1.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-1.webp">
-									</div>
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-2.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-2.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-2.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-2.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-2.webp">
-									</div>
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-3.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-3.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-3.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-3.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-3.webp">
-									</div>
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-4.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-4.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-4.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-4.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-4.webp">
-									</div>
-
-
-
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-5.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-5.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-5.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-5.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-5.webp">
-									</div>
-
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-6.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-6.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-6.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-6.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-6.webp">
-									</div>
-
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-7.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-7.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-7.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-7.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-7.webp">
-									</div>
-
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-8.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-8.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-8.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-8.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-8.webp">
-									</div>
-
-
-									<div class="sp-slide">
-										<img alt="Image" class="sp-image" src="css/images/blank.gif"
-											data-src="img/dambulla/habarana-village-sri-lanka-gallery-9.webp"
-											data-small="img/dambulla/habarana-village-sri-lanka-gallery-9.webp"
-											data-medium="img/dambulla/habarana-village-sri-lanka-gallery-9.webp"
-											data-large="img/dambulla/habarana-village-sri-lanka-gallery-9.webp"
-											data-retina="img/dambulla/habarana-village-sri-lanka-gallery-9.webp">
-									</div>
-
-
-
-								</div>
-								<div class="sp-thumbnails">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-1.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-2.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-3.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-4.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-5.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-6.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-7.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-8.webp">
-									<img alt="Image" class="sp-thumbnail"
-										src="img/dambulla/habarana-village-sri-lanka-gallery-9.webp">
-
-								</div>
-							</div>
-
-
-
-
-
-
-
-
-
-
-
-							<h2>Welcome to Habarana: Gateway to Sri Lanka's Natural and Cultural Treasures </h2>
-							<p>
-								Nestled in the heart of Sri Lanka's famed Cultural Triangle, Habarana stands as a
-								vibrant hub offering unparalleled access to the island's rich heritage and natural
-								splendor. Situated approximately 176 kilometers northeast of Colombo and 72 kilometers
-								north of Kandy, this charming town serves as the perfect base for exploring the wonders
-								of central Sri Lanka.
-								<br><br>
-								Renowned for its strategic location at the crossroads of several major highways,
-								Habarana serves as a vital transportation hub connecting travelers to a myriad of iconic
-								destinations. From the sacred city of Anuradhapura to the majestic rock fortress of
-								Sigiriya and the ancient ruins of Polonnaruwa, Habarana provides convenient access to
-								some of Sri Lanka's most cherished UNESCO World Heritage Sites.
-								<br><br>
-								But Habarana is more than just a starting point for cultural expeditions; it is also a
-								paradise for nature lovers and adventure seekers. Surrounded by lush forests, serene
-								lakes, and abundant wildlife, the town offers a plethora of outdoor activities, from
-								exhilarating safaris in nearby national parks to tranquil boat rides on scenic
-								reservoirs.
-								<br><br>
-								One of the town's most notable attractions is the nearby Minneriya National Park,
-								renowned for its spectacular elephant gatherings during the dry season. Visitors can
-								embark on thrilling jeep safaris through the park's pristine wilderness, where
-								encounters with majestic elephants, elusive leopards, and a diverse array of birdlife
-								await.
-								<br><br>
-								For those seeking a more leisurely experience, Habarana offers opportunities for
-								cultural immersion and relaxation. Explore traditional villages, interact with friendly
-								locals, and savor authentic Sri Lankan cuisine infused with aromatic spices and bold
-								flavors.
-								<br><br>
-								After a day of exploration, unwind in one of Habarana's charming accommodations, ranging
-								from eco-lodges nestled amidst verdant landscapes to luxurious resorts offering
-								world-class amenities. Whether you're seeking adventure, cultural discovery, or simply a
-								tranquil retreat, Habarana invites you to embark on an unforgettable journey through the
-								heart of Sri Lanka's cultural and natural wonders.
-							</p>
-
-						</div>
-						<!-- end post -->
+					<div class="sp-slide">
+						<img alt="Image" class="sp-image" src="css/images/blank.gif"
+							data-src="img/dambulla/habarana-village-sri-lanka-gallery-4.webp">
 					</div>
-					<!-- end box_style_1 -->
-
-
-
-
-
+					<div class="sp-slide">
+						<img alt="Image" class="sp-image" src="css/images/blank.gif"
+							data-src="img/dambulla/habarana-village-sri-lanka-gallery-5.webp">
+					</div>
 				</div>
-				<!-- End col-md-9-->
-
+				<div class="sp-thumbnails">
+					<img alt="Image" class="sp-thumbnail" src="img/dambulla/habarana-village-sri-lanka-gallery-1.webp">
+					<img alt="Image" class="sp-thumbnail" src="img/dambulla/habarana-village-sri-lanka-gallery-2.webp">
+					<img alt="Image" class="sp-thumbnail" src="img/dambulla/habarana-village-sri-lanka-gallery-3.webp">
+					<img alt="Image" class="sp-thumbnail" src="img/dambulla/habarana-village-sri-lanka-gallery-4.webp">
+					<img alt="Image" class="sp-thumbnail" src="img/dambulla/habarana-village-sri-lanka-gallery-5.webp">
+				</div>
 			</div>
-			<!-- End row-->
+
+			<hr>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-6 text-center">
+					<p><a href="#"><img src="img/shopping-sri-lanka.webp" alt="Pic" class="img-fluid rounded"></a>
+					</p>
+					<h4><span>Shopping</span> Sri Lanka</h4>
+					<p>Experience the vibrant tapestry of Sri Lanka's markets, offering a treasure trove of unique
+						crafts, spices, and souvenirs waiting to be discovered</p>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<p><a href="#"><img src="img/transfer-booking.webp" alt="Pic" class="img-fluid rounded"></a></p>
+					<h4><span>Transfer</span> booking</h4>
+					<p>Simplify your travel arrangements with our hassle-free transfer booking service, ensuring
+						seamless journeys from arrival to departure.</p>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<p><a href="#"><img src="img/activities-sri-lanka.webp" alt="Pic" class="img-fluid rounded"></a></p>
+					<h4><span>Activities</span> Sri Lanka</h4>
+					<p>Embark on unforgettable adventures across Sri Lanka with our curated selection of activities,
+						tailored to satisfy every traveler's interests and passions.</p>
+				</div>
+				<div class="col-lg-3 col-md-6 text-center">
+					<p><a href="#"><img src="img/tours-sri-lanka.webp" alt="Pic" class="img-fluid rounded"></a></p>
+					<h4><span>Tours</span> Sri Lanka</h4>
+					<p>Embark on an enriching journey through Sri Lanka's wonders with our meticulously planned
+						tours, offering a perfect blend of culture, nature, and adventure.</p>
+				</div>
+			</div>
 		</div>
-		<!-- End container -->
 	</main>
 	<!-- End main -->
 
@@ -517,7 +557,7 @@
 				<div class="col-md-3">
 					<h3>Discover</h3>
 					<ul>
-						<li><a href="#">Cultural Trangle</a></li>
+						<li><a href="#">Cultural Triangle</a></li>
 						<li><a href="#">Hill Country</a></li>
 						<li><a href="#">Sun and Sand</a></li>
 						<li><a href="#">Wild Life</a></li>
@@ -581,6 +621,10 @@
 		});
 	</script>
 
+
+
+	<!-- Navigation JS -->
+	<script src="wanderlust-hero.js" defer></script>
 
 </body>
 

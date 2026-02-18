@@ -31,6 +31,17 @@
 	<!-- CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
 
+
+	<!-- Fonts for Navigation -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;500;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Navigation CSS -->
+	<link rel="stylesheet" href="wanderlust-hero.css">
+
 </head>
 
 <body>
@@ -46,196 +57,262 @@
 	</div>
 	<!-- End Preload -->
 
-	<div class="layer"></div>
-	<!-- Mobile menu overlay mask -->
+
+
 	<!-- Header================================================== -->
-	<header>
-		<div id="top_line">
-			<div class="container">
-				<div class="row">
-					<div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
-				</div><!-- End row -->
-			</div><!-- End container-->
-		</div><!-- End top line-->
 
-		<div class="container">
-			<div class="row">
-				<div class="col-3">
-					<div id="logo_home">
-						<h1><a href="#" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+	<!-- Navigation Overlay (Mobile) -->
+	<div class="wl-mobile-nav-overlay" id="wlMobileNav">
+		<button class="wl-close-menu" id="wlCloseMenu" aria-label="Close Menu">&times;</button>
+		<div class="wl-mobile-menu-container">
+			<ul class="wl-mobile-menu-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="weddings-events.html">Weddings & Events</a></li>
+				<li class="has-submenu">
+					<button class="wl-submenu-toggle">Destinations <i class="fas fa-chevron-down"></i></button>
+					<ul class="wl-submenu">
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Cultural Triangle <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="cultural-triangle.html">Cultural Triangle Overview</a></li>
+								<li><a href="anuradhapura.html">Anuradhapura</a></li>
+								<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+								<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+								<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+								<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Hill Country <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="hill-country.html">Hill Country Overview</a></li>
+								<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+								<li><a href="ella-sri-lanka.html">Ella</a></li>
+								<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+								<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Sun and Sand <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="sun-and-sand.html">Sun and Sand Overview</a></li>
+								<li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+								<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+								<li><a href="ahungalla-beach.html">Ahungalla</a></li>
+								<li><a href="bentota-beach.html">Bentota</a></li>
+								<li><a href="galle-sri-lanka.html">Galle</a></li>
+								<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+								<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+								<li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+								<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+								<li><a href="pasikuda-beach.html">Pasikuda</a></li>
+								<li><a href="unawatuna-beach.html">Unawatuna</a></li>
+								<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+								<li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+								<li><a href="weligama-beach.html">Weligama</a></li>
+								<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Wildlife <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="wild-life.html">Wildlife Overview</a></li>
+								<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+								<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+								<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+								<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+								<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+								<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+								<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+								<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+								<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+								<li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+								<li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+								<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Culture and Heritage <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="culture-and-heritage.html">Culture Overview</a></li>
+								<li><a href="#">Galle Fort</a></li>
+								<li><a href="#">Anuradhapura</a></li>
+								<li><a href="#">Jaffna</a></li>
+								<li><a href="#">Dambulla</a></li>
+								<li><a href="#">Polonnaruwa</a></li>
+								<li><a href="#">Kandy</a></li>
+								<li><a href="#">Sigiriya</a></li>
+								<li><a href="#">Colombo</a></li>
+								<li><a href="#">Chilaw</a></li>
+								<li><a href="#">Sinharaja</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Air/Sea Ports <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="air-sea-ports.html">Overview</a></li>
+								<li><a href="#">Colombo Seaport</a></li>
+								<li><a href="#">Hambantota Seaport</a></li>
+								<li><a href="#">B. Airport</a></li>
+								<li><a href="#">R. Airport</a></li>
+								<li><a href="#">M.R Airport</a></li>
+								<li><a href="#">Jaffna Airport</a></li>
+								<li><a href="#">Batticaloa Airport</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="wellness-spa.html">Wellness & Spa</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="wl-main-header" id="wlMainHeader">
+		<div class="wl-header-container">
+			<!-- Mobile Toggle -->
+			<button class="wl-menu-toggle" id="wlMenuToggle" aria-label="Open Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<!-- Logo (Independent Layer) -->
+			<div class="wl-logo-wrapper">
+				<a href="index.html" class="wl-logo-content">
+					<img src="img/headder-logo.png" class="wl-logo-image" alt="Red Elephant Travel" />
+					<div class="wl-logo-text-container">
+						<span class="wl-logo-highlight">Red</span>
+						<span class="typing-text">Elephant Travel</span>
 					</div>
-				</div>
-				<nav class="col-9">
-					<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
-							mobile</span></a>
-					<div class="main-menu">
-						<div id="header_menu">
-							<img src="img/logo-red-elephant.png" width="160" height="34" alt="City tours">
+				</a>
+			</div>
+
+			<!-- Desktop Navigation (Unified) -->
+			<nav class="wl-desktop-nav">
+				<ul class="wl-nav-list ml-main-nav-list">
+					<!-- Left Group -->
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="weddings-events.html">Weddings & Events</a></li>
+
+					<!-- The Magic Spacer -->
+					<li class="wl-nav-spacer"></li>
+
+					<!-- Right Group -->
+					<li class="wl-dropdown-item wl-mega-dropdown-item">
+						<a href="#">Destinations <i class="fas fa-chevron-down"></i></a>
+						<div class="wl-mega-menu">
+							<!-- Col 1: Cultural & Hill Country -->
+							<div class="wl-mega-column">
+								<h3>Cultural Triangle</h3>
+								<ul>
+									<li><a href="cultural-triangle.html">All Cultural Sites</a></li>
+									<li><a href="anuradhapura.html">Anuradhapura</a></li>
+									<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+									<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+									<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+									<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Hill Country</h3>
+								<ul>
+									<li><a href="hill-country.html">All Hill Country</a></li>
+									<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+									<li><a href="ella-sri-lanka.html">Ella</a></li>
+									<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+									<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 2: Sun & Sand -->
+							<div class="wl-mega-column">
+								<h3>Sun and Sand</h3>
+								<ul>
+									<li><a href="sun-and-sand.html">All Beaches</a></li>
+									<li><a href="ahangama-beach-sri-lanka.html">Ahangama/Ahungalla</a></li>
+									<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+									<li><a href="bentota-beach.html">Bentota</a></li>
+									<li><a href="galle-sri-lanka.html">Galle & Unawatuna</a></li>
+									<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+									<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+									<li><a href="mirissa-sri-lanka.html">Mirissa/Weligama</a></li>
+									<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+									<li><a href="pasikuda-beach.html">Pasikuda/Trinco</a></li>
+									<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+									<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 3: Wildlife -->
+							<div class="wl-mega-column">
+								<h3>Wildlife</h3>
+								<ul>
+									<li><a href="wild-life.html">All Parks</a></li>
+									<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+									<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+									<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+									<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+									<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+									<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+									<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+									<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+									<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+									<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 4: Culture & Ports -->
+							<div class="wl-mega-column">
+								<h3>Culture & Heritage</h3>
+								<ul>
+									<li><a href="culture-and-heritage.html">All Heritage</a></li>
+									<li><a href="#">Galle Fort</a></li>
+									<li><a href="#">Anuradhapura</a></li>
+									<li><a href="#">Jaffna</a></li>
+									<li><a href="#">Colombo</a></li>
+									<li><a href="#">Chilaw</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Air/Sea Ports</h3>
+								<ul>
+									<li><a href="air-sea-ports.html">All Ports</a></li>
+									<li><a href="#">Colombo/Hambantota Seaport</a></li>
+									<li><a href="#">B. / R. / M.R Airport</a></li>
+									<li><a href="#">Jaffna / Batticaloa Airport</a></li>
+								</ul>
+							</div>
 						</div>
-						<a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
-						<ul>
-							<li class="submenu">
-								<a href="index.html" class="show-submenu">Home</a>
-							</li>
+					</li>
 
-							<li class="submenu">
-								<a href="about.html" class="show-submenu">About Us</a>
-
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Tours <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By Theme</a></li>
-									<li><a href="#">By Length</a></li>
-									<li class="third-level">
-
-									</li>
-
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Hotels <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By City</a></li>
-									<li><a href="#">By Type</a></li>
-									<li><a href="#">By Chain</a></li>
-								</ul>
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Destinations <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
-										<ul>
-											<li><a href="anuradhapura.html">Anuradhapura</a></li>
-											<li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
-											<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
-											<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
-											<li><a href="kandy-sri-lanka.html">Kandy </a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="hill-country.html">Hill Country</a>
-
-										<ul>
-											<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
-											<li><a href="ella-sri-lanka.html">Ella</a></li>
-											<li><a href="hatton-sri-lanka.html">Haton</a></li>
-											<li><a href="badulla-sri-lanka.html">Badulla</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
+					<li><a href="wellness-spa.html">Wellness</a></li>
+					<li><a href="contact-us.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
 
 
-										<ul>
-											<li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
-											<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
-											<li><a href="ahungalla-beach.html">Ahungalla</a></li>
-											<li><a href="bentota-beach.html">Bentota</a></li>
-											<li><a href="galle-sri-lanka.html">Galle</a></li>
-											<li><a href="negombo-sri-lanka.html">Negambo</a></li>
-											<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
-											<li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
-											<li><a href="koggala-sri-lanka.html">Koggala</a></li>
-											<li><a href="pasikuda-beach.html">Pasikuda</a></li>
-											<li><a href="unawatuna-beach.html">Unawatuna</a></li>
-											<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
-											<li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
-											<li><a href="weligama-beach.html">Weligama</a></li>
-											<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
-										</ul>
-
-
-
-
-									</li>
-									<li class="third-level"><a href="wild-life.html">Wildlife</a>
-
-										<ul>
-											<li><a href="#">Yala National Park</a></li>
-											<li><a href="#">Udawalawe Natinal Park</a></li>
-											<li><a href="#">Minneriya National Park</a></li>
-											<li><a href="#">Bundala National Park</a></li>
-											<li><a href="#">Kumana National Park</a></li>
-											<li><a href="#">Kaudulla National Park</a></li>
-											<li><a href="#">Galoya National Park</a></li>
-											<li><a href="#">Habarana</a></li>
-											<li><a href="#">Wilpththu</a></li>
-											<li><a href="#">Pinnawala</a></li>
-											<li><a href="#">Wasgamuwa National Park</a></li>
-											<li><a href="#">Sinharaja Forest</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
-										<ul>
-											<li><a href="#">Galle Fort</a></li>
-											<li><a href="#">Anuradhapura</a></li>
-											<li><a href="#">Jaffna</a></li>
-											<li><a href="#">Dambulla</a></li>
-											<li><a href="#">Polonnaruwa</a></li>
-											<li><a href="#">Kandy</a></li>
-											<li><a href="#">Sigiriya</a></li>
-											<li><a href="#">Colombo</a></li>
-											<li><a href="#">Chilaw</a></li>
-											<li><a href="#">Sinharaja</a></li>
-										</ul>
-									</li>
-
-
-
-									<li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
-
-										<ul>
-											<li><a href="#">Colombo Seaport</a></li>
-											<li><a href="#">Hambantota Seaport</a></li>
-											<li><a href="#">B. Airport</a></li>
-											<li><a href="#">R. Airport</a></li>
-											<li><a href="#">M.R Airport</a></li>
-											<li><a href="#">Aaffna Airport</a></li>
-											<li><a href="#">Batticaloa Airport</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="submenu">
-                                <a href="#" class="show-submenu">Wellness <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="#" class="show-submenu">Weddings & Events <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-					<!-- End main-menu -->
-				</nav>
-			</div>
-		</div><!-- container -->
-	</header><!-- End Header -->
-
-
-	<section class="parallax-window" data-parallax="scroll" data-image-src="img/nuwara-eliya/ella-top-banner.webp"
+	<section class="dest-hero" id="home" data-parallax="scroll" data-image-src="img/nuwara-eliya/ella-top-banner.webp"
 		data-natural-width="1400" data-natural-height="470">
-		<div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
-			<div class="animated fadeInDown">
-				<h1>Ella</h1>
-				<p>Discover Serenity in the Heart of Sri Lanka: Ella, Where Nature's Beauty Knows No Bounds</p>
-			</div>
+		<div class="dest-hero-bg"></div>
+		<div class="dest-hero-content">
+			<h1>Ella Sri Lanka</h1>
+			<p class="dest-hero-subtitle">Mountain Bliss in the Heart of Hill Country</p>
+		</div>
+		<div class="dest-scroll-indicator">
+			<svg viewBox="0 0 24 24" fill="none">
+				<path d="M12 5v14M12 19l-7-7M12 19l7-7" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
 		</div>
 	</section>
-	<!-- End section -->
-	<!-- End Section -->
 
 	<main>
 		<div id="position">
@@ -251,261 +328,191 @@
 		</div>
 		<!-- End Position -->
 
-		<div class="container margin_60">
-
-
-
-
-
-			<p style="text-align: justify; font-size: 15px"><strong style="font-weight: 700">Exploring Ella: A Haven in
-					the Heart of Sri Lanka</strong>
-				<br>
-
-				<strong style="font-weight: 700">Location:</strong>
-				<br>Ella is a charming small town nestled amidst the verdant hills of the Badulla District in the Uva
-				Province of Sri Lanka. Situated approximately 200 kilometers east of the capital city, Colombo, Ella is
-				renowned for its breathtaking natural beauty, temperate climate, and rich cultural heritage. Perched at
-				an elevation of 1,041 meters above sea level, Ella offers visitors a refreshing escape from the hustle
-				and bustle of urban life, with its tranquil ambiance and idyllic surroundings.
-				<br><br>
-				<strong style="font-weight: 700">Natural Attractions:</strong>
-
-				<br><strong style="font-weight: 600">1.</strong> Ella Rock: Rising majestically above the town, Ella
-				Rock offers panoramic vistas of the lush greenery and scenic landscapes that characterize the region.
-				Adventurous trekkers can embark on a challenging hike to the summit, rewarded with sweeping views of tea
-				plantations, waterfalls, and distant mountain ranges.
-				<br><br>
-				<strong style="font-weight: 600">2.</strong> Ravana Falls: Cascading gracefully amidst verdant foliage,
-				Ravana Falls is a mesmerizing natural wonder located just a short distance from Ella town. Legend has it
-				that this picturesque waterfall was once associated with the mythical tale of the Ramayana, adding to
-				its allure and mystique.
-				<br><br>
-				<strong style="font-weight: 600">3.</strong> Nine Arch Bridge: A marvel of colonial-era engineering, the
-				Nine Arch Bridge is an iconic landmark that spans a lush valley near Ella. Visitors can witness the
-				timeless charm of this stone viaduct as vintage trains chug across its arches, creating a scene
-				reminiscent of a bygone era.
-				<br><br>
-				<strong style="font-weight: 600">4.</strong> Little Adam's Peak: Offering a relatively easy trek with
-				spectacular rewards, Little Adam's Peak is a popular hiking destination in Ella. As hikers ascend the
-				gently sloping trail, they are treated to breathtaking views of Ella Gap, verdant tea estates, and the
-				surrounding countryside.
-				<br><br>
-				<strong style="font-weight: 700">Cultural Highlights:</strong>
-
-				<br><strong style="font-weight: 600">1. Tea Plantations: </strong>Ella is surrounded by verdant tea
-				estates that offer a glimpse into Sri Lanka's rich tea-growing heritage. Visitors can explore tea
-				factories, learn about the tea production process, and sample a variety of freshly brewed brews amidst
-				scenic plantation settings.
-				<br><br>
-				<strong style="font-weight: 600">2. Ella Spice Garden:</strong> Delve into the vibrant flavors and
-				aromas of Sri Lankan spices with a visit to the Ella Spice Garden. Guided tours offer insight into the
-				cultivation and uses of a wide array of spices, from cinnamon and cardamom to cloves and pepper.
-				<br><br>
-				<strong style="font-weight: 700">Local Cuisine and Hospitality:</strong>
-				<br>Ella boasts a vibrant culinary scene, with numerous cafes, restaurants, and eateries serving up a
-				tantalizing array of local and international dishes. From traditional Sri Lankan rice and curry to
-				Western favorites and fusion cuisine, there's something to satisfy every palate. Visitors can also
-				experience the warmth and hospitality of the local community through homestays and guesthouses,
-				providing an authentic glimpse into Sri Lankan culture and way of life.
-				<br><br>
-				<br><strong style="font-weight: 700">Adventure and Recreation:</strong>
-				Beyond its natural and cultural attractions, Ella offers a plethora of outdoor activities and adventures
-				for adrenaline seekers. From mountain biking and zip-lining to rock climbing and waterfall rappelling,
-				the town provides ample opportunities for thrill-seekers to get their adrenaline fix amidst stunning
-				natural surroundings.
-				<br><br>
-				<strong style="font-weight: 700">Conclusion:</strong>
-				Ella epitomizes the essence of Sri Lanka's hill country, offering a harmonious blend of natural beauty,
-				cultural heritage, and outdoor adventure. Whether you're seeking serenity amidst scenic landscapes,
-				embarking on thrilling adventures, or immersing yourself in the rich tapestry of local culture, Ella
-				invites you to experience the wonders of this enchanting destination.
-				<br><br>
-				Plan your visit to Ella today and discover why it's hailed as a hidden gem in the heart of Sri Lanka's
-				hill country.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			</p>
-			<hr>
-
-
-
-
-
-			<div id="Img_carousel" class="slider-pro">
-				<div class="sp-slides">
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-1.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-1.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-1.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-1.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-1.webp">
+		<section class="dest-intro" id="about">
+			<div class="dest-intro-grid">
+				<div class="dest-intro-text dest-reveal">
+					<div class="main_title">
+						<h2>Nature's <span>Serene</span> Haven</h2>
 					</div>
 
+					<p>
+						Ella is a charming small town nestled amidst the verdant hills of the Badulla District.
+						Known for its laid-back atmosphere and breathtaking views through the "Ella Gap," it has
+						become a favorite destination for travelers seeking a mix of relaxation and adventure.
+					</p>
 
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-2.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-2.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-2.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-2.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-2.webp">
+					<p>
+						Perched at an elevation of 1,041 meters, Ella is surrounded by tea plantations, waterfalls,
+						and jungle-clad peaks. Whether you are watching the train cross the Nine Arch Bridge or
+						hiking up Little Adam's Peak for sunset, Ella offers a magical escape from the bustle of
+						everyday life.
+					</p>
+
+					<div class="dest-intro-stats">
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">1,041m</div>
+							<div class="dest-stat-label">Elevation</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">200</div>
+							<div class="dest-stat-label">KM from Colombo</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">High</div>
+							<div class="dest-stat-label">Biodiversity</div>
+						</div>
 					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-3.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-3.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-3.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-3.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-3.webp">
-					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-4.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-4.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-4.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-4.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-4.webp">
-					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-5.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-5.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-5.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-5.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-5.webp">
-					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-6.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-6.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-6.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-6.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-6.webp">
-					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-7.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-7.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-7.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-7.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-7.webp">
-					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-8.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-8.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-8.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-8.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-8.webp">
-					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-9.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-9.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-9.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-9.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-9.webp">
-					</div>
-
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/nuwara-eliya/ella-sri-lanka-gallery-10.webp"
-							data-small="img/nuwara-eliya/ella-sri-lanka-gallery-10.webp"
-							data-medium="img/nuwara-eliya/ella-sri-lanka-gallery-10.webp"
-							data-large="img/nuwara-eliya/ella-sri-lanka-gallery-10.webp"
-							data-retina="img/nuwara-eliya/ella-sri-lanka-gallery-10.webp">
-					</div>
-
-
-
-
-
-
-
-
-
-
-
 
 				</div>
-				<div class="sp-thumbnails">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-1.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-2.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-3.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-4.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-5.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-6.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-7.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-8.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-9.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/nuwara-eliya/ella-sri-lanka-gallery-10.webp">
+				<div class="dest-intro-image dest-reveal">
+					<img src="img/nuwara-eliya/ella-top-banner.webp" alt="Ella Landscapes">
+				</div>
+			</div>
+		</section>
 
-
+		<section class="dest-attractions" id="attractions">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPLORE</div>
+				<div class="main_title">
+					<h2>Must <span>Visit</span> Attractions</h2>
 				</div>
 			</div>
 
+			<div class="dest-attractions-grid">
 
-
-
-
-
-
-			<!-- End row -->
-		</div>
-		<!-- End container -->
-
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6 nopadding features-intro-img">
-					<div class="featuresdsella-bg">
-						<div class="features-img"></div>
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">01</div>
+						<img src="img/nuwara-eliya/ella-sri-lanka-gallery-7.webp" alt="Nine Arch Bridge">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Nine Arch Bridge</h3>
+						<p>
+							A colonial-era engineering marvel set amidst lush jungle and tea fields. Watching the blue
+							train chug across this stone viaduct is an iconic Sri Lankan experience.
+						</p>
 					</div>
 				</div>
-				<div class="col-lg-6 nopadding">
-					<div class="features-content">
-						<h3>"Accommodation Ella"</h3>
-						<p>Experience tranquil retreats and cozy hideaways amidst the lush hills of Ella with our range
-							of accommodations, promising unforgettable stays in the heart of Sri Lanka's scenic beauty.
+
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">02</div>
+						<img src="img/nuwara-eliya/ella-sri-lanka-gallery-4.webp" alt="Little Adam's Peak">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Little Adam's Peak</h3>
+						<p>
+							A relatively easy hike offering spectacular panoramic views of the Ella Gap and
+							surrounding mountains, especially beautiful at sunrise or sunset.
 						</p>
-						<p><a href="#" class=" btn_1 white">Read more</a>
+					</div>
+				</div>
+
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">03</div>
+						<img src="img/nuwara-eliya/ella-sri-lanka-gallery-8.webp" alt="Ella Rock">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Ella Rock</h3>
+						<p>
+							For a more challenging trek, climb Ella Rock to be rewarded with sweeping vistas of the
+							valley below and distant mountain ranges.
 						</p>
+					</div>
+				</div>
+
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">04</div>
+						<img src="img/nuwara-eliya/ella-sri-lanka-gallery-3.webp" alt="Ravana Falls">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Ravana Falls</h3>
+						<p>
+							One of Sri Lanka's widest waterfalls, cascading down in multiple tiers right next to the
+							main road, linked to the legendary Ramayana epic.
+						</p>
+					</div>
+				</div>
+
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">05</div>
+						<img src="img/nuwara-eliya/ella-sri-lanka-gallery-6.webp" alt="Spice Gardens">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Ella Spice Garden</h3>
+						<p>
+							Take a guided tour to learn about the cultivation of Sri Lanka's famous spices like
+							cinnamon, pepper, and cardamom in a fragrant, lush setting.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="dest-activities" id="activities">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPERIENCE</div>
+				<div class="main_title">
+					<h2>Things <span>To</span> Do</h2>
+				</div>
+			</div>
+
+			<div class="dest-activities-flex">
+				<div class="dest-activities-list">
+
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-hiking"></div>
+						<div class="dest-activity-text">
+							<h4>Hiking & Trekking</h4>
+							<p>
+								Ella is a hiker's paradise. From gentle walks through tea estates to the steep ascent
+								of Ella Rock, there are trails for every fitness level.
+							</p>
+						</div>
+					</div>
+
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-adventure"></div>
+						<div class="dest-activity-text">
+							<h4>Adventure Activities</h4>
+							<p>
+								For adrenaline junkies, try the Flying Ravana Mega Zipline, Sri Lanka's longest
+								zipline, soaring over lush green estates.
+							</p>
+						</div>
+					</div>
+
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-cooking"></div>
+						<div class="dest-activity-text">
+							<h4>Cooking Classes</h4>
+							<p>
+								Join a local family for a cooking class to learn the secrets of Sri Lankan rice and
+								curry, using fresh spices and clay pots.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="dest-activities-sidebar">
+					<div class="dest-sidebar-card reveal">
+						<h3>Plan Your Visit</h3>
+						<p>
+							Ella is great year-round, but majestic views are best seen in the dry months. Book your
+							train tickets in advance as the scenic route is very popular.
+						</p>
+						<a href="#" class="cta-button">Book Your Stay</a>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- End container-fluid  -->
+		</section>
 
 		<div class="container margin_60">
-
 
 			<hr>
 			<div class="row">
@@ -570,7 +577,7 @@
 				<div class="col-md-3">
 					<h3>Discover</h3>
 					<ul>
-						<li><a href="#">Cultural Trangle</a></li>
+						<li><a href="#">Cultural Triangle</a></li>
 						<li><a href="#">Hill Country</a></li>
 						<li><a href="#">Sun and Sand</a></li>
 						<li><a href="#">Wild Life</a></li>
@@ -632,6 +639,10 @@
 			});
 		});
 	</script>
+
+
+	<!-- Navigation JS -->
+	<script src="wanderlust-hero.js" defer></script>
 
 </body>
 

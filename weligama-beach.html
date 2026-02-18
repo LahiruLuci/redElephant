@@ -31,6 +31,17 @@
 	<!-- CUSTOM CSS -->
 	<link href="css/custom.css" rel="stylesheet">
 
+
+	<!-- Fonts for Navigation -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;500;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Navigation CSS -->
+	<link rel="stylesheet" href="wanderlust-hero.css">
+
 </head>
 
 <body>
@@ -46,197 +57,263 @@
 	</div>
 	<!-- End Preload -->
 
-	<div class="layer"></div>
-	<!-- Mobile menu overlay mask -->
+
+
 	<!-- Header================================================== -->
-	<header>
-		<div id="top_line">
-			<div class="container">
-				<div class="row">
-					<div class="col-6"><i class="icon-phone"></i><strong>+94 77 315 71 71 </strong></div>
-				</div><!-- End row -->
-			</div><!-- End container-->
-		</div><!-- End top line-->
 
-		<div class="container">
-			<div class="row">
-				<div class="col-3">
-					<div id="logo_home">
-						<h1><a href="#" title="Red Elephant Travel">Red Elephant Travel</a></h1>
+	<!-- Navigation Overlay (Mobile) -->
+	<div class="wl-mobile-nav-overlay" id="wlMobileNav">
+		<button class="wl-close-menu" id="wlCloseMenu" aria-label="Close Menu">&times;</button>
+		<div class="wl-mobile-menu-container">
+			<ul class="wl-mobile-menu-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="weddings-events.html">Weddings & Events</a></li>
+				<li class="has-submenu">
+					<button class="wl-submenu-toggle">Destinations <i class="fas fa-chevron-down"></i></button>
+					<ul class="wl-submenu">
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Cultural Triangle <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="cultural-triangle.html">Cultural Triangle Overview</a></li>
+								<li><a href="anuradhapura.html">Anuradhapura</a></li>
+								<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+								<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+								<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+								<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Hill Country <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="hill-country.html">Hill Country Overview</a></li>
+								<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+								<li><a href="ella-sri-lanka.html">Ella</a></li>
+								<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+								<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Sun and Sand <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="sun-and-sand.html">Sun and Sand Overview</a></li>
+								<li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
+								<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+								<li><a href="ahungalla-beach.html">Ahungalla</a></li>
+								<li><a href="bentota-beach.html">Bentota</a></li>
+								<li><a href="galle-sri-lanka.html">Galle</a></li>
+								<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+								<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+								<li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
+								<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+								<li><a href="pasikuda-beach.html">Pasikuda</a></li>
+								<li><a href="unawatuna-beach.html">Unawatuna</a></li>
+								<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+								<li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
+								<li><a href="weligama-beach.html">Weligama</a></li>
+								<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Wildlife <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="wild-life.html">Wildlife Overview</a></li>
+								<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+								<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+								<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+								<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+								<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+								<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+								<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+								<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+								<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+								<li><a href="pinnawala-sri-lanka.html">Pinnawala</a></li>
+								<li><a href="wasgamuwa-national-park.html">Wasgamuwa National Park</a></li>
+								<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Culture and Heritage <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="culture-and-heritage.html">Culture Overview</a></li>
+								<li><a href="#">Galle Fort</a></li>
+								<li><a href="#">Anuradhapura</a></li>
+								<li><a href="#">Jaffna</a></li>
+								<li><a href="#">Dambulla</a></li>
+								<li><a href="#">Polonnaruwa</a></li>
+								<li><a href="#">Kandy</a></li>
+								<li><a href="#">Sigiriya</a></li>
+								<li><a href="#">Colombo</a></li>
+								<li><a href="#">Chilaw</a></li>
+								<li><a href="#">Sinharaja</a></li>
+							</ul>
+						</li>
+						<li class="has-nested-submenu">
+							<button class="wl-submenu-toggle wl-nested-toggle">Air/Sea Ports <i
+									class="fas fa-chevron-down"></i></button>
+							<ul class="wl-nested-submenu">
+								<li><a href="air-sea-ports.html">Overview</a></li>
+								<li><a href="#">Colombo Seaport</a></li>
+								<li><a href="#">Hambantota Seaport</a></li>
+								<li><a href="#">B. Airport</a></li>
+								<li><a href="#">R. Airport</a></li>
+								<li><a href="#">M.R Airport</a></li>
+								<li><a href="#">Jaffna Airport</a></li>
+								<li><a href="#">Batticaloa Airport</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="wellness-spa.html">Wellness & Spa</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="wl-main-header" id="wlMainHeader">
+		<div class="wl-header-container">
+			<!-- Mobile Toggle -->
+			<button class="wl-menu-toggle" id="wlMenuToggle" aria-label="Open Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<!-- Logo (Independent Layer) -->
+			<div class="wl-logo-wrapper">
+				<a href="index.html" class="wl-logo-content">
+					<img src="img/headder-logo.png" class="wl-logo-image" alt="Red Elephant Travel" />
+					<div class="wl-logo-text-container">
+						<span class="wl-logo-highlight">Red</span>
+						<span class="typing-text">Elephant Travel</span>
 					</div>
-				</div>
-				<nav class="col-9">
-					<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu
-							mobile</span></a>
-					<div class="main-menu">
-						<div id="header_menu">
-							<img src="img/logo-red-elephant.png" width="160" height="34" alt="City tours">
-						</div>
-						<a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
-						<ul>
-							<li class="submenu">
-								<a href="index.html" class="show-submenu">Home</a>
-							</li>
-
-							<li class="submenu">
-								<a href="about.html" class="show-submenu">About Us</a>
-
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Tours <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By Theme</a></li>
-									<li><a href="#">By Length</a></li>
-									<li class="third-level">
-
-									</li>
-
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Hotels <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li><a href="#">By City</a></li>
-									<li><a href="#">By Type</a></li>
-									<li><a href="#">By Chain</a></li>
-								</ul>
-							</li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Destinations <i
-										class="icon-down-open-mini"></i></a>
-								<ul>
-									<li class="third-level"><a href="cultural-triangle.html">Cultural Trangle </a>
-										<ul>
-											<li><a href="anuradhapura.html">Anuradhapura</a></li>
-											<li><a href="polonnaruwa.html">Pollonnaruwa</a></li>
-											<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
-											<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
-											<li><a href="kandy-sri-lanka.html">Kandy </a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="hill-country.html">Hill Country</a>
-
-										<ul>
-											<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
-											<li><a href="ella-sri-lanka.html">Ella</a></li>
-											<li><a href="hatton-sri-lanka.html">Haton</a></li>
-											<li><a href="badulla-sri-lanka.html">Badulla</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="sun-and-sand.html">Sun and Sand</a>
-
-
-										<ul>
-											<li><a href="ahangama-beach-sri-lanka.html">Ahangama</a></li>
-											<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
-											<li><a href="ahungalla-beach.html">Ahungalla</a></li>
-											<li><a href="bentota-beach.html">Bentota</a></li>
-											<li><a href="galle-sri-lanka.html">Galle</a></li>
-											<li><a href="negombo-sri-lanka.html">Negambo</a></li>
-											<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
-											<li><a href="mirissa-sri-lanka.html">Mirissa</a></li>
-											<li><a href="koggala-sri-lanka.html">Koggala</a></li>
-											<li><a href="pasikuda-beach.html">Pasikuda</a></li>
-											<li><a href="unawatuna-beach.html">Unawatuna</a></li>
-											<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
-											<li><a href="trincomalee-sri-lanka.html">Trincomalee</a></li>
-											<li><a href="weligama-beach.html">Weligama</a></li>
-											<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
-										</ul>
-
-
-
-
-									</li>
-									<li class="third-level"><a href="wild-life.html">Wildlife</a>
-
-										<ul>
-											<li><a href="#">Yala National Park</a></li>
-											<li><a href="#">Udawalawe Natinal Park</a></li>
-											<li><a href="#">Minneriya National Park</a></li>
-											<li><a href="#">Bundala National Park</a></li>
-											<li><a href="#">Kumana National Park</a></li>
-											<li><a href="#">Kaudulla National Park</a></li>
-											<li><a href="#">Galoya National Park</a></li>
-											<li><a href="#">Habarana</a></li>
-											<li><a href="#">Wilpththu</a></li>
-											<li><a href="#">Pinnawala</a></li>
-											<li><a href="#">Wasgamuwa National Park</a></li>
-											<li><a href="#">Sinharaja Forest</a></li>
-										</ul>
-									</li>
-
-									<li class="third-level"><a href="culture-and-heritage.html">Culture and Heritage</a>
-										<ul>
-											<li><a href="#">Galle Fort</a></li>
-											<li><a href="#">Anuradhapura</a></li>
-											<li><a href="#">Jaffna</a></li>
-											<li><a href="#">Dambulla</a></li>
-											<li><a href="#">Polonnaruwa</a></li>
-											<li><a href="#">Kandy</a></li>
-											<li><a href="#">Sigiriya</a></li>
-											<li><a href="#">Colombo</a></li>
-											<li><a href="#">Chilaw</a></li>
-											<li><a href="#">Sinharaja</a></li>
-										</ul>
-									</li>
-
-
-
-									<li class="third-level"><a href="air-sea-ports.html">Air/Sea Ports</a>
-
-										<ul>
-											<li><a href="#">Colombo Seaport</a></li>
-											<li><a href="#">Hambantota Seaport</a></li>
-											<li><a href="#">B. Airport</a></li>
-											<li><a href="#">R. Airport</a></li>
-											<li><a href="#">M.R Airport</a></li>
-											<li><a href="#">Aaffna Airport</a></li>
-											<li><a href="#">Batticaloa Airport</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="submenu">
-                                <a href="#" class="show-submenu">Wellness <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-                            <li class="submenu">
-                                <a href="#" class="show-submenu">Weddings & Events <i
-                                        class="icon-down-open-mini"></i></a>
-                            </li>
-
-							<li class="submenu">
-								<a href="javascript:void(0);" class="show-submenu">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-					<!-- End main-menu -->
-				</nav>
+				</a>
 			</div>
-		</div><!-- container -->
-	</header><!-- End Header -->
+
+			<!-- Desktop Navigation (Unified) -->
+			<nav class="wl-desktop-nav">
+				<ul class="wl-nav-list ml-main-nav-list">
+					<!-- Left Group -->
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="weddings-events.html">Weddings & Events</a></li>
+
+					<!-- The Magic Spacer -->
+					<li class="wl-nav-spacer"></li>
+
+					<!-- Right Group -->
+					<li class="wl-dropdown-item wl-mega-dropdown-item">
+						<a href="#">Destinations <i class="fas fa-chevron-down"></i></a>
+						<div class="wl-mega-menu">
+							<!-- Col 1: Cultural & Hill Country -->
+							<div class="wl-mega-column">
+								<h3>Cultural Triangle</h3>
+								<ul>
+									<li><a href="cultural-triangle.html">All Cultural Sites</a></li>
+									<li><a href="anuradhapura.html">Anuradhapura</a></li>
+									<li><a href="polonnaruwa.html">Polonnaruwa</a></li>
+									<li><a href="dambulla-sri-lanka.html">Dambulla</a></li>
+									<li><a href="sigiriya-sri-lanka.html">Sigiriya</a></li>
+									<li><a href="kandy-sri-lanka.html">Kandy</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Hill Country</h3>
+								<ul>
+									<li><a href="hill-country.html">All Hill Country</a></li>
+									<li><a href="nuwara-eliya-sri-lanka.html">Nuwara Eliya</a></li>
+									<li><a href="ella-sri-lanka.html">Ella</a></li>
+									<li><a href="hatton-sri-lanka.html">Hatton</a></li>
+									<li><a href="badulla-sri-lanka.html">Badulla</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 2: Sun & Sand -->
+							<div class="wl-mega-column">
+								<h3>Sun and Sand</h3>
+								<ul>
+									<li><a href="sun-and-sand.html">All Beaches</a></li>
+									<li><a href="ahangama-beach-sri-lanka.html">Ahangama/Ahungalla</a></li>
+									<li><a href="arugam-bay-beach.html">Arugam Bay</a></li>
+									<li><a href="bentota-beach.html">Bentota</a></li>
+									<li><a href="galle-sri-lanka.html">Galle & Unawatuna</a></li>
+									<li><a href="negombo-sri-lanka.html">Negambo</a></li>
+									<li><a href="kalpitiya-sri-lanka.html">Kalpitiya</a></li>
+									<li><a href="mirissa-sri-lanka.html">Mirissa/Weligama</a></li>
+									<li><a href="koggala-sri-lanka.html">Koggala</a></li>
+									<li><a href="pasikuda-beach.html">Pasikuda/Trinco</a></li>
+									<li><a href="hikkaduwa-beach.html">Hikkaduwa</a></li>
+									<li><a href="hiriketiya-beach.html">Hiriketiya</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 3: Wildlife -->
+							<div class="wl-mega-column">
+								<h3>Wildlife</h3>
+								<ul>
+									<li><a href="wild-life.html">All Parks</a></li>
+									<li><a href="yala-national-park-sri-lanka.html">Yala National Park</a></li>
+									<li><a href="udawalawe-national-park.html">Udawalawe National Park</a></li>
+									<li><a href="minneriya-national-park.html">Minneriya National Park</a></li>
+									<li><a href="bundala-national-park.html">Bundala National Park</a></li>
+									<li><a href="kumana-national-park-sri-lanka.html">Kumana National Park</a></li>
+									<li><a href="kaudulla-national-park-sri-lanka.html">Kaudulla National Park</a></li>
+									<li><a href="gal-oya-national-park-sri-lanka.html">Galoya National Park</a></li>
+									<li><a href="habarana-sri-lanka.html">Habarana</a></li>
+									<li><a href="wilpattu-national-park-sri-lanka.html">Wilpattu National Park</a></li>
+									<li><a href="sinharaja-forest-sri-lanka.html">Sinharaja Forest</a></li>
+								</ul>
+							</div>
+
+							<!-- Col 4: Culture & Ports -->
+							<div class="wl-mega-column">
+								<h3>Culture & Heritage</h3>
+								<ul>
+									<li><a href="culture-and-heritage.html">All Heritage</a></li>
+									<li><a href="#">Galle Fort</a></li>
+									<li><a href="#">Anuradhapura</a></li>
+									<li><a href="#">Jaffna</a></li>
+									<li><a href="#">Colombo</a></li>
+									<li><a href="#">Chilaw</a></li>
+								</ul>
+								<h3 style="margin-top: 20px;">Air/Sea Ports</h3>
+								<ul>
+									<li><a href="air-sea-ports.html">All Ports</a></li>
+									<li><a href="#">Colombo/Hambantota Seaport</a></li>
+									<li><a href="#">B. / R. / M.R Airport</a></li>
+									<li><a href="#">Jaffna / Batticaloa Airport</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+					<li><a href="wellness-spa.html">Wellness</a></li>
+					<li><a href="contact-us.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
 
 
-	<section class="parallax-window" data-parallax="scroll"
+	<section class="dest-hero" id="home" data-parallax="scroll"
 		data-image-src="img/sunandsand/weligama-beach-sri-lanka.webp" data-natural-width="1400"
 		data-natural-height="470">
-		<div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
-			<div class="animated fadeInDown">
-				<h1>Weligama Beach, Sri lanka</h1>
-				<p>Where Waves Beckon and Serenity Prevails.</p>
-			</div>
+		<div class="dest-hero-bg"></div>
+		<div class="dest-hero-content">
+			<h1>Weligama Beach</h1>
+			<p class="dest-hero-subtitle">Where Waves Beckon and Serenity Prevails</p>
+		</div>
+		<div class="dest-scroll-indicator">
+			<svg viewBox="0 0 24 24" fill="none">
+				<path d="M12 5v14M12 19l-7-7M12 19l7-7" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
 		</div>
 	</section>
-	<!-- End section -->
-	<!-- End Section -->
 
 	<main>
 		<div id="position">
@@ -252,254 +329,163 @@
 		</div>
 		<!-- End Position -->
 
-		<div class="container margin_60">
-
-
-
-
-
-			<p style="text-align: justify; font-size: 15px"><strong style="font-weight: 700">Weligama Beach, nestled
-					along the southern coast of Sri Lanka, is a captivating destination renowned for its pristine sands,
-					turquoise waters, and vibrant surf culture. Here's a detailed overview of this unique coastal
-					gem:</strong>
-				<br>
-				<strong style="font-weight:700">Location:</strong>
-				Weligama Beach is situated in the Matara District of the Southern Province of Sri Lanka, approximately
-				143 kilometers south of the capital city, Colombo. Its strategic location along the Indian Ocean makes
-				it easily accessible from major cities and tourist hubs, yet it retains a sense of tranquility and
-				charm.
-				<br><br>
-				<strong style="font-weight:700">Geography:</strong>
-				The beach at Weligama stretches for several kilometers, boasting soft golden sands that gently slope
-				into the warm waters of the Indian Ocean. Coconut palms sway in the tropical breeze, providing shade and
-				a picturesque backdrop to the idyllic coastline.
-				<br><br>
-				<strong style="font-weight:700">Attractions:</strong>
-				<br><strong style="font-weight:700">1. Surfing:</strong> Weligama is renowned as one of the best
-				beginner surf spots in Sri Lanka, thanks to its gentle waves and sandy bottom breaks. Surf schools and
-				instructors line the beach, offering lessons and board rentals for visitors eager to catch their first
-				wave.
-				<br><br>
-				<strong style="font-weight:700">2. Stilt Fishermen:</strong> Witness the iconic sight of stilt fishermen
-				perched on wooden poles, a traditional fishing technique practiced along the southern coast of Sri
-				Lanka. Photographers and curious travelers flock to Weligama Beach to capture this cultural spectacle
-				against the backdrop of the setting sun.
-				<br><br>
-				<strong style="font-weight:700">3. Island Adventures:</strong> Embark on a boat tour to nearby islands
-				such as Taprobane Island and Snake Island, where you can snorkel in crystal-clear waters, explore hidden
-				coves, and soak up the stunning coastal scenery.
-				<br><br>
-				<strong style="font-weight:700"> 4. Weligama Bay Resort:</strong> Relax and unwind at Weligama Bay
-				Resort, a beachfront oasis offering luxurious accommodations, world-class amenities, and panoramic views
-				of the ocean. Indulge in spa treatments, savor delectable cuisine, and experience true Sri Lankan
-				hospitality in this tropical paradise.
-				<br><br>
-				<strong style="font-weight:700">Dining:</strong>
-				<br>Experience the flavors of Sri Lankan cuisine and international fare at beachfront restaurants and
-				cafes lining Weligama Beach. From fresh seafood delicacies to spicy curries and tropical fruit
-				smoothies, the culinary scene reflects the region's coastal bounty and cultural diversity.
-				<br><br>
-				<strong style="font-weight:700">Nearby Attractions:</strong>
-				<br><strong style="font-weight:700">1. Mirissa:</strong> Explore the nearby town of Mirissa, known for
-				its laid-back vibe, whale watching excursions, and vibrant nightlife.
-				<br><br>
-				<strong style="font-weight:700"> 2.Galle Fort:</strong> Visit the historic Galle Fort, a UNESCO World
-				Heritage Site located approximately 30 kilometers from Weligama, and immerse yourself in its
-				colonial-era charm and architectural splendor.
-				<br><br>
-				<strong style="font-weight:700"> Conclusion:</strong>
-				<br>In conclusion, Weligama Beach offers a perfect blend of natural beauty, adventure, and relaxation,
-				making it an ideal destination for travelers seeking sun, surf, and seaside serenity on the southern
-				coast of Sri Lanka. Whether you're riding the waves, sampling local cuisine, or simply lounging on the
-				sand, Weligama promises an unforgettable beach getaway for visitors of all ages.
-
-
-
-
-			</p>
-			<hr>
-
-
-
-
-
-			<div id="Img_carousel" class="slider-pro">
-				<div class="sp-slides">
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka1.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka1.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka1.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka1.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka1.webp">
+		<section class="dest-intro" id="about">
+			<div class="dest-intro-grid">
+				<div class="dest-intro-text dest-reveal">
+					<div class="main_title">
+						<h2>A Surfer's <span>Sanctuary</span></h2>
 					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka2.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka2.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka2.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka2.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka2.webp">
+					<p>
+						Nestled along the southern coast, Weligama Beach is a captivating destination renowned for its
+						pristine sands and vibrant surf culture. The name "Weligama" literally translates to "Sandy
+						Village,"
+						a fitting title for this idyllic bay.
+					</p>
+					<p>
+						The beach stretches for several kilometers with soft golden sands sloping gently into the warm
+						Indian Ocean. It is famous for its stilt fishermen and as one of the best places to learn
+						surfing
+						in Sri Lanka.
+					</p>
+					<div class="dest-intro-stats">
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">143</div>
+							<div class="dest-stat-label">KM from Colombo</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">24/7</div>
+							<div class="dest-stat-label">Surf Vibes</div>
+						</div>
+						<div class="dest-stat-item">
+							<div class="dest-stat-number">100+</div>
+							<div class="dest-stat-label">Surf Schools</div>
+						</div>
 					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka3.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka3.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka3.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka3.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka3.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka4.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka4.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka4.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka4.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka4.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka5.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka5.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka5.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka5.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka5.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka6.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka6.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka6.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka6.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka6.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka7.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka7.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka7.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka7.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka7.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka8.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka8.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka8.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka8.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka8.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka9.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka9.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka9.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka9.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka9.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka10.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka10.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka10.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka10.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka10.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka11.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka11.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka11.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka11.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka11.webp">
-					</div>
-
-					<div class="sp-slide">
-						<img alt="Image" class="sp-image" src="css/images/blank.gif"
-							data-src="img/sunandsand/weligama-beach-sri-lanka12.webp"
-							data-small="img/sunandsand/weligama-beach-sri-lanka12.webp"
-							data-medium="img/sunandsand/weligama-beach-sri-lanka12.webp"
-							data-large="img/sunandsand/weligama-beach-sri-lanka12.webp"
-							data-retina="img/sunandsand/weligama-beach-sri-lanka12.webp">
-					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 				</div>
-				<div class="sp-thumbnails">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka1.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka2.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka3.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka4.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka5.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka6.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka7.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka8.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka9.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka10.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka11.webp">
-					<img alt="Image" class="sp-thumbnail" src="img/sunandsand/weligama-beach-sri-lanka12.webp">
-
-
-
-
+				<div class="dest-intro-image dest-reveal">
+					<img src="img/sunandsand/weligama-beach-sri-lanka1.webp" alt="Weligama Surf">
 				</div>
 			</div>
+		</section>
 
-
-
-
-
-
-
-			<!-- End row -->
-		</div>
-		<!-- End container -->
-
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6 nopadding features-intro-img">
-					<div class="featurweligama-bg">
-						<div class="features-img"></div>
+		<section class="dest-attractions" id="attractions">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPLORE</div>
+				<div class="main_title">
+					<h2>Must <span>See</span> Highlights</h2>
+				</div>
+			</div>
+			<div class="dest-attractions-grid">
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">01</div>
+						<img src="img/sunandsand/weligama-beach-sri-lanka2.webp" alt="Stilt Fishermen">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Stilt Fishermen</h3>
+						<p>
+							Witness the iconic sight of fishermen perched on wooden poles, a traditional technique
+							practiced along the southern coast, especially stunning at sunset.
+						</p>
 					</div>
 				</div>
-				<div class="col-lg-6 nopadding">
-					<div class="features-content">
-						<h3>"Accommodation Weligama Beach"</h3>
-						<p>Find your slice of coastal paradise at Weligama's array of accommodations, offering
-							beachfront luxury and unforgettable seaside experiences.</p>
-						<p><a href="#" class=" btn_1 white">Read more</a>
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">02</div>
+						<img src="img/sunandsand/weligama-beach-sri-lanka3.webp" alt="Taprobane Island">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Taprobane Island</h3>
+						<p>
+							A tiny private island just off the coast, home to a historic villa. It's a picturesque
+							landmark that adds to the unique charm of Weligama Bay.
+						</p>
+					</div>
+				</div>
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">03</div>
+						<img src="img/sunandsand/mirissa-sri-lanka.webp" alt="Mirissa">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Mirissa Nearby</h3>
+						<p>
+							Just a short drive away, explore Mirissa, known for its laid-back vibe, whale watching
+							excursions, and vibrant nightlife.
+						</p>
+					</div>
+				</div>
+				<div class="dest-attraction-card dest-reveal">
+					<div class="dest-attraction-image">
+						<div class="dest-attraction-number">04</div>
+						<img src="img/culture/galle-fort-sri-lanka.webp" alt="Galle Fort">
+					</div>
+					<div class="dest-attraction-content">
+						<h3>Galle Fort</h3>
+						<p>
+							Visit the historic UNESCO World Heritage Site of Galle Fort, located approximately 30km
+							away, for a day trip into colonial history.
 						</p>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- End container-fluid  -->
+		</section>
+
+		<section class="dest-activities" id="activities">
+			<div class="dest-section-header dest-reveal">
+				<div class="section-label">EXPERIENCE</div>
+				<div class="main_title">
+					<h2>Things <span>To</span> Do</h2>
+				</div>
+			</div>
+			<div class="dest-activities-flex">
+				<div class="dest-activities-list">
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-scuba"></div>
+						<div class="dest-activity-text">
+							<h4>Surfing Lessons</h4>
+							<p>
+								Weligama is one of the best beginner surf spots. Join a surf school to catch your first
+								wave on the gentle, sandy bottom breaks.
+							</p>
+						</div>
+					</div>
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-wildlife"></div>
+						<div class="dest-activity-text">
+							<h4>Island Adventures</h4>
+							<p>
+								Embark on a boat tour to nearby Snake Island or around the bay to snorkel in hidden
+								coves
+								and soak up the stunning coastal scenery.
+							</p>
+						</div>
+					</div>
+					<div class="dest-activity-item dest-reveal">
+						<div class="dest-activity-icon activity-history-walk"></div>
+						<div class="dest-activity-text">
+							<h4>Seafood Dining</h4>
+							<p>
+								Savor fresh seafood delicacies and spicy curries at beachfront cafes. The culinary scene
+								reflects the region's rich coastal bounty.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="dest-activities-sidebar">
+					<div class="dest-sidebar-card reveal">
+						<h3>Plan Your Trip</h3>
+						<p>
+							Weligama is a great year-round destination. The main surf season is from October to April.
+							Accommodations range from surf camps to luxury resorts.
+						</p>
+						<a href="#" class="cta-button">Book Your Stay</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<div class="container margin_60">
-
-
 			<hr>
 			<div class="row">
 				<div class="col-lg-3 col-md-6 text-center">
@@ -535,6 +521,44 @@
 						offering a perfect blend of culture, nature, and adventure.</p>
 				</div>
 			</div>
+		</div>
+
+
+		<hr>
+		<div class="row">
+			<div class="col-lg-3 col-md-6 text-center">
+				<p>
+					<a href="#"><img src="img/shopping-sri-lanka.webp" alt="Pic" class="img-fluid rounded"></a>
+				</p>
+				<h4><span>Shopping</span> Sri Lanka</h4>
+				<p>Experience the vibrant tapestry of Sri Lanka's markets, offering a treasure trove of unique
+					crafts, spices, and souvenirs waiting to be discovered</p>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<p>
+					<a href="#"><img src="img/transfer-booking.webp" alt="Pic" class="img-fluid rounded"></a>
+				</p>
+				<h4><span>Transfer</span> booking</h4>
+				<p>Simplify your travel arrangements with our hassle-free transfer booking service, ensuring
+					seamless journeys from arrival to departure.</p>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<p>
+					<a href="#"><img src="img/activities-sri-lanka.webp" alt="Pic" class="img-fluid rounded"></a>
+				</p>
+				<h4><span>Activities</span> Sri Lanka</h4>
+				<p>Embark on unforgettable adventures across Sri Lanka with our curated selection of activities,
+					tailored to satisfy every traveler's interests and passions.</p>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<p>
+					<a href="#"><img src="img/tours-sri-lanka.webp" alt="Pic" class="img-fluid rounded"></a>
+				</p>
+				<h4><span>Tours</span> Sri Lanka</h4>
+				<p>Embark on an enriching journey through Sri Lanka's wonders with our meticulously planned tours,
+					offering a perfect blend of culture, nature, and adventure.</p>
+			</div>
+		</div>
 
 
 		</div>
@@ -563,7 +587,7 @@
 				<div class="col-md-3">
 					<h3>Discover</h3>
 					<ul>
-						<li><a href="#">Cultural Trangle</a></li>
+						<li><a href="#">Cultural Triangle</a></li>
 						<li><a href="#">Hill Country</a></li>
 						<li><a href="#">Sun and Sand</a></li>
 						<li><a href="#">Wild Life</a></li>
@@ -625,6 +649,10 @@
 			});
 		});
 	</script>
+
+
+	<!-- Navigation JS -->
+	<script src="wanderlust-hero.js" defer></script>
 
 </body>
 

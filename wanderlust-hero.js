@@ -112,3 +112,73 @@ if (wlSubmenuToggles) {
         });
     });
 }
+
+// =========================================
+// ACTIVE LINK HIGHLIGHTING
+// =========================================
+function wlHighlightActiveLink() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const allLinks = document.querySelectorAll('.wl-nav-list a, .wl-mobile-menu-links a');
+
+    allLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+
+            // Highlight parent dropdown/mega-menu if in one
+            const desktopDropdown = link.closest('.wl-dropdown-menu, .wl-mega-menu');
+            if (desktopDropdown) {
+                const parentItem = desktopDropdown.closest('.wl-dropdown-item, .wl-mega-dropdown-item');
+                if (parentItem) {
+                    const parentLink = parentItem.querySelector('a');
+                    if (parentLink) parentLink.classList.add('active');
+                }
+            }
+
+            // Mobile Submenu handling
+            const mobileSubmenu = link.closest('.wl-submenu, .wl-nested-submenu');
+            if (mobileSubmenu) {
+                mobileSubmenu.classList.add('open');
+                const toggleBtn = mobileSubmenu.previousElementSibling;
+                if (toggleBtn && (toggleBtn.classList.contains('wl-submenu-toggle') || toggleBtn.classList.contains('wl-nested-toggle'))) {
+                    toggleBtn.classList.add('active');
+                    const icon = toggleBtn.querySelector('i');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+
+                // If it's a nested submenu, open the parent one too
+                const parentSubmenu = mobileSubmenu.parentElement.closest('.wl-submenu');
+                if (parentSubmenu) {
+                    parentSubmenu.classList.add('open');
+                    const parentToggle = parentSubmenu.previousElementSibling;
+                    if (parentToggle) parentToggle.classList.add('active');
+                }
+            }
+        }
+    });
+}
+
+// =========================================
+// REVEAL ANIMATIONS ON SCROLL
+// =========================================
+function wlHandleReveal() {
+    const reveals = document.querySelectorAll('.reveal, .dest-reveal');
+    const windowHeight = window.innerHeight;
+    const elementVisible = 150;
+
+    reveals.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
+        } else {
+            // Optional: Remove active class if you want animations to repeat
+            // element.classList.remove('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', wlHandleReveal);
+document.addEventListener('DOMContentLoaded', () => {
+    wlHighlightActiveLink();
+    wlHandleReveal(); // Initial check
+});
